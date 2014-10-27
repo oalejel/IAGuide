@@ -7,7 +7,10 @@
 //
 
 #import "HomeViewController.h"
-#import "LocationsSliderView.h"
+#import "Location.h"
+#import "LocationStore.h"
+#import "OutlineOverlayRenderer.h"
+#import "OutlineOverlay.h"
 
 @interface HomeViewController () 
 
@@ -21,66 +24,68 @@
 
 @implementation HomeViewController
 
-- (instancetype)init
+#pragma mark - Initializers
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super init];
-  
+    if (self)
+    {
+        //override intialization process - not much with the view should be done
+        self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+        UIImage *image = [UIImage imageNamed:@"compass"];
+        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Map" image:image tag:0];
+    }
+    
     return self;
 }
 
+#pragma mark - View Setup
+//the reason these properties are set here is the fact that the nib with the mapView is not loaded until viewDidLoad
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     //set the textfield delegate to self
     self.searchField.delegate = self;
-    self.textFieldReturnPoint = self.searchField.frame;
     
     //set up the mapView
-    self.mapView.mapType = MKMapTypeSatellite;
     self.mapView.delegate = self;
+    self.mapView.mapType = MKMapTypeSatellite;
+    self.mapView.showsUserLocation = YES;
+    self.mapView.zoomEnabled = NO;
+    self.mapView.scrollEnabled = NO;
+    
     [self setBackgroundGradient];
-    self.mapViewReturnPoint = self.mapView.frame;
-    
-    
-//    UIView *view = [[UIView alloc] initWithFrame:self.mapView.frame];
-//    view.backgroundColor = [UIColor orangeColor];
-//    [self.view insertSubview:view belowSubview:self.mapView];
-//    
-//    UIView *secondView = [[UIView alloc] initWithFrame:self.searchField.frame];
-//    view.backgroundColor = [UIColor blueColor];
-//    [self.view insertSubview:secondView belowSubview:self.searchField];
-//    
-    //give the map a start location
-    CLLocationDegrees lat = 42.603363;
-    CLLocationDegrees lon = -83.226143;
-    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(lat, lon);
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coordinate, 0.001000, 0.001500);
-    
-    [self.mapView setRegion:region animated:YES];
+    [self setLocation];
+    [self setCamera];
 }
 
-- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
-    //get the region information for the current location
-    float latitude = mapView.region.center.latitude;
-    float longitude = mapView.region.center.longitude;
-    float latDelta = mapView.region.span.latitudeDelta;
-    float lonDelta = mapView.region.span.longitudeDelta;
-    
-    NSLog(@"Region lat: %f, long: %f, latD: %f, lonD: %f", latitude, longitude, latDelta, lonDelta);
-    
-    
-    
-    
-    
-    
-    if (self.isEditing) {
-        [self animateKeyboardReturn:self.searchField];
-    }
+    [super viewWillAppear:animated];
+    [self addSchoolOverlayToMap];
 }
 
-#pragma mark - Simple Private Functions
+- (void)setLocation
+{
+    //give the map a start location
+    CLLocationDegrees lat = 42.603373;
+    CLLocationDegrees lon = -83.226150;
+    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(lat, lon);
+    
+    MKCoordinateRegion schoolRegion = MKCoordinateRegionMakeWithDistance(coordinate, 155, 0);
+    MKCoordinateRegion region = [self.mapView regionThatFits:schoolRegion];
+    [self.mapView setRegion:region];
+}
+
+- (void)setCamera
+{
+    MKMapCamera *camera = [self.mapView.camera copy];
+    [camera setHeading:179.0];
+    [self.mapView setCamera:camera];
+    //keep it from changing after this - this might actually not be necessary
+    self.mapView.rotateEnabled = NO;
+}
+
 - (void)setBackgroundGradient
 {
     //create a gradient for the background
@@ -94,36 +99,159 @@
     [self.view.layer insertSublayer:gradientLayer atIndex:0];
 }
 
-#pragma mark - Delegate
+- (void)addSchoolOverlayToMap
+{
+    CLLocationCoordinate2D array[4] = {CLLocationCoordinate2DMake(42.602941, -83.225584),
+        CLLocationCoordinate2DMake(42.602941, -83.226743),
+        CLLocationCoordinate2DMake(42.603796, -83.226743),
+        CLLocationCoordinate2DMake(42.603796, -83.225584)};
+    
+    
+    MKPolygon *polygon = [MKPolygon polygonWithCoordinates:array count:4];
+    [self.mapView addOverlay:polygon];
+}
+
+#pragma mark - Delegate & Map
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
+{
+    if (self.isEditing) {
+        [self animateKeyboardReturn:self.searchField];
+    }
+    
+    //get the region information for the current location
+    float latitude = mapView.region.center.latitude;
+    float longitude = mapView.region.center.longitude;
+    float latDelta = mapView.region.span.latitudeDelta;
+    float lonDelta = mapView.region.span.longitudeDelta;
+    
+    NSLog(@"Region lat: %f, long: %f, latD: %f, lonD: %f", latitude, longitude, latDelta, lonDelta);
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    //this statement is important since the userlocation view is sent through here
+    //you might want to change the current location pin view so it's just a circle
+    if ([annotation isKindOfClass:[Location class]]) {
+        
+        MKPinAnnotationView *annotationPin = (MKPinAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:@"AnnotationView"];
+        
+        //might not need this later
+        if (!annotationPin) {
+            annotationPin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"AnnotationPin"];
+        }
+        annotationPin.canShowCallout = YES;
+        annotationPin.draggable = YES;
+        return annotationPin;
+        
+    } else {
+        MKAnnotationView *pinView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"CurrentLocationAnnotation"];
+        //create a circle image based on the file for user loc.
+        UIImage *image = [UIImage imageNamed:@"Circle2"];
+        pinView.image = image;
+        
+        return pinView;
+    }
+}
+
+- (void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray *)views
+{
+    for (MKPinAnnotationView *pinView in views) {
+        [self.mapView selectAnnotation:pinView.annotation animated:YES];
+    }
+}
+
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay
+{
+    OutlineOverlayRenderer *renderer = [[OutlineOverlayRenderer alloc] initWithOverlay:overlay];
+    return renderer;
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view didChangeDragState:(MKAnnotationViewDragState)newState fromOldState:(MKAnnotationViewDragState)oldState
+{
+    if (newState == MKAnnotationViewDragStateEnding) {
+            CLLocationCoordinate2D droppedAt = view.annotation.coordinate;
+            NSLog(@"Pin dropped at %f,%f", droppedAt.latitude, droppedAt.longitude);
+    }
+}
+
+- (void)addLocationToMap:(Location *)location
+{
+    [self.mapView addAnnotation:location];
+}
+
+#pragma mark - Search Field methods
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    NSLog(@"Should end editing");
+    [self animateKeyboardReturn:textField];
+    
+    return YES;
+}
+
+//problem - on large screens, the views arent moving upwards
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
     self.isEditing = YES;
-    //change this animation speed value to look smother
+    
+    CGRect zeroRect = CGRectMake(0, 0, 0, 0);
+    
+    //check if these values are unset
+    if (self.mapViewReturnPoint.origin.x ==  zeroRect.origin.x) {
+        self.mapViewReturnPoint = self.mapView.frame;
+    }
+    
+    if (self.textFieldReturnPoint.origin.x ==  zeroRect.origin.x) {
+        self.textFieldReturnPoint = self.searchField.frame;
+    }
+    
+    if (self.searchField.textColor == [UIColor redColor]) {
+        self.searchField.textColor = [UIColor blackColor];
+    }
+    
+    //change this animation speed value to look smoother
     [UIView animateWithDuration:0.3 animations:^{
         CGPoint centerPoint = self.view.center;
-        self.searchField.center = centerPoint;
-        self.mapView.center = CGPointMake(centerPoint.x, 70);
+        //fix this return point to look better
+        CGPoint searchFieldPoint = CGPointMake(centerPoint.x, (self.searchField.frame.size.height / 2) + (self.mapView.frame.size.height / 2) + 19);
+        self.searchField.center = searchFieldPoint;
+        self.mapView.center = CGPointMake(centerPoint.x, 0);
     }];
     
     return YES;
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    [self animateKeyboardReturn:textField];
-    NSLog(@"Should end editing");
-    return YES;
-}
-
 - (void)animateKeyboardReturn:(UITextField *)textField
 {
-    self.isEditing = NO;
     //is the view the thing that resigns the first responder
     [textField resignFirstResponder];
-    [UIView animateWithDuration:1.0 animations:^{
+    self.isEditing = NO;
+    [UIView animateWithDuration:0.3 animations:^{
         self.mapView.frame = self.mapViewReturnPoint;
         self.searchField.frame = self.textFieldReturnPoint;
     }];
+}
+
+- (IBAction)searchFieldReturned:(UITextField *)sender {
+    NSString *text = sender.text;
+    int textInt = [text intValue];
+    
+    NSNumber *number = [NSNumber numberWithInt:textInt];
+    Location *searchedLocation = [[LocationStore sharedStore] locationForRoomNumber:number];
+    if (!searchedLocation) {
+        self.searchField.textColor = [UIColor redColor];
+        return;
+    }
+    
+    [self.mapView removeAnnotations:self.mapView.annotations];
+    [self addLocationToMap:searchedLocation];
+}
+
+#pragma mark - Touch Events
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    if (self.isEditing) {
+        [self animateKeyboardReturn:self.searchField];
+    }
 }
 
 @end

@@ -7,17 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D0C6FE419FC1D9B0060C70C /* mapoutline2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D0C6FE319FC1D9B0060C70C /* mapoutline2.png */; };
+		3D0F690D19FDDCE90080DC35 /* outline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D0F690C19FDDCE90080DC35 /* outline@2x.png */; };
+		3D0F690F19FDE12D0080DC35 /* ExtrasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D0F690E19FDE12D0080DC35 /* ExtrasViewController.xib */; };
+		3D0F691319FDE2290080DC35 /* quizlet.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D0F691219FDE2290080DC35 /* quizlet.png */; };
+		3D0F691519FDE2420080DC35 /* procrastinate.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D0F691419FDE2420080DC35 /* procrastinate.png */; };
+		3D2F267B19D8C96200529954 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2F267A19D8C96200529954 /* Location.m */; };
 		3D368CBD19C5E7F400D043AD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D368CBC19C5E7F400D043AD /* LaunchScreen.xib */; };
 		3D368D0119C5EC4F00D043AD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D368D0019C5EC4F00D043AD /* Images.xcassets */; };
+		3D4E9FE919EEA6D400B75FCF /* outline.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D4E9FE819EEA6D400B75FCF /* outline.png */; };
 		3D551AB619AB82D10082C393 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D551AB519AB82D10082C393 /* main.m */; };
 		3D551AB919AB82D10082C393 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D551AB819AB82D10082C393 /* AppDelegate.m */; };
 		3D551AD019AB82D10082C393 /* IAGuideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D551ACF19AB82D10082C393 /* IAGuideTests.m */; };
 		3D551ADB19AB83E40082C393 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D551ADA19AB83E40082C393 /* HomeViewController.m */; };
-		3D551ADE19AB83F00082C393 /* LocationsSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D551ADD19AB83F00082C393 /* LocationsSliderView.m */; };
 		3D66EA8219CF132700432B20 /* LocationStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D66EA8119CF132700432B20 /* LocationStore.m */; };
-		3D8FDCCD19C4FD3F0046FCD6 /* SwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FDCCC19C4FD3F0046FCD6 /* SwitchButton.m */; };
+		3D6CCA7F19E2DD850049C4BE /* OutlineOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6CCA7E19E2DD850049C4BE /* OutlineOverlay.m */; };
+		3D793A2719E87C9200BBAD68 /* OutlineOverlayRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D793A2619E87C9200BBAD68 /* OutlineOverlayRenderer.m */; };
+		3D8D6E4619D6488C00A31C10 /* Circle2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8D6E4519D6488C00A31C10 /* Circle2.png */; };
+		3D8D6E4819D649F900A31C10 /* Circle3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8D6E4719D649F900A31C10 /* Circle3@2x.png */; };
+		3DD04DEE19D62C3D00F22A61 /* Circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DD04DED19D62C3D00F22A61 /* Circle.png */; };
 		3DD81F0419B68BAA00794B17 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DD81F0319B68BAA00794B17 /* HomeViewController.xib */; };
 		3DD81F0619B6A08D00794B17 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DD81F0519B6A08D00794B17 /* MapKit.framework */; };
+		3DF32E1019FC22CB005AEA8B /* ExtrasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF32E0F19FC22CB005AEA8B /* ExtrasViewController.m */; };
+		3DF32E1619FC3814005AEA8B /* compass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DF32E1519FC3814005AEA8B /* compass@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +43,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D0C6FE319FC1D9B0060C70C /* mapoutline2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapoutline2.png; sourceTree = "<group>"; };
+		3D0F690C19FDDCE90080DC35 /* outline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "outline@2x.png"; sourceTree = "<group>"; };
+		3D0F690E19FDE12D0080DC35 /* ExtrasViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExtrasViewController.xib; sourceTree = "<group>"; };
+		3D0F691219FDE2290080DC35 /* quizlet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quizlet.png; sourceTree = "<group>"; };
+		3D0F691419FDE2420080DC35 /* procrastinate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = procrastinate.png; sourceTree = "<group>"; };
+		3D2F267919D8C96200529954 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Location.h; path = ../Location.h; sourceTree = "<group>"; };
+		3D2F267A19D8C96200529954 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Location.m; path = ../Location.m; sourceTree = "<group>"; };
 		3D368CBC19C5E7F400D043AD /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		3D368D0019C5EC4F00D043AD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3D4E9FE819EEA6D400B75FCF /* outline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = outline.png; sourceTree = "<group>"; };
 		3D551AB019AB82D10082C393 /* IAGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IAGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D551AB419AB82D10082C393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D551AB519AB82D10082C393 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -43,14 +63,20 @@
 		3D551ACF19AB82D10082C393 /* IAGuideTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IAGuideTests.m; sourceTree = "<group>"; };
 		3D551AD919AB83E40082C393 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		3D551ADA19AB83E40082C393 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		3D551ADC19AB83F00082C393 /* LocationsSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationsSliderView.h; sourceTree = "<group>"; };
-		3D551ADD19AB83F00082C393 /* LocationsSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationsSliderView.m; sourceTree = "<group>"; };
 		3D66EA8019CF132700432B20 /* LocationStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationStore.h; sourceTree = "<group>"; };
 		3D66EA8119CF132700432B20 /* LocationStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationStore.m; sourceTree = "<group>"; };
-		3D8FDCCB19C4FD3F0046FCD6 /* SwitchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwitchButton.h; path = ../SwitchButton.h; sourceTree = "<group>"; };
-		3D8FDCCC19C4FD3F0046FCD6 /* SwitchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SwitchButton.m; path = ../SwitchButton.m; sourceTree = "<group>"; };
+		3D6CCA7D19E2DD850049C4BE /* OutlineOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutlineOverlay.h; sourceTree = "<group>"; };
+		3D6CCA7E19E2DD850049C4BE /* OutlineOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineOverlay.m; sourceTree = "<group>"; };
+		3D793A2519E87C9200BBAD68 /* OutlineOverlayRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OutlineOverlayRenderer.h; path = ../OutlineOverlayRenderer.h; sourceTree = "<group>"; };
+		3D793A2619E87C9200BBAD68 /* OutlineOverlayRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OutlineOverlayRenderer.m; path = ../OutlineOverlayRenderer.m; sourceTree = "<group>"; };
+		3D8D6E4519D6488C00A31C10 /* Circle2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Circle2.png; sourceTree = "<group>"; };
+		3D8D6E4719D649F900A31C10 /* Circle3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Circle3@2x.png"; sourceTree = "<group>"; };
+		3DD04DED19D62C3D00F22A61 /* Circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Circle.png; path = ../Circle.png; sourceTree = "<group>"; };
 		3DD81F0319B68BAA00794B17 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = ../HomeViewController.xib; sourceTree = "<group>"; };
 		3DD81F0519B6A08D00794B17 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3DF32E0E19FC22CB005AEA8B /* ExtrasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtrasViewController.h; sourceTree = "<group>"; };
+		3DF32E0F19FC22CB005AEA8B /* ExtrasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtrasViewController.m; sourceTree = "<group>"; };
+		3DF32E1519FC3814005AEA8B /* compass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compass@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,16 +122,11 @@
 			children = (
 				3D551AB719AB82D10082C393 /* AppDelegate.h */,
 				3D551AB819AB82D10082C393 /* AppDelegate.m */,
-				3D8FDCCB19C4FD3F0046FCD6 /* SwitchButton.h */,
-				3D8FDCCC19C4FD3F0046FCD6 /* SwitchButton.m */,
-				3D551ADC19AB83F00082C393 /* LocationsSliderView.h */,
-				3D551ADD19AB83F00082C393 /* LocationsSliderView.m */,
-				3D551AD919AB83E40082C393 /* HomeViewController.h */,
-				3D551ADA19AB83E40082C393 /* HomeViewController.m */,
-				3D66EA8019CF132700432B20 /* LocationStore.h */,
-				3D66EA8119CF132700432B20 /* LocationStore.m */,
-				3DD81F0319B68BAA00794B17 /* HomeViewController.xib */,
 				3D368CBC19C5E7F400D043AD /* LaunchScreen.xib */,
+				3DAFF91B19F6D894002605AE /* Overlay */,
+				3DAFF91C19F6D8A1002605AE /* Locations */,
+				3DAFF91D19F6D8AD002605AE /* Controller */,
+				3DAFF91E19F6D8C0002605AE /* Images */,
 				3D368D0019C5EC4F00D043AD /* Images.xcassets */,
 				3D551AB319AB82D10082C393 /* Supporting Files */,
 			);
@@ -136,6 +157,57 @@
 				3D551ACE19AB82D10082C393 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3DAFF91B19F6D894002605AE /* Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				3D6CCA7D19E2DD850049C4BE /* OutlineOverlay.h */,
+				3D6CCA7E19E2DD850049C4BE /* OutlineOverlay.m */,
+				3D793A2519E87C9200BBAD68 /* OutlineOverlayRenderer.h */,
+				3D793A2619E87C9200BBAD68 /* OutlineOverlayRenderer.m */,
+			);
+			name = Overlay;
+			sourceTree = "<group>";
+		};
+		3DAFF91C19F6D8A1002605AE /* Locations */ = {
+			isa = PBXGroup;
+			children = (
+				3D2F267919D8C96200529954 /* Location.h */,
+				3D2F267A19D8C96200529954 /* Location.m */,
+				3D66EA8019CF132700432B20 /* LocationStore.h */,
+				3D66EA8119CF132700432B20 /* LocationStore.m */,
+			);
+			name = Locations;
+			sourceTree = "<group>";
+		};
+		3DAFF91D19F6D8AD002605AE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3DF32E0E19FC22CB005AEA8B /* ExtrasViewController.h */,
+				3DF32E0F19FC22CB005AEA8B /* ExtrasViewController.m */,
+				3D0F690E19FDE12D0080DC35 /* ExtrasViewController.xib */,
+				3D551AD919AB83E40082C393 /* HomeViewController.h */,
+				3D551ADA19AB83E40082C393 /* HomeViewController.m */,
+				3DD81F0319B68BAA00794B17 /* HomeViewController.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3DAFF91E19F6D8C0002605AE /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3D0F691419FDE2420080DC35 /* procrastinate.png */,
+				3D0F691219FDE2290080DC35 /* quizlet.png */,
+				3D0F690C19FDDCE90080DC35 /* outline@2x.png */,
+				3DF32E1519FC3814005AEA8B /* compass@2x.png */,
+				3DD04DED19D62C3D00F22A61 /* Circle.png */,
+				3D8D6E4519D6488C00A31C10 /* Circle2.png */,
+				3D8D6E4719D649F900A31C10 /* Circle3@2x.png */,
+				3D4E9FE819EEA6D400B75FCF /* outline.png */,
+				3D0C6FE319FC1D9B0060C70C /* mapoutline2.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,7 +293,17 @@
 			files = (
 				3D368D0119C5EC4F00D043AD /* Images.xcassets in Resources */,
 				3D368CBD19C5E7F400D043AD /* LaunchScreen.xib in Resources */,
+				3D0F691519FDE2420080DC35 /* procrastinate.png in Resources */,
+				3D0C6FE419FC1D9B0060C70C /* mapoutline2.png in Resources */,
+				3D0F690F19FDE12D0080DC35 /* ExtrasViewController.xib in Resources */,
 				3DD81F0419B68BAA00794B17 /* HomeViewController.xib in Resources */,
+				3DD04DEE19D62C3D00F22A61 /* Circle.png in Resources */,
+				3D0F690D19FDDCE90080DC35 /* outline@2x.png in Resources */,
+				3D8D6E4619D6488C00A31C10 /* Circle2.png in Resources */,
+				3D0F691319FDE2290080DC35 /* quizlet.png in Resources */,
+				3D4E9FE919EEA6D400B75FCF /* outline.png in Resources */,
+				3D8D6E4819D649F900A31C10 /* Circle3@2x.png in Resources */,
+				3DF32E1619FC3814005AEA8B /* compass@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,12 +321,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D8FDCCD19C4FD3F0046FCD6 /* SwitchButton.m in Sources */,
+				3D793A2719E87C9200BBAD68 /* OutlineOverlayRenderer.m in Sources */,
+				3D2F267B19D8C96200529954 /* Location.m in Sources */,
 				3D551AB919AB82D10082C393 /* AppDelegate.m in Sources */,
 				3D66EA8219CF132700432B20 /* LocationStore.m in Sources */,
+				3D6CCA7F19E2DD850049C4BE /* OutlineOverlay.m in Sources */,
 				3D551AB619AB82D10082C393 /* main.m in Sources */,
-				3D551ADE19AB83F00082C393 /* LocationsSliderView.m in Sources */,
 				3D551ADB19AB83E40082C393 /* HomeViewController.m in Sources */,
+				3DF32E1019FC22CB005AEA8B /* ExtrasViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,10 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HomeViewController.h"
-
-@interface AppDelegate ()
-
-@end
+#import "ExtrasViewController.h"
 
 @implementation AppDelegate
             
@@ -21,8 +18,15 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     HomeViewController *hvc = [[HomeViewController alloc] init];
-    hvc.view.frame = self.window.frame;
-    self.window.rootViewController = hvc;
+    ExtrasViewController *evc = [[ExtrasViewController alloc] init];
+    
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    tabBarController.viewControllers = @[hvc, evc];
+    [tabBarController setSelectedIndex:0];
+    tabBarController.tabBar.tintColor = [UIColor whiteColor];
+    tabBarController.tabBar.barTintColor = [UIColor colorWithRed:74.0/255.0 green:116.0/255.0 blue:184.0/255 alpha:1.0];
+    
+    self.window.rootViewController = tabBarController;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

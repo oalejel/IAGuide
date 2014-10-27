@@ -8,32 +8,75 @@
 
 #import "LocationStore.h"
 
+
 @interface LocationStore ()
 
-@property (nonatomic, strong) NSArray *privateItems;
-@property (nonatomic, strong) NSArray *allItems;
+@property (nonatomic, strong) NSMutableDictionary *privateItems;
 
 @end
 
 @implementation LocationStore
 
-
-
-+(NSArray *)sharedStore
++ (instancetype)sharedStore
 {
-    return [[self alloc] initPrivate];
+    static LocationStore *sharedStore;
+    
+    if (!sharedStore) {
+        sharedStore = [[self alloc] initPrivate];
+    }
+    
+    return sharedStore;
 }
 
 - (instancetype)init
 {
-    @throw [NSException exceptionWithName:@"incorrect initializer" reason:@"dont use init" userInfo:nil];
+    @throw [NSException exceptionWithName:@"incorrect initializer"
+                                   reason:@"dont use init"
+                                 userInfo:nil];
 }
 
-- (void)initPrivate
+- (instancetype)initPrivate
 {
     self = [super init];
     
-    self.privateItems = [[NSArray alloc] init];
+    if (self) {
+        _privateItems = [self setupDictionary];
+    }
+    
+    return self;
+}
+
+- (NSDictionary *)allItems
+{
+    return [self.privateItems copy];
+}
+
+- (NSMutableDictionary *)setupDictionary
+{
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
+    
+    //dictionary that only holds data
+    NSDictionary *itemDictionary = @{ @101: @[@42.603764, @-83.225914],
+                                             @102: @[@42.603641, @-83.225912],
+                                      @110: @[@42.603644, @-83.226446]
+                                      };
+    
+    NSLog(@"dictionary looks like: %@", itemDictionary);
+    
+    for (NSNumber *roomNumber in itemDictionary) {
+        NSArray *coordinateArray = itemDictionary[roomNumber];
+        NSString *numberString = [NSString stringWithFormat:@"Room %@", roomNumber.stringValue];
+        CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake([coordinateArray[0] doubleValue], [coordinateArray[1] doubleValue]);
+        Location *location = [[Location alloc] initWithTitle:numberString Coordinate:coordinate];
+        dictionary[roomNumber] = location;
+    }
+    
+    return dictionary;
+}
+
+- (Location *)locationForRoomNumber:(NSNumber *)roomNumber
+{
+    return [self.privateItems objectForKey:roomNumber];
 }
 
 @end

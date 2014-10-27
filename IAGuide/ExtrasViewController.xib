@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExtrasViewController">
+            <connections>
+                <outlet property="view" destination="Dwd-up-N1j" id="bB0-iw-Cu1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Dwd-up-N1j">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IA Student Essentials" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3T-Qx-Kc2">
+                    <rect key="frame" x="207" y="349" width="163" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6gm-qO-6Up">
+                    <rect key="frame" x="0.0" y="385" width="600" height="114"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="procrastinate.png" translatesAutoresizingMaskIntoConstraints="NO" id="hZY-p9-ND5">
+                            <rect key="frame" x="8" y="7" width="100" height="100"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="hZY-p9-ND5" secondAttribute="height" multiplier="1:1" id="q3V-Si-1cx"/>
+                            </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="n3X-QH-HdR" appends="YES" id="Dcc-i6-Xed"/>
+                            </connections>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quizlet.png" translatesAutoresizingMaskIntoConstraints="NO" id="vlh-2P-PZR">
+                            <rect key="frame" x="492" y="7" width="100" height="100"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="vlh-2P-PZR" secondAttribute="height" multiplier="1:1" id="6Ku-iD-K1m"/>
+                            </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="1fx-RD-oDz" appends="YES" id="wBf-kK-MGz"/>
+                            </connections>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="vlh-2P-PZR" secondAttribute="bottom" constant="7" id="4g7-do-ZNF">
+                            <variation key="widthClass=compact" constant="6"/>
+                        </constraint>
+                        <constraint firstAttribute="height" constant="114" id="FIQ-kF-7bM">
+                            <variation key="widthClass=compact" constant="90"/>
+                        </constraint>
+                        <constraint firstAttribute="bottom" secondItem="hZY-p9-ND5" secondAttribute="bottom" constant="7" id="HbG-F7-TjG">
+                            <variation key="widthClass=compact" constant="6"/>
+                        </constraint>
+                        <constraint firstItem="hZY-p9-ND5" firstAttribute="top" secondItem="6gm-qO-6Up" secondAttribute="top" constant="7" id="aZx-9T-9tI"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vlh-2P-PZR" secondAttribute="bottom" constant="7" id="d9o-10-cfz">
+                            <variation key="widthClass=compact" constant="6"/>
+                        </constraint>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hZY-p9-ND5" secondAttribute="bottom" constant="7" id="dwL-kd-NRL">
+                            <variation key="widthClass=compact" constant="6"/>
+                        </constraint>
+                        <constraint firstAttribute="trailing" secondItem="vlh-2P-PZR" secondAttribute="trailing" constant="8" id="hr1-tO-uwd"/>
+                        <constraint firstItem="hZY-p9-ND5" firstAttribute="leading" secondItem="6gm-qO-6Up" secondAttribute="leading" constant="8" id="pYc-Nf-RWk"/>
+                        <constraint firstItem="vlh-2P-PZR" firstAttribute="top" secondItem="6gm-qO-6Up" secondAttribute="top" constant="7" id="r2Q-OQ-3S1"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed By omar al-ejel" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXh-kN-5b6">
+                    <rect key="frame" x="199" y="109" width="202" height="61"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="61" id="P2c-D5-fkA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="6gm-qO-6Up" secondAttribute="trailing" id="4AD-Dj-tIr"/>
+                <constraint firstAttribute="centerX" secondItem="R3T-Qx-Kc2" secondAttribute="centerX" constant="11.5" id="5Ak-RZ-UPg"/>
+                <constraint firstAttribute="bottom" secondItem="6gm-qO-6Up" secondAttribute="bottom" constant="101" id="Jgf-0V-Yav">
+                    <variation key="widthClass=compact" constant="125"/>
+                </constraint>
+                <constraint firstItem="dXh-kN-5b6" firstAttribute="top" secondItem="Dwd-up-N1j" secondAttribute="top" constant="109" id="KL4-GS-NTs"/>
+                <constraint firstAttribute="centerX" secondItem="dXh-kN-5b6" secondAttribute="centerX" id="KNe-Z9-bfr"/>
+                <constraint firstItem="6gm-qO-6Up" firstAttribute="leading" secondItem="Dwd-up-N1j" secondAttribute="leading" id="XGb-OX-QGs"/>
+                <constraint firstItem="6gm-qO-6Up" firstAttribute="top" secondItem="R3T-Qx-Kc2" secondAttribute="bottom" constant="15" id="kjb-Ns-E6e"/>
+            </constraints>
+            <point key="canvasLocation" x="279" y="355"/>
+        </view>
+        <tapGestureRecognizer id="1fx-RD-oDz"/>
+        <tapGestureRecognizer id="n3X-QH-HdR"/>
+    </objects>
+    <resources>
+        <image name="procrastinate.png" width="175" height="175"/>
+        <image name="quizlet.png" width="175" height="175"/>
+    </resources>
+</document>

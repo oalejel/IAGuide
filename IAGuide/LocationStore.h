@@ -7,9 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Location.h"
 
 @interface LocationStore : NSObject
 
-+(NSArray *)sharedStore;
+@property (nonatomic, readonly) NSDictionary *allItems;
+
++ (instancetype)sharedStore;
+
+- (Location *)locationForRoomNumber:(NSNumber *)roomNumber;
 
 @end
