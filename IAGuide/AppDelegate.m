@@ -7,52 +7,69 @@
 //
 
 #import "AppDelegate.h"
-#import "HomeViewController.h"
+#import "MapViewController.h"
 #import "ExtrasViewController.h"
+#import "GuideViewController.h"
+#import "OlympicsViewController.h"
+#import "IAGuide-Swift.h"           //import all swift
+
+NSDateFormatter *dateFormatter = nil;
+NSDictionary *scheduleTitles = nil;
 
 @implementation AppDelegate
-            
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    HomeViewController *hvc = [[HomeViewController alloc] init];
+    //global variable used by many classes - keep this early i
+    dateFormatter = [[NSDateFormatter alloc] init];
+    
+    //set the root view controller as the startupcontroller
+    GuideViewController *gvc = [[GuideViewController alloc] init];
+    MapViewController *mvc = [[MapViewController alloc] init];
+    OlympicsViewController *ovc = [[OlympicsViewController alloc] init];
     ExtrasViewController *evc = [[ExtrasViewController alloc] init];
     
-    UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    tabBarController.viewControllers = @[hvc, evc];
-    [tabBarController setSelectedIndex:0];
-    tabBarController.tabBar.tintColor = [UIColor whiteColor];
-    tabBarController.tabBar.barTintColor = [UIColor colorWithRed:74.0/255.0 green:116.0/255.0 blue:184.0/255 alpha:1.0];
+    UITabBarController *tbc = [self setupApplicationTabBarController];
+    tbc.viewControllers = @[gvc, mvc, ovc, evc];
+    tbc.selectedIndex = 0;
+    for (UITabBarItem *item in tbc.tabBar.items) {
+        item.image = [item.image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    }
     
-    self.window.rootViewController = tabBarController;
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+        
+    //still working on this
+    scheduleTitles = @{
+                        @"L1_Normal":@[@""],
+                        @"L2_Normal":@[ @"" ],
+                        @"L1_Late":@[],
+                        @"L2_Late":@[],
+                        @"L1_":@[],
+                        };
     
+    self.window.rootViewController = tbc;
+    
+    //initialize window default color, make it visible, and then return yes
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-}
+//create & setup the tab bar controller for the app
+- (UITabBarController *)setupApplicationTabBarController
+    {
+        UITabBarController *tabBarController = [[UITabBarController alloc] init];
+        tabBarController.tabBar.tintColor = [UIColor yellowColor]; //selected images are yellow
 
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
+        [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil] forState:UIControlStateNormal];//unselected text is white
+        [UITabBarItem.appearance setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor yellowColor], NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];//selected text is yellow
+        tabBarController.tabBar.translucent = NO;
+        //give tabbar the custom blue color
+        tabBarController.tabBar.barTintColor = [UIColor colorWithRed:43.0/255.0 green:132.0/255.0 blue:211.0/255 alpha:1.0];
 
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        return tabBarController;
 }
 
 @end

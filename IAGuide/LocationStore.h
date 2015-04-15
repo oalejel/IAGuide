@@ -7,14 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Location.h"
+
+@class Location;//swift location file
 
 @interface LocationStore : NSObject
 
 @property (nonatomic, readonly) NSDictionary *allItems;
 
-+ (instancetype)sharedStore;
-
++ (instancetype)sharedStore; //returns the same instance all the time
 - (Location *)locationForRoomNumber:(NSNumber *)roomNumber;
+- (void)clearDataForMemoryWarning;
 
 @end

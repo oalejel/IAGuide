@@ -7,6 +7,17 @@
 //
 
 #import "ExtrasViewController.h"
+#import <MapKit/MapKit.h>
+#import <MessageUI/MessageUI.h>
+
+@interface ExtrasViewController () <MFMailComposeViewControllerDelegate, UINavigationControllerDelegate>
+
+@property (nonatomic) BOOL viewAppearedBefore;
+@property (nonatomic) NSArray *locations;
+@property (nonatomic) NSDictionary *launchOptions;
+@property (nonatomic) NSURL *websiteurl;
+
+@end
 
 @implementation ExtrasViewController
 
@@ -14,16 +25,32 @@
 {
     self = [super init];
     if (self) {
-        self.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMore tag:1];
+        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"More" image:[UIImage imageNamed:@"more"] selectedImage:[UIImage imageNamed:@"more_selected"]];
+        self.websiteurl = [NSURL URLWithString:@"http://www.iatoday.org/international/index.aspx"];
     }
     return self;
 }
 
-- (void)viewDidLoad
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidLoad];
+    [super viewWillAppear:animated];
     
-    [self setBackgroundGradient];
+    if (!self.viewAppearedBefore) {
+        [self setBackgroundGradient];
+        self.viewAppearedBefore = true;
+    }
+    
+    // Create an MKMapItem to pass to the Maps app
+    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(42.603373, -83.226150);
+    MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:coordinate
+                                                   addressDictionary:nil];
+    MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:placemark];
+    [mapItem setName:@"International Academy Central"];
+
+    // Get the "Current User Location" MKMapItem
+    MKMapItem *currentLocationMapItem = [MKMapItem mapItemForCurrentLocation];
+    self.locations = @[currentLocationMapItem, mapItem];
+    self.launchOptions = @{MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving};
 }
 
 - (void)setBackgroundGradient
@@ -32,11 +59,46 @@
     CAGradientLayer *gradientLayer = [CAGradientLayer layer];
     gradientLayer.frame = self.view.frame;
     
-    UIColor *firstColor = [UIColor colorWithRed:147.0/255 green:200.0/255 blue:252.0/255 alpha:1.0];
-    UIColor *secondColor = [UIColor colorWithRed:102.0/255 green:94.0/255 blue:190.0/255 alpha:1.0];
+    UIColor *firstColor = [UIColor colorWithRed:105.0/255 green:220.0/255 blue:255.0/255 alpha:1.0];
+    UIColor *secondColor = [UIColor colorWithRed:0.0 green:0.17 blue:0.9 alpha:1.0];
     gradientLayer.colors = [NSArray arrayWithObjects:(id)firstColor.CGColor, (id)secondColor.CGColor, nil];
     
     [self.view.layer insertSublayer:gradientLayer atIndex:0];
+}
+- (IBAction)openHomeWebsite:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:self.websiteurl];
+}
+
+- (IBAction)openMapApp:(id)sender
+{
+    Class mapItemClass = [MKMapItem class]; //the following if is important for ios 6 compatibility
+    if (mapItemClass && [mapItemClass respondsToSelector:@selector(openMapsWithItems:launchOptions:)])
+    {
+        
+        // Pass the current location and destination map items to the Maps app
+        // Set the direction mode in the launchOptions dictionary
+        [MKMapItem openMapsWithItems:self.locations
+                       launchOptions:self.launchOptions];
+    }
+}
+
+- (IBAction)feedbackButtonPressed:(id)sender
+{
+    if ([MFMailComposeViewController canSendMail]) {
+        MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
+        mailViewController.mailComposeDelegate = self;
+        [mailViewController setSubject:@"Feedback for IA Guide"];
+        [mailViewController setTitle:@"Send Feedback"];
+        [mailViewController setToRecipients:@[@"omalsecondary@gmail.com"]];
+        
+        [self presentViewController:mailViewController animated:YES completion:nil];
+    }
+}
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    [[controller presentingViewController] dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ClassBlockViewContainer">
+            <rect key="frame" x="0.0" y="0.0" width="310" height="146"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUq-Tx-tVD">
+                    <rect key="frame" x="0.0" y="0.0" width="27" height="145"/>
+                    <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="27" id="IVk-xk-Ahe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Superclarendon-Bold" family="Superclarendon" pointSize="21"/>
+                    <state key="normal" title="&lt;">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="pageButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="Xd7-t8-DDk"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFV-VS-sqc">
+                    <rect key="frame" x="283" y="1" width="27" height="145"/>
+                    <color key="backgroundColor" white="0.7184103261" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="27" id="eYU-4N-K3v"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Superclarendon-Bold" family="Superclarendon" pointSize="21"/>
+                    <state key="normal" title="&gt;">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="pageButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="5Qg-Wc-av7"/>
+                    </connections>
+                </button>
+                <pageControl contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="h8Z-Bd-hOT">
+                    <rect key="frame" x="144" y="116" width="23" height="37"/>
+                    <color key="pageIndicatorTintColor" white="0.7184103261" alpha="0.73999999999999999" colorSpace="calibratedWhite"/>
+                    <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                </pageControl>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mG5-Da-Wy2">
+                    <rect key="frame" x="27" y="0.0" width="256" height="125"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="h8Z-Bd-hOT" secondAttribute="bottom" constant="-7" id="AyR-jG-Nys"/>
+                <constraint firstItem="mG5-Da-Wy2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="K6u-CV-RhZ"/>
+                <constraint firstItem="cFV-VS-sqc" firstAttribute="leading" secondItem="mG5-Da-Wy2" secondAttribute="trailing" id="LQl-eO-REq"/>
+                <constraint firstItem="mG5-Da-Wy2" firstAttribute="leading" secondItem="lUq-Tx-tVD" secondAttribute="trailing" id="M2O-jd-LFl"/>
+                <constraint firstAttribute="trailing" secondItem="cFV-VS-sqc" secondAttribute="trailing" id="VTQ-Wk-lMl"/>
+                <constraint firstItem="cFV-VS-sqc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="1" id="bLb-3W-VcH"/>
+                <constraint firstAttribute="bottom" secondItem="lUq-Tx-tVD" secondAttribute="bottom" constant="1" id="cFD-fa-TwI"/>
+                <constraint firstItem="h8Z-Bd-hOT" firstAttribute="top" secondItem="mG5-Da-Wy2" secondAttribute="bottom" constant="-9" id="dWo-se-EyY"/>
+                <constraint firstAttribute="centerX" secondItem="h8Z-Bd-hOT" secondAttribute="centerX" constant="-0.5" id="liH-E9-ZaW"/>
+                <constraint firstItem="lUq-Tx-tVD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="nQg-v0-hu4"/>
+                <constraint firstAttribute="bottom" secondItem="cFV-VS-sqc" secondAttribute="bottom" id="nvZ-jv-KLC"/>
+                <constraint firstItem="lUq-Tx-tVD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yao-Mj-f0J"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="pageControl" destination="h8Z-Bd-hOT" id="ZCC-82-btn"/>
+                <outlet property="scrollView" destination="mG5-Da-Wy2" id="RmQ-z3-SaH"/>
+            </connections>
+        </view>
+    </objects>
+</document>

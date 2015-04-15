@@ -18,16 +18,15 @@
     
     CGContextAddRect(context, aRect);
     
-    UIImage *image = [UIImage imageNamed:@"outline@2x"];
+    UIImage *image = [UIImage imageNamed:@"mapoutline.png"];
     CGImageRef ref = image.CGImage;
     
     //flip coordinate system and adjust angle
-    CGContextTranslateCTM(context, aRect.size.width - 3, 0);
+    CGContextTranslateCTM(context, aRect.size.width - 5, 0);
     CGContextScaleCTM(context, -1, 1);
     CGContextRotateCTM(context, 1 * (M_PI/180));
     
     CGContextDrawImage(context, aRect, ref);
-
 }
 
 @end

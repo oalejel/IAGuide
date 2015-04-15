@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C81f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InfoViewController">
+            <connections>
+                <outlet property="tableView" destination="hHI-Oq-Acr" id="Dgc-tJ-QF8"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="C3M-2V-4Fn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="hHI-Oq-Acr">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="hHI-Oq-Acr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Oe8-3T-LEO"/>
+                <constraint firstAttribute="bottom" secondItem="hHI-Oq-Acr" secondAttribute="bottom" id="Zbt-Jp-Rkf"/>
+                <constraint firstAttribute="trailing" secondItem="hHI-Oq-Acr" secondAttribute="trailing" id="ce1-4Y-EOI"/>
+                <constraint firstItem="hHI-Oq-Acr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nkZ-ck-8hd"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
