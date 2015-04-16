@@ -138,20 +138,20 @@
             break;
     }
     
-    //add 1 to the index since secondlunch is located one index away from the lunch1 schedule. It also cant be a hlaf day because there is a universal half day schedule
+    //add 1 to the index since secondlunch is located one index away from the lunch1 schedule. It also cant be a half day because there is a universal half day schedule
     if (!firstLunch && typeOfDay != Half && typeOfDay != NoSchool) {
         indexForDayType++;
     }
     
-    //compare # of seconds in day, if more, then look at previous index for current class
+    //compare # of seconds in day, if greater, then look at previous index for current class
     int currentIndex = 0;
     for (NSNumber *number in (NSArray *)self.schedulesArray[indexForDayType]) {
         int minutes = number.intValue % 100;
         int hours = (number.intValue - minutes) / 100;
         int totalMinutes = minutes + (hours * 60);
         double totalSeconds = totalMinutes * 60;
-        
-        if (now_TotalSeconds < totalSeconds) {
+        //need the <= since we are only comparing hours and minutes . if last minute of day, then accept that too, but
+        if (now_TotalSeconds <= totalSeconds) {
             //create a timer for the next change in class
             int timeInterval = totalSeconds - now_TotalSeconds;
             NSTimer *timer;
@@ -175,6 +175,21 @@
             [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
             
             return currentIndex - 1;
+        } else if (number.intValue == 2359) {
+            //sorry future reader for the verbosity here, i promise it wont happen again ;)
+            int timeInterval = [(NSNumber *)[(NSArray *)self.schedulesArray[indexForDayType] firstObject] intValue] + 1.0;
+            NSNumber *labelIndex = [NSNumber numberWithInt:currentIndex];
+            NSNumber *lunchViewIndex;
+            if (firstLunch) {
+                lunchViewIndex = @0;
+            } else {
+                lunchViewIndex = @1;
+            }
+            NSArray *arguments = @[labelIndex, lunchViewIndex];
+            NSTimer *tomorrowClassTimer = [NSTimer timerWithTimeInterval:timeInterval target:self selector:@selector(notifyDelegate:) userInfo:arguments repeats:NO];
+            [[NSRunLoop mainRunLoop] addTimer:tomorrowClassTimer forMode:NSDefaultRunLoopMode];
+            
+            return 0;
         }
         
         currentIndex++;

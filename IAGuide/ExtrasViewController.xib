@@ -39,7 +39,7 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed By Omar Al-ejel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXh-kN-5b6">
-                    <rect key="frame" x="197" y="168" width="207" height="46"/>
+                    <rect key="frame" x="197" y="119" width="207" height="46"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="46" id="P2c-D5-fkA"/>
                     </constraints>
@@ -47,48 +47,6 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8F-Fs-A5K">
-                    <rect key="frame" x="171" y="266" width="258" height="40"/>
-                    <color key="backgroundColor" white="0.7184103261" alpha="0.62" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="258" id="LwI-dD-5ex"/>
-                        <constraint firstAttribute="height" constant="40" id="qHP-7n-H9U"/>
-                    </constraints>
-                    <state key="normal" title="Get Driving Directions">
-                        <color key="titleColor" red="0.14582487059509119" green="0.32856206293706175" blue="0.82684337721102408" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="openMapApp:" destination="-1" eventType="touchUpInside" id="zJd-rC-eTG"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoJ-Gb-Gmv">
-                    <rect key="frame" x="171" y="329" width="258" height="40"/>
-                    <color key="backgroundColor" white="0.7184103261" alpha="0.62" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="258" id="cjd-GC-gWV"/>
-                        <constraint firstAttribute="height" constant="40" id="tqj-MQ-F4V"/>
-                    </constraints>
-                    <state key="normal" title="Open &quot;IAToday&quot; in Safari">
-                        <color key="titleColor" red="0.14582487059509119" green="0.32856206293706175" blue="0.82684337721102408" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="openHomeWebsite:" destination="-1" eventType="touchUpInside" id="MfN-nb-hbp"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsW-Gq-YR1">
-                    <rect key="frame" x="171" y="392" width="258" height="40"/>
-                    <color key="backgroundColor" white="0.7184103261" alpha="0.62" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="B4o-Jj-v4c"/>
-                        <constraint firstAttribute="width" constant="258" id="dBl-g7-43L"/>
-                    </constraints>
-                    <state key="normal" title="Send Feedback/Suggestions">
-                        <color key="titleColor" red="0.14582487059999999" green="0.32856206290000001" blue="0.82684337720000001" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="feedbackButtonPressed:" destination="-1" eventType="touchUpInside" id="cXI-4T-ccX"/>
-                    </connections>
-                </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swift.png" translatesAutoresizingMaskIntoConstraints="NO" id="4WT-jv-hea">
                     <rect key="frame" x="317" y="542" width="50" height="50"/>
                     <constraints>
@@ -109,7 +67,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class of 2017" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6aY-eB-33Z">
-                    <rect key="frame" x="197" y="193" width="207" height="44"/>
+                    <rect key="frame" x="197" y="144" width="207" height="44"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="207" id="Eom-Ps-nLA"/>
                         <constraint firstAttribute="height" constant="44" id="ZDN-cS-foj"/>
@@ -118,6 +76,62 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8F-Fs-A5K">
+                    <rect key="frame" x="171" y="190" width="258" height="40"/>
+                    <color key="backgroundColor" white="0.7184103261" alpha="0.62" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="258" id="LwI-dD-5ex"/>
+                        <constraint firstAttribute="height" constant="40" id="qHP-7n-H9U"/>
+                    </constraints>
+                    <state key="normal" title="Get Driving Directions">
+                        <color key="titleColor" red="0.14582487059509119" green="0.32856206293706175" blue="0.82684337721102408" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="openMapApp:" destination="-1" eventType="touchUpInside" id="zJd-rC-eTG"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoJ-Gb-Gmv">
+                    <rect key="frame" x="171" y="253" width="258" height="40"/>
+                    <color key="backgroundColor" white="0.7184103261" alpha="0.62" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="258" id="cjd-GC-gWV"/>
+                        <constraint firstAttribute="height" constant="40" id="tqj-MQ-F4V"/>
+                    </constraints>
+                    <state key="normal" title="Open &quot;IAToday&quot; in Safari">
+                        <color key="titleColor" red="0.14582487059509119" green="0.32856206293706175" blue="0.82684337721102408" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="openHomeWebsite:" destination="-1" eventType="touchUpInside" id="MfN-nb-hbp"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tmb-dM-r7m">
+                    <rect key="frame" x="171" y="379" width="258" height="40"/>
+                    <color key="backgroundColor" white="0.7184103261" alpha="0.62" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="eD7-oE-spV"/>
+                        <constraint firstAttribute="width" constant="258" id="ns1-3y-q72"/>
+                    </constraints>
+                    <state key="normal" title="View Source on Github">
+                        <color key="titleColor" red="0.14582487059999999" green="0.32856206290000001" blue="0.82684337720000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="viewSourcePressed:" destination="-1" eventType="touchUpInside" id="nUI-hA-MQo"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsW-Gq-YR1">
+                    <rect key="frame" x="171" y="316" width="258" height="40"/>
+                    <color key="backgroundColor" white="0.7184103261" alpha="0.62" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="B4o-Jj-v4c"/>
+                        <constraint firstAttribute="width" constant="258" id="dBl-g7-43L"/>
+                    </constraints>
+                    <state key="normal" title="Send Feedback/Suggestions">
+                        <color key="titleColor" red="0.14582487059999999" green="0.32856206290000001" blue="0.82684337720000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="feedbackButtonPressed:" destination="-1" eventType="touchUpInside" id="NcT-2F-C5z"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
@@ -125,18 +139,19 @@
                 <constraint firstAttribute="centerX" secondItem="cLL-r6-g2W" secondAttribute="centerX" constant="0.5" id="0Ta-1E-btv"/>
                 <constraint firstAttribute="trailing" secondItem="VK0-8a-VLn" secondAttribute="trailing" id="2Yt-Bq-ktf"/>
                 <constraint firstItem="VK0-8a-VLn" firstAttribute="top" secondItem="Dwd-up-N1j" secondAttribute="top" id="2ft-3G-2H1"/>
-                <constraint firstItem="N4R-w2-jFn" firstAttribute="top" relation="greaterThanOrEqual" secondItem="MsW-Gq-YR1" secondAttribute="bottom" constant="20" id="3KZ-33-iME"/>
                 <constraint firstItem="cLL-r6-g2W" firstAttribute="centerY" secondItem="4WT-jv-hea" secondAttribute="centerY" constant="-0.5" id="6bB-R8-Oyn"/>
                 <constraint firstItem="dXh-kN-5b6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="VK0-8a-VLn" secondAttribute="bottom" constant="8" id="8Br-cs-e1q"/>
+                <constraint firstItem="4WT-jv-hea" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Tmb-dM-r7m" secondAttribute="bottom" constant="8" id="Dcg-rx-iGb"/>
                 <constraint firstItem="h8F-Fs-A5K" firstAttribute="centerX" secondItem="QoJ-Gb-Gmv" secondAttribute="centerX" id="GZ2-f7-lWH"/>
-                <constraint firstItem="h8F-Fs-A5K" firstAttribute="top" secondItem="6aY-eB-33Z" secondAttribute="bottom" constant="29" id="J8e-9H-pxQ"/>
+                <constraint firstItem="h8F-Fs-A5K" firstAttribute="top" secondItem="6aY-eB-33Z" secondAttribute="bottom" constant="2" id="J8e-9H-pxQ"/>
                 <constraint firstAttribute="centerX" secondItem="dXh-kN-5b6" secondAttribute="centerX" id="KNe-Z9-bfr"/>
                 <constraint firstItem="N4R-w2-jFn" firstAttribute="width" secondItem="4WT-jv-hea" secondAttribute="width" id="LhG-Vf-tT5"/>
                 <constraint firstAttribute="centerX" secondItem="6aY-eB-33Z" secondAttribute="centerX" constant="-0.5" id="V7i-CD-thx"/>
                 <constraint firstItem="6aY-eB-33Z" firstAttribute="top" secondItem="dXh-kN-5b6" secondAttribute="bottom" constant="-21" id="W3z-LJ-oou"/>
-                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="MsW-Gq-YR1" secondAttribute="bottom" constant="8" id="WoM-iP-Mn7"/>
                 <constraint firstAttribute="bottom" secondItem="4WT-jv-hea" secondAttribute="bottom" constant="8" id="YFr-T5-O5u"/>
-                <constraint firstAttribute="centerY" secondItem="h8F-Fs-A5K" secondAttribute="centerY" constant="14" id="dsy-fA-AEH"/>
+                <constraint firstItem="Tmb-dM-r7m" firstAttribute="top" secondItem="MsW-Gq-YR1" secondAttribute="bottom" constant="23" id="ako-YB-qkZ"/>
+                <constraint firstItem="Tmb-dM-r7m" firstAttribute="centerX" secondItem="MsW-Gq-YR1" secondAttribute="centerX" id="byJ-sr-4NQ"/>
+                <constraint firstAttribute="centerY" secondItem="h8F-Fs-A5K" secondAttribute="centerY" constant="90" id="dsy-fA-AEH"/>
                 <constraint firstItem="QoJ-Gb-Gmv" firstAttribute="centerX" secondItem="MsW-Gq-YR1" secondAttribute="centerX" id="iRH-eN-IHM"/>
                 <constraint firstItem="N4R-w2-jFn" firstAttribute="width" secondItem="N4R-w2-jFn" secondAttribute="height" multiplier="1:1" constant="-9" id="jNn-fX-4mn"/>
                 <constraint firstAttribute="centerX" secondItem="h8F-Fs-A5K" secondAttribute="centerX" id="kpI-wP-r52"/>

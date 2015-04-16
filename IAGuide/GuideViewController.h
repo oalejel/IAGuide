@@ -10,4 +10,6 @@
 
 @interface GuideViewController : UIViewController
 
+- (void)prepareForNewDay;
+
 @end

@@ -92,51 +92,98 @@
     self.pageControl.currentPage = 0;
     [(UIButton *)[self viewWithTag:2] setEnabled:NO];//can only move right in beginning
     
-    ClassBlockView *view1;
-    ClassBlockView *view2;
+    NSString *titleString_1 = @"Lunch 1";
+    NSString *blockString1_1 = @"7:45";
+    NSString *blockString2_1 = @"9:15";
+    NSString *blockString3_1 = @"9:25";
+    NSString *blockString4_1 = @"10:55";
+    NSString *blockString5_1 = @"11:30";
+    NSString *blockString6_1 = @"1:05";
     
+    NSString *titleString_2 = @"Lunch 2";// since xib has "First Lunch Schedule"
+    NSString *blockString1_2 = @"7:45";
+    NSString *blockString2_2 = @"9:15";
+    NSString *blockString3_2 = @"9:25";
+    NSString *blockString4_2 = @"11:00";
+    NSString *blockString5_2 = @"12:30";
+    NSString *blockString6_2 = @"1:05";
     
-    NSMutableArray *lunch_1_Titles = [@[@"First Lunch Schedule", @"Block 1", @"Passing", @"Block 2", @"Lunch", @"Block 3", @"Block 4", @" 7:45|10:55", @" 9:15|11:30", @"9:25|1:05"] mutableCopy];
-    
-    //if half day, just make one
     if ([[TodayManager sharedClassManager] halfDay]) {
-        NSMutableArray *halfDayTitles = [lunch_1_Titles mutableCopy];
+        titleString_1 = @"Half Day";
+        //only need one sched view
+        blockString1_1 = @"7:45";
+        blockString2_1 = @"8:45";
+        blockString3_1 = @"8:50";
+        blockString4_1 = @"(none)";
+        blockString5_1 = @"9:55";
+        blockString6_1 = @"11:00";
+    } else if ([[TodayManager sharedClassManager]lateStart]) {
+        //make titles for view2 based on view1 titles
+        titleString_1 = @"Late Start Lunch 1";
+        titleString_2 = @"Late Start Lunch 2";
         
-        halfDayTitles[0] = @"Half Day Schedule";
-        halfDayTitles[4] = @" ";//since there is no lunch on half days
-        halfDayTitles[7] = @"7:45|    ";
-        halfDayTitles[8] = @"8:45|9:55";
-        halfDayTitles[9] = @" 8:50|11:00";
-        view1 = [[ClassBlockView alloc] initWithTitles:halfDayTitles];
+        blockString1_1 = @"9:30";
+        blockString2_1 = @"10:35";
+        blockString3_1 = @"10:40";
+        blockString4_1 = @"11:45";
+        blockString5_1 = @"12:20";
+        blockString6_1 = @"1:30";
+        
+        blockString1_2 = @"9:30";
+        blockString2_2 = @"10:35";
+        blockString3_2 = @"11:45";
+        blockString4_2 = @"11:50";
+        blockString5_2 = @"12:55";
+        blockString6_2 = @"1:30";
+    }
+    
+    ClassBlockView *view1 = [[ClassBlockView alloc] init];
+    ClassBlockView *view2 = [[ClassBlockView alloc] init];
+    
+    //the frame must have an origin x value that moves it to the right of the other view
+    view2.frame = CGRectMake(scrollerSize.width, 0, scrollerSize.width, scrollerSize.height);
+    
+    UIBezierPath *linePath = [[UIBezierPath alloc] init];
+    [linePath moveToPoint:CGPointMake(view1.frame.size.width / 2, 35)];
+    [linePath addLineToPoint:CGPointMake(view1.frame.size.width / 2, view1.frame.size.height - 13)];
+    
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.path = linePath.CGPath;
+    shapeLayer.lineWidth = 1;
+    shapeLayer.opacity = 1.0;
+    shapeLayer.opacity = true;
+    shapeLayer.strokeColor = [[UIColor darkGrayColor] CGColor];
+    
+    [view1.layer addSublayer:shapeLayer];
+    
+    CAShapeLayer *otherLayer = [CAShapeLayer layer];
+    otherLayer.path = linePath.CGPath;
+    otherLayer.lineWidth = 1;
+    otherLayer.opacity = 1.0;
+    otherLayer.opacity = true;
+    otherLayer.strokeColor = [[UIColor darkGrayColor] CGColor];
+    
+    [view2.layer addSublayer:otherLayer];
+    
+    view1.titleLabel.text = titleString_1;
+    view1.blockLabel1.text = blockString1_1;
+    view1.blockLabel2.text = blockString2_1;
+    view1.blockLabel3.text = blockString3_1;
+    view1.blockLabel4.text = blockString4_1;
+    view1.blockLabel5.text = blockString5_1;
+    view1.blockLabel6.text = blockString6_1;
+    
+    if ([[TodayManager sharedClassManager] halfDay]) {
         self.classBlockViews = @[view1];
         [self.scrollView addSubview:view1];
     } else {
-        view1 = [[ClassBlockView alloc] initWithTitles:lunch_1_Titles];
-        //make titles for view2 based on view1 titles
-        NSMutableArray *lunch_2_Titles = [lunch_1_Titles mutableCopy];
-        lunch_2_Titles[0] = @"Second Lunch Schedule";
-        NSString *reinsertString = lunch_1_Titles[5];
-        [lunch_2_Titles removeObjectAtIndex:5];
-        [lunch_2_Titles insertObject:reinsertString atIndex:4];
-        
-        if ([[TodayManager sharedClassManager] lateStart]) {
-            lunch_1_Titles[7] = @" 9:30|11:45";
-            lunch_1_Titles[8] = @"10:35|12:20";
-            lunch_1_Titles[9] = @"10:40|1:30 ";
-            
-            lunch_2_Titles[7] = @" 9:30|11:50";
-            lunch_2_Titles[8] = @"10:35|12:55";
-            lunch_2_Titles[9] = @"10:40|1:30 ";
-        } else {
-            //configure time labels for 2nd lunch
-            lunch_2_Titles[7] = @" 7:45|11:00";
-            lunch_2_Titles[8] = @" 9:15|12:30";
-            lunch_2_Titles[9] = @"9:25|1:05";
-        }
-
-        view2 = [[ClassBlockView alloc] initWithTitles:lunch_2_Titles];
-        //the frame must have an origin x value that moves it to the right of the other view
-        view2.frame = CGRectMake(scrollerSize.width, 0, scrollerSize.width, scrollerSize.height);
+        view2.titleLabel.text = titleString_2;
+        view2.blockLabel1.text = blockString1_2;
+        view2.blockLabel2.text = blockString2_2;
+        view2.blockLabel3.text = blockString3_2;
+        view2.blockLabel4.text = blockString4_2;
+        view2.blockLabel5.text = blockString5_2;
+        view2.blockLabel6.text = blockString6_2;
         
         self.classBlockViews = @[view1, view2];
         [self.scrollView addSubview:view1];
@@ -147,10 +194,11 @@
 //you can use one ibaction for two buttons as long as the buttons have special tags setup in the xib
 - (IBAction)pageButtonClicked:(id)sender {
     if ([(UIButton *)sender tag] == 2) {
-        [self.pageControl setCurrentPage:0];//0 is first page
+        //dont need this
+        //[self.pageControl setCurrentPage:0];//0 is first page
         [self.scrollView setContentOffset:CGPointZero animated:YES];
     } else {
-        [self.pageControl setCurrentPage:1];
+        //[self.pageControl setCurrentPage:1];
         [self.scrollView setContentOffset:CGPointMake(self.scrollView.frame.size.width, 0) animated:YES];
     }
 }

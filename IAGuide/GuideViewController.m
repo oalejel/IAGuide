@@ -194,6 +194,9 @@
 - (void)switchDayImage
 {
     if (self.finishedAnimaton) {
+        //make sure its up to date the moment this is called (for new days)
+        self.isADay = [[TodayManager sharedClassManager] todayIsAnADay:[NSDate date]]; //get bool value on whether it is an a day
+        
         NSDate *now = [NSDate date];
         dateFormatter.dateFormat = @"W";//set format to day of week
         int dayOfWeek = [[dateFormatter stringFromDate:now] intValue];//get number value for weekday
@@ -319,6 +322,12 @@
             }
         }
     }
+}
+
+//awesome:
+- (void)prepareForNewDay {
+    [self switchDayImage];
+    [self updateCurrentEvents];
 }
 
 #pragma Mark - File functions

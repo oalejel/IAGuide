@@ -15,7 +15,6 @@
 @property (nonatomic) BOOL viewAppearedBefore;
 @property (nonatomic) NSArray *locations;
 @property (nonatomic) NSDictionary *launchOptions;
-@property (nonatomic) NSURL *websiteurl;
 
 @end
 
@@ -26,7 +25,6 @@
     self = [super init];
     if (self) {
         self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"More" image:[UIImage imageNamed:@"more"] selectedImage:[UIImage imageNamed:@"more_selected"]];
-        self.websiteurl = [NSURL URLWithString:@"http://www.iatoday.org/international/index.aspx"];
     }
     return self;
 }
@@ -67,7 +65,8 @@
 }
 - (IBAction)openHomeWebsite:(id)sender
 {
-    [[UIApplication sharedApplication] openURL:self.websiteurl];
+//    NSURL *websiteurl = [NSURL URLWithString:@"http://www.iatoday.org/international/index.aspx"];
+//    [[UIApplication sharedApplication] openURL:websiteurl];
 }
 
 - (IBAction)openMapApp:(id)sender
@@ -81,6 +80,11 @@
         [MKMapItem openMapsWithItems:self.locations
                        launchOptions:self.launchOptions];
     }
+}
+
+- (IBAction)viewSourcePressed:(id)sender {
+//    NSURL *gitURL = [NSURL URLWithString:@"https://github.com/oalejel/IAGuide"];
+//    [[UIApplication sharedApplication] openURL:gitURL];
 }
 
 - (IBAction)feedbackButtonPressed:(id)sender

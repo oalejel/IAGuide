@@ -10,6 +10,13 @@
 
 @interface ClassBlockView : UIView
 
-- (instancetype)initWithTitles:(NSArray *)titleArray;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *blockLabel1;
+@property (weak, nonatomic) IBOutlet UILabel *blockLabel2;
+@property (weak, nonatomic) IBOutlet UILabel *blockLabel3;
+@property (weak, nonatomic) IBOutlet UILabel *blockLabel4;
+@property (weak, nonatomic) IBOutlet UILabel *blockLabel5;
+@property (weak, nonatomic) IBOutlet UILabel *blockLabel6;
 
 @end

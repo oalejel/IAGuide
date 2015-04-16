@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 extern NSDateFormatter *dateFormatter;
-extern NSDictionary *scheduleTitles;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

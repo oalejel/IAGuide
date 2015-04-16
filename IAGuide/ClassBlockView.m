@@ -16,19 +16,12 @@
 //Block1 tag = 1, block2 = 3, block4 = 4, block5 = 5, block6 = 6
 //access labels using [self viewForTag:(#)];
 
-- (instancetype)initWithTitles:(NSArray *)titleArray
+
+- (instancetype)init
 {
     NSArray *viewArray = [[NSBundle mainBundle] loadNibNamed:@"ClassBlockView" owner:self options:0];
     self = (ClassBlockView *)[viewArray firstObject];
     
-    if (titleArray) {
-        int currentIndex = 0;
-        for (NSString *title in titleArray) {
-            UILabel *label = (UILabel *)[self viewWithTag:currentIndex];
-            label.text = title;
-            currentIndex++;
-        }
-    }
     
     return self;
 }

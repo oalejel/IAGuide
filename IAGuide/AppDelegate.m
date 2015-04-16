@@ -14,7 +14,11 @@
 #import "IAGuide-Swift.h"           //import all swift
 
 NSDateFormatter *dateFormatter = nil;
-NSDictionary *scheduleTitles = nil;
+
+@interface AppDelegate ()
+//need to hold on to this vc so that it can be notified when there is a new day
+@property (nonatomic) GuideViewController *gvc;
+@end
 
 @implementation AppDelegate
 
@@ -26,13 +30,13 @@ NSDictionary *scheduleTitles = nil;
     dateFormatter = [[NSDateFormatter alloc] init];
     
     //set the root view controller as the startupcontroller
-    GuideViewController *gvc = [[GuideViewController alloc] init];
+    _gvc = [[GuideViewController alloc] init];
     MapViewController *mvc = [[MapViewController alloc] init];
     OlympicsViewController *ovc = [[OlympicsViewController alloc] init];
     ExtrasViewController *evc = [[ExtrasViewController alloc] init];
     
     UITabBarController *tbc = [self setupApplicationTabBarController];
-    tbc.viewControllers = @[gvc, mvc, ovc, evc];
+    tbc.viewControllers = @[self.gvc, mvc, ovc, evc];
     tbc.selectedIndex = 0;
     for (UITabBarItem *item in tbc.tabBar.items) {
         item.image = [item.image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -40,16 +44,18 @@ NSDictionary *scheduleTitles = nil;
     
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
         
-    //still working on this
-    scheduleTitles = @{
-                        @"L1_Normal":@[@""],
-                        @"L2_Normal":@[ @"" ],
-                        @"L1_Late":@[],
-                        @"L2_Late":@[],
-                        @"L1_":@[],
-                        };
+
     
     self.window.rootViewController = tbc;
+    //to find time til tomorrow, subtract seconds in a day (86400)
+    long secondsSince1970 = time(NULL);
+    struct tm now;
+    localtime_r(&secondsSince1970, &now);
+    long todaySeconds = (now.tm_hour * 3600) +  (now.tm_min * 60) + (now.tm_sec);
+    long timeTilTomorrow = 86400 - todaySeconds;
+    //NSTimer *dayTimer = [NSTimer scheduledTimerWithTimeInterval:timeTilTomorrow target:self selector:@selector(prepareForNewDay) userInfo:nil repeats:nil];
+    NSTimer *dayTimer = [NSTimer timerWithTimeInterval:timeTilTomorrow target:self selector:@selector(prepareForNewDay) userInfo:nil repeats:false];
+    [[NSRunLoop mainRunLoop] addTimer:dayTimer forMode:NSDefaultRunLoopMode];
     
     //initialize window default color, make it visible, and then return yes
     self.window.backgroundColor = [UIColor whiteColor];
@@ -58,8 +64,7 @@ NSDictionary *scheduleTitles = nil;
 }
 
 //create & setup the tab bar controller for the app
-- (UITabBarController *)setupApplicationTabBarController
-    {
+- (UITabBarController *)setupApplicationTabBarController {
         UITabBarController *tabBarController = [[UITabBarController alloc] init];
         tabBarController.tabBar.tintColor = [UIColor yellowColor]; //selected images are yellow
 
@@ -70,6 +75,22 @@ NSDictionary *scheduleTitles = nil;
         tabBarController.tabBar.barTintColor = [UIColor colorWithRed:43.0/255.0 green:132.0/255.0 blue:211.0/255 alpha:1.0];
 
         return tabBarController;
+}
+
+//so that a day and b day is always up to date - important to user experience
+- (void)prepareForNewDay
+{
+    [self.gvc prepareForNewDay];
+    
+    //add a new timer for the next day, that way, this app can run forever and always be up to date
+    long secondsSince1970 = time(NULL);
+    struct tm now;
+    localtime_r(&secondsSince1970, &now);
+    long todaySeconds = (now.tm_hour * 3600) +  (now.tm_min * 60) + (now.tm_sec);
+    long timeTilTomorrow = 86400 - todaySeconds;
+    //NSTimer *dayTimer = [NSTimer scheduledTimerWithTimeInterval:timeTilTomorrow target:self selector:@selector(prepareForNewDay) userInfo:nil repeats:nil];
+    NSTimer *dayTimer = [NSTimer timerWithTimeInterval:timeTilTomorrow target:self selector:@selector(prepareForNewDay) userInfo:nil repeats:false];
+    [[NSRunLoop mainRunLoop] addTimer:dayTimer forMode:NSDefaultRunLoopMode];
 }
 
 @end
