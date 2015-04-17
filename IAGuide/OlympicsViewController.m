@@ -46,36 +46,80 @@
     return self;
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
+    
+    UIImage *pressedImage = [UIImage imageNamed:@"pressed.png"];
+    [self.showFeedButton setBackgroundImage:pressedImage forState:UIControlStateHighlighted];
+    
+    self.scoresContainer.layer.cornerRadius = 4;
+    
+    CGFloat contentHeight = self.contentView.frame.size.height;
+    self.contentView.frame = CGRectMake(0, 0, self.view.frame.size.width, contentHeight);
+    self.contentView.backgroundColor = [UIColor clearColor];
+    
+    self.scrollView.contentSize = self.contentView.frame.size;
+    [self.scrollView addSubview:self.contentView];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     if (!self.viewAppearedBefore) {
+        
         [self setBackgroundGradient];
+//        [self drawScoresGraph];
+        
+        //do on a separate thread so things dont lag...
+        dispatch_queue_t q = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        dispatch_async(q, ^{
+            [self getData];
+            [self setBargraphs];
+        });
     }
 }
 
--(void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    if (!self.viewAppearedBefore) {
-        self.viewAppearedBefore = true;
-        [self getData];
-        [self setBargraphs];
-    }
+- (void)viewDidLayoutSubviews {
+    [self drawScoresGraph];
+}
+
+- (void)drawScoresGraph {
+    UIBezierPath *xAxisPath = [[UIBezierPath alloc] init];
+    UIBezierPath *yAxisPath = [[UIBezierPath alloc] init];
     
+    CGFloat xMin = 15;
+    CGFloat xMax = self.scoresContainer.frame.size.width - xMin;
+    CGFloat yMin = 15;
+    CGFloat yMax = self.scoresContainer.frame.size.height - yMin;
+    
+    [xAxisPath moveToPoint:CGPointMake(xMin, yMax)];
+    [xAxisPath addLineToPoint:CGPointMake(xMax, yMax)];
+    [yAxisPath moveToPoint:CGPointMake(xMin, yMin)];
+    [yAxisPath addLineToPoint:CGPointMake(xMin, yMax)];
+    
+    CAShapeLayer *xAxislayer = [CAShapeLayer layer];
+    CAShapeLayer *yAxisLayer = [CAShapeLayer layer];
+    
+    xAxislayer.path = xAxisPath.CGPath;
+    yAxisLayer.path = yAxisPath.CGPath;
+    
+    xAxislayer.lineWidth = 1;
+    yAxisLayer.lineWidth = 1;
+    xAxislayer.strokeColor = [[UIColor grayColor] CGColor];
+    yAxisLayer.strokeColor = [[UIColor grayColor] CGColor];
+    
+    [self.scoresContainer.layer addSublayer:xAxislayer];
+    [self.scoresContainer.layer addSublayer:yAxisLayer];
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    self.contentView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.contentView.frame.size.height);
-    [self.scrollView addSubview:self.contentView];
-    self.contentView.backgroundColor = [UIColor clearColor];
-    self.scrollView.contentSize = self.contentView.frame.size;
-    self.scrollView.layer.cornerRadius = 4;
-    UIImage *pressedImage = [UIImage imageNamed:@"pressed.png"];
-    [self.showFeedButton setBackgroundImage:pressedImage forState:UIControlStateHighlighted];
-    self.scoresContainer.layer.cornerRadius = 4;
-}
+//-(void)viewDidAppear:(BOOL)animated {
+//    [super viewDidAppear:animated];
+//    if (!self.viewAppearedBefore) {
+//        self.viewAppearedBefore = true;
+//    }
+//    
+//}
 
 - (void)getData {
     NSArray *urlStrings = @[@"http://www.iaolympics.com/api/scores", @"http://www.iaolympics.com/api/freshman",

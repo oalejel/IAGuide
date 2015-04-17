@@ -1,3 +1,4 @@
+//  Used by the map to store room location titles and coordinates.
 //
 //  Location.swift
 //  IAGuide
@@ -5,6 +6,7 @@
 //  Created by Omar Alejel on 1/6/15.
 //  Copyright (c) 2015 Omar Alejel. All rights reserved.
 //
+
 
 import Foundation
 import MapKit

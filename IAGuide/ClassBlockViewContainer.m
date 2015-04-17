@@ -70,8 +70,8 @@
                 }
                 
                 labelToChange.textColor = [UIColor greenColor];
-                NSString *boldFontName = [labelToChange.font.fontName stringByReplacingOccurrencesOfString:@"-Regular" withString:@"-Bold"];
-                labelToChange.font = [UIFont fontWithName:boldFontName size:labelToChange.font.pointSize];
+                NSString *boldName = [labelToChange.font.fontName stringByReplacingOccurrencesOfString:@"-Regular" withString:@"-Bold"];
+                labelToChange.font = [UIFont fontWithName:boldName size:labelToChange.font.pointSize];
             }
         }
     });
@@ -150,8 +150,6 @@
     CAShapeLayer *shapeLayer = [CAShapeLayer layer];
     shapeLayer.path = linePath.CGPath;
     shapeLayer.lineWidth = 1;
-    shapeLayer.opacity = 1.0;
-    shapeLayer.opacity = true;
     shapeLayer.strokeColor = [[UIColor darkGrayColor] CGColor];
     
     [view1.layer addSublayer:shapeLayer];
@@ -159,8 +157,6 @@
     CAShapeLayer *otherLayer = [CAShapeLayer layer];
     otherLayer.path = linePath.CGPath;
     otherLayer.lineWidth = 1;
-    otherLayer.opacity = 1.0;
-    otherLayer.opacity = true;
     otherLayer.strokeColor = [[UIColor darkGrayColor] CGColor];
     
     [view2.layer addSublayer:otherLayer];
@@ -194,12 +190,9 @@
 //you can use one ibaction for two buttons as long as the buttons have special tags setup in the xib
 - (IBAction)pageButtonClicked:(id)sender {
     if ([(UIButton *)sender tag] == 2) {
-        //dont need this
-        //[self.pageControl setCurrentPage:0];//0 is first page
         [self.scrollView setContentOffset:CGPointZero animated:YES];
     } else {
-        //[self.pageControl setCurrentPage:1];
-        [self.scrollView setContentOffset:CGPointMake(self.scrollView.frame.size.width, 0) animated:YES];
+        [self.scrollView setContentOffset:CGPointMake(self.scrollView.frame.size.width,0) animated:YES];
     }
 }
 

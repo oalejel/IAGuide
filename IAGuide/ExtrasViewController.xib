@@ -48,20 +48,20 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swift.png" translatesAutoresizingMaskIntoConstraints="NO" id="4WT-jv-hea">
-                    <rect key="frame" x="317" y="542" width="50" height="50"/>
+                    <rect key="frame" x="317" y="561" width="31" height="31"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="4WT-jv-hea" secondAttribute="height" multiplier="1:1" id="YDE-A2-yYi"/>
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="next.png" translatesAutoresizingMaskIntoConstraints="NO" id="N4R-w2-jFn">
-                    <rect key="frame" x="234" y="533" width="50" height="59"/>
+                    <rect key="frame" x="253" y="552" width="31" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="N4R-w2-jFn" secondAttribute="height" multiplier="1:1" constant="-9" id="PVX-D3-gUS"/>
-                        <constraint firstAttribute="height" priority="999" constant="59" id="xXr-J4-ff5"/>
+                        <constraint firstAttribute="height" priority="999" constant="40" id="xXr-J4-ff5"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLL-r6-g2W">
-                    <rect key="frame" x="293" y="553" width="13" height="27"/>
+                    <rect key="frame" x="293" y="563" width="13" height="27"/>
                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
@@ -151,7 +151,7 @@
                 <constraint firstAttribute="bottom" secondItem="4WT-jv-hea" secondAttribute="bottom" constant="8" id="YFr-T5-O5u"/>
                 <constraint firstItem="Tmb-dM-r7m" firstAttribute="top" secondItem="MsW-Gq-YR1" secondAttribute="bottom" constant="23" id="ako-YB-qkZ"/>
                 <constraint firstItem="Tmb-dM-r7m" firstAttribute="centerX" secondItem="MsW-Gq-YR1" secondAttribute="centerX" id="byJ-sr-4NQ"/>
-                <constraint firstAttribute="centerY" secondItem="h8F-Fs-A5K" secondAttribute="centerY" constant="90" id="dsy-fA-AEH"/>
+                <constraint firstAttribute="centerY" secondItem="h8F-Fs-A5K" secondAttribute="centerY" priority="999" constant="90" id="dsy-fA-AEH"/>
                 <constraint firstItem="QoJ-Gb-Gmv" firstAttribute="centerX" secondItem="MsW-Gq-YR1" secondAttribute="centerX" id="iRH-eN-IHM"/>
                 <constraint firstItem="N4R-w2-jFn" firstAttribute="width" secondItem="N4R-w2-jFn" secondAttribute="height" multiplier="1:1" constant="-9" id="jNn-fX-4mn"/>
                 <constraint firstAttribute="centerX" secondItem="h8F-Fs-A5K" secondAttribute="centerX" id="kpI-wP-r52"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14E7f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
@@ -9,10 +9,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OlympicsViewController">
             <connections>
                 <outlet property="contentView" destination="5BR-3c-ePW" id="oJF-vK-1cR"/>
+                <outlet property="freshmenBar" destination="8EG-Pf-aC6" id="Kvn-Oh-SAq"/>
                 <outlet property="infoTextView" destination="SQ6-K6-pmS" id="g0R-Gc-hGb"/>
+                <outlet property="juniorBar" destination="ocS-UG-phL" id="XnD-rI-3Ju"/>
                 <outlet property="scoresContainer" destination="TT9-HQ-iy0" id="SWA-XT-b2a"/>
                 <outlet property="scrollView" destination="Blz-Bi-k4z" id="a4B-XX-83Z"/>
+                <outlet property="seniorBar" destination="Z3u-Cl-niD" id="pWh-Z5-hQd"/>
                 <outlet property="showFeedButton" destination="dav-Pa-TGK" id="VMK-Bz-Vmd"/>
+                <outlet property="sophomoreBar" destination="pCT-Gc-tue" id="ECX-re-6hR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -103,6 +107,24 @@
                 </textView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TT9-HQ-iy0">
                     <rect key="frame" x="137" y="113" width="396" height="246"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8EG-Pf-aC6">
+                            <rect key="frame" x="0.0" y="167" width="21" height="79"/>
+                            <color key="backgroundColor" red="0.62352941176470589" green="0.29803921568627451" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pCT-Gc-tue">
+                            <rect key="frame" x="21" y="167" width="21" height="79"/>
+                            <color key="backgroundColor" red="0.34509803921568627" green="0.65490196078431373" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ocS-UG-phL">
+                            <rect key="frame" x="42" y="167" width="21" height="79"/>
+                            <color key="backgroundColor" red="0.16862745098039217" green="0.11372549019607843" blue="0.63137254901960782" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z3u-Cl-niD">
+                            <rect key="frame" x="62" y="167" width="21" height="79"/>
+                            <color key="backgroundColor" red="0.10588235294117647" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="TT9-HQ-iy0" secondAttribute="height" multiplier="418:289" constant="40.193771626297575" id="Oj1-0F-7HG"/>

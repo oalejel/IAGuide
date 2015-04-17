@@ -26,7 +26,9 @@ NSDateFormatter *dateFormatter = nil;
     // Override point for customization after application launch.
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    //global variable used by many classes - keep this early i
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
+    //global variable used by many classes - init this early in app cycle
     dateFormatter = [[NSDateFormatter alloc] init];
     
     //set the root view controller as the startupcontroller
@@ -42,9 +44,9 @@ NSDateFormatter *dateFormatter = nil;
         item.image = [item.image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     }
     
-    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-        
-
+    //this will make the mvc view load early. we need this because loading a map takes time
+    NSInteger x = [[mvc view] tag];
+    x++;
     
     self.window.rootViewController = tbc;
     //to find time til tomorrow, subtract seconds in a day (86400)

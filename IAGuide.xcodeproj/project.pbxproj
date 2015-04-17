@@ -33,6 +33,8 @@
 		3D79969B1A3F26FA007CF0E5 /* MXLCalendarEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7996951A3F26FA007CF0E5 /* MXLCalendarEvent.m */; };
 		3D79969C1A3F26FA007CF0E5 /* MXLCalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7996971A3F26FA007CF0E5 /* MXLCalendarManager.m */; };
 		3D79969D1A3F26FA007CF0E5 /* NSTimeZone+ProperAbbreviation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7996991A3F26FA007CF0E5 /* NSTimeZone+ProperAbbreviation.m */; };
+		3D7FEE351AE04C76005F0A66 /* nextbday.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7FEE331AE04C76005F0A66 /* nextbday.png */; };
+		3D7FEE361AE04C76005F0A66 /* nextaday.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7FEE341AE04C76005F0A66 /* nextaday.png */; };
 		3D832AE81A5488D000174B61 /* Teachers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D832AE71A5488D000174B61 /* Teachers.plist */; };
 		3D83303B1A0A7C3C00447A4D /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8330391A0A7C3C00447A4D /* GuideViewController.m */; };
 		3D83303C1A0A7C3C00447A4D /* GuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D83303A1A0A7C3C00447A4D /* GuideViewController.xib */; };
@@ -117,6 +119,8 @@
 		3D7996971A3F26FA007CF0E5 /* MXLCalendarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXLCalendarManager.m; sourceTree = "<group>"; };
 		3D7996981A3F26FA007CF0E5 /* NSTimeZone+ProperAbbreviation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimeZone+ProperAbbreviation.h"; sourceTree = "<group>"; };
 		3D7996991A3F26FA007CF0E5 /* NSTimeZone+ProperAbbreviation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimeZone+ProperAbbreviation.m"; sourceTree = "<group>"; };
+		3D7FEE331AE04C76005F0A66 /* nextbday.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nextbday.png; sourceTree = "<group>"; };
+		3D7FEE341AE04C76005F0A66 /* nextaday.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nextaday.png; sourceTree = "<group>"; };
 		3D832AE71A5488D000174B61 /* Teachers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Teachers.plist; sourceTree = "<group>"; };
 		3D8330381A0A7C3C00447A4D /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
 		3D8330391A0A7C3C00447A4D /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
@@ -172,14 +176,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3D187B411A3548E50051B3FA /* More */ = {
+		3D187B411A3548E50051B3FA /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				3DA36BBC1A5C9AEF00C369CA /* ViewController(s) */,
-				3DA36BBD1A5C9B0D00C369CA /* View(s) */,
+				3D5F9F3F1A226D30003EE125 /* DetailTableCell.h */,
+				3D5F9F401A226D30003EE125 /* DetailTableCell.m */,
 				3D7996911A3F26FA007CF0E5 /* iCalendar feed processor */,
 			);
-			name = More;
+			name = Other;
 			sourceTree = "<group>";
 		};
 		3D24D3B41A5DE94C008AC1AF /* Model */ = {
@@ -213,21 +217,18 @@
 		3D551AB219AB82D10082C393 /* IAGuide */ = {
 			isa = PBXGroup;
 			children = (
-				3D8F6D0D1ADE753F00CA5646 /* Digital-7 */,
-				3DC221591ADDA26400158C7D /* noconnection@2x.png */,
-				3DC2216D1ADDD9EC00158C7D /* notpressed@2x.png */,
-				3DC2216E1ADDD9EC00158C7D /* pressed@2x.png */,
-				3DC2214D1ADD92E500158C7D /* swift.png */,
-				3DC2214F1ADD935200158C7D /* next.png */,
 				3D551AB719AB82D10082C393 /* AppDelegate.h */,
 				3D551AB819AB82D10082C393 /* AppDelegate.m */,
+				3DA36BA71A5C7BDF00C369CA /* Location.swift */,
 				3DA36BB31A5C8DDD00C369CA /* IAGuide-Bridging-Header.h */,
-				3DA36BB41A5C95B500C369CA /* Today(Guide) Tab Files */,
-				3DAFF91C19F6D8A1002605AE /* Map Tab Files */,
-				3DA36BB51A5C99BA00C369CA /* Extras Tab Files */,
-				3D187B411A3548E50051B3FA /* More */,
-				3D96AAE31A8962550018D4F7 /* Images.xcassets */,
+				3DA36BB41A5C95B500C369CA /* Guide */,
+				3DAFF91C19F6D8A1002605AE /* Map */,
+				3D7FEE371AE068D2005F0A66 /* Olympics */,
+				3DA36BB51A5C99BA00C369CA /* Extras */,
+				3D187B411A3548E50051B3FA /* Other */,
 				3DAFF91E19F6D8C0002605AE /* Images */,
+				3D8F6D0D1ADE753F00CA5646 /* Digital-7 */,
+				3D96AAE31A8962550018D4F7 /* Images.xcassets */,
 				3D551AB319AB82D10082C393 /* Supporting Files */,
 			);
 			path = IAGuide;
@@ -278,22 +279,36 @@
 			path = MXLCalendarManager;
 			sourceTree = "<group>";
 		};
-		3DA36BB41A5C95B500C369CA /* Today(Guide) Tab Files */ = {
+		3D7FEE371AE068D2005F0A66 /* Olympics */ = {
+			isa = PBXGroup;
+			children = (
+				3DFD8BD41A350ED000279A2E /* OlympicsViewController.h */,
+				3DFD8BD51A350ED000279A2E /* OlympicsViewController.m */,
+				3DFD8BD61A350ED000279A2E /* OlympicsViewController.xib */,
+				3D997CE51AD1803A003B4958 /* WebViewController.h */,
+				3D997CE61AD1803A003B4958 /* WebViewController.m */,
+			);
+			name = Olympics;
+			sourceTree = "<group>";
+		};
+		3DA36BB41A5C95B500C369CA /* Guide */ = {
 			isa = PBXGroup;
 			children = (
 				3DA36BB61A5C9A3900C369CA /* ViewController */,
 				3DA36BB71A5C9A5100C369CA /* View */,
 				3D24D3B41A5DE94C008AC1AF /* Model */,
 			);
-			name = "Today(Guide) Tab Files";
+			name = Guide;
 			sourceTree = "<group>";
 		};
-		3DA36BB51A5C99BA00C369CA /* Extras Tab Files */ = {
+		3DA36BB51A5C99BA00C369CA /* Extras */ = {
 			isa = PBXGroup;
 			children = (
-				3DA36BBB1A5C9AB500C369CA /* ViewController */,
+				3DF32E0E19FC22CB005AEA8B /* ExtrasViewController.h */,
+				3DF32E0F19FC22CB005AEA8B /* ExtrasViewController.m */,
+				3D0F690E19FDE12D0080DC35 /* ExtrasViewController.xib */,
 			);
-			name = "Extras Tab Files";
+			name = Extras;
 			sourceTree = "<group>";
 		};
 		3DA36BB61A5C9A3900C369CA /* ViewController */ = {
@@ -325,6 +340,9 @@
 				3D551AD919AB83E40082C393 /* MapViewController.h */,
 				3D551ADA19AB83E40082C393 /* MapViewController.m */,
 				3DD81F0319B68BAA00794B17 /* MapViewController.xib */,
+				3D51838B1A0B9B7A00245E66 /* InfoViewController.h */,
+				3D51838C1A0B9B7A00245E66 /* InfoViewController.m */,
+				3D51838D1A0B9B7A00245E66 /* InfoViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -343,60 +361,30 @@
 		3DA36BBA1A5C9A7E00C369CA /* Model (non-visual data manipulation) */ = {
 			isa = PBXGroup;
 			children = (
-				3DA36BA71A5C7BDF00C369CA /* Location.swift */,
 				3D66EA8019CF132700432B20 /* LocationStore.h */,
 				3D66EA8119CF132700432B20 /* LocationStore.m */,
 			);
 			name = "Model (non-visual data manipulation)";
 			sourceTree = "<group>";
 		};
-		3DA36BBB1A5C9AB500C369CA /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				3DF32E0E19FC22CB005AEA8B /* ExtrasViewController.h */,
-				3DF32E0F19FC22CB005AEA8B /* ExtrasViewController.m */,
-				3D0F690E19FDE12D0080DC35 /* ExtrasViewController.xib */,
-			);
-			name = ViewController;
-			sourceTree = "<group>";
-		};
-		3DA36BBC1A5C9AEF00C369CA /* ViewController(s) */ = {
-			isa = PBXGroup;
-			children = (
-				3D51838B1A0B9B7A00245E66 /* InfoViewController.h */,
-				3D51838C1A0B9B7A00245E66 /* InfoViewController.m */,
-				3D51838D1A0B9B7A00245E66 /* InfoViewController.xib */,
-				3DFD8BD41A350ED000279A2E /* OlympicsViewController.h */,
-				3DFD8BD51A350ED000279A2E /* OlympicsViewController.m */,
-				3DFD8BD61A350ED000279A2E /* OlympicsViewController.xib */,
-				3D997CE51AD1803A003B4958 /* WebViewController.h */,
-				3D997CE61AD1803A003B4958 /* WebViewController.m */,
-			);
-			name = "ViewController(s)";
-			sourceTree = "<group>";
-		};
-		3DA36BBD1A5C9B0D00C369CA /* View(s) */ = {
-			isa = PBXGroup;
-			children = (
-				3D5F9F3F1A226D30003EE125 /* DetailTableCell.h */,
-				3D5F9F401A226D30003EE125 /* DetailTableCell.m */,
-			);
-			name = "View(s)";
-			sourceTree = "<group>";
-		};
-		3DAFF91C19F6D8A1002605AE /* Map Tab Files */ = {
+		3DAFF91C19F6D8A1002605AE /* Map */ = {
 			isa = PBXGroup;
 			children = (
 				3DA36BB81A5C9A6100C369CA /* ViewController */,
 				3DA36BB91A5C9A6E00C369CA /* View */,
 				3DA36BBA1A5C9A7E00C369CA /* Model (non-visual data manipulation) */,
 			);
-			name = "Map Tab Files";
+			name = Map;
 			sourceTree = "<group>";
 		};
 		3DAFF91E19F6D8C0002605AE /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3DC221591ADDA26400158C7D /* noconnection@2x.png */,
+				3DC2216D1ADDD9EC00158C7D /* notpressed@2x.png */,
+				3DC2216E1ADDD9EC00158C7D /* pressed@2x.png */,
+				3DC2214D1ADD92E500158C7D /* swift.png */,
+				3DC2214F1ADD935200158C7D /* next.png */,
 				3D943A431A895A070041DC6D /* gradient@2x.png */,
 				3D943A411A89555E0041DC6D /* decal@2x.png */,
 				3D4059111A3F4224004A7F79 /* mapoutline@2x.png */,
@@ -410,6 +398,8 @@
 				3DA1E8581A361B72007E500B /* compass@2x.png */,
 				3D2C3B871A354F900040B3E6 /* compass_sel@2x.png */,
 				3D1784721A5EE5D200792E6E /* noschool@2x.png */,
+				3D7FEE331AE04C76005F0A66 /* nextbday.png */,
+				3D7FEE341AE04C76005F0A66 /* nextaday.png */,
 				3D83B6C71A0B129800480E2F /* aday.png */,
 				3D83B6C81A0B129800480E2F /* bday.png */,
 			);
@@ -503,6 +493,7 @@
 				3D6CFCC91A5A0F9000931143 /* ClassBlockView.xib in Resources */,
 				3D832AE81A5488D000174B61 /* Teachers.plist in Resources */,
 				3DC2216F1ADDD9EC00158C7D /* notpressed@2x.png in Resources */,
+				3D7FEE351AE04C76005F0A66 /* nextbday.png in Resources */,
 				3D943A441A895A070041DC6D /* gradient@2x.png in Resources */,
 				3D1524941A578D820006F9F4 /* ClassBlockViewContainer.xib in Resources */,
 				3DC221701ADDD9EC00158C7D /* pressed@2x.png in Resources */,
@@ -525,6 +516,7 @@
 				3D1784731A5EE5D200792E6E /* noschool@2x.png in Resources */,
 				3DFD8BD81A350ED000279A2E /* OlympicsViewController.xib in Resources */,
 				3DC2215A1ADDA26400158C7D /* noconnection@2x.png in Resources */,
+				3D7FEE361AE04C76005F0A66 /* nextaday.png in Resources */,
 				3DA1E8571A361B19007E500B /* more@2x.png in Resources */,
 				3DC2214E1ADD92E500158C7D /* swift.png in Resources */,
 				3D83303C1A0A7C3C00447A4D /* GuideViewController.xib in Resources */,

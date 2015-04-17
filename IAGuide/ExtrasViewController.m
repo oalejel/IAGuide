@@ -65,8 +65,8 @@
 }
 - (IBAction)openHomeWebsite:(id)sender
 {
-//    NSURL *websiteurl = [NSURL URLWithString:@"http://www.iatoday.org/international/index.aspx"];
-//    [[UIApplication sharedApplication] openURL:websiteurl];
+    NSURL *websiteurl = [NSURL URLWithString:@"http://www.iatoday.org/international/index.aspx"];
+    [[UIApplication sharedApplication] openURL:websiteurl];
 }
 
 - (IBAction)openMapApp:(id)sender
@@ -83,8 +83,8 @@
 }
 
 - (IBAction)viewSourcePressed:(id)sender {
-//    NSURL *gitURL = [NSURL URLWithString:@"https://github.com/oalejel/IAGuide"];
-//    [[UIApplication sharedApplication] openURL:gitURL];
+    NSURL *gitURL = [NSURL URLWithString:@"https://github.com/oalejel/IAGuide"];
+    [[UIApplication sharedApplication] openURL:gitURL];
 }
 
 - (IBAction)feedbackButtonPressed:(id)sender

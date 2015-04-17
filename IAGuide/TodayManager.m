@@ -49,34 +49,9 @@
     self = [super init];
     
     if (self) {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"ShortDays" ofType:@"plist"];
-        NSArray *irregularDays = [NSArray arrayWithContentsOfFile:path];
-        
-        NSDate *today = [NSDate date];
-        dateFormatter.dateFormat = @"M";//month format
-        int month = [[dateFormatter stringFromDate:today] intValue];//will be 1-12
-        dateFormatter.dateFormat = @"D"; //day format
-        int day = [[dateFormatter stringFromDate:today] intValue];
-        
-        int dayType = 0;//if 1, then latestart, if 2, then halfday, if 3, then no school
-        
-        int index = 0;
-        for (NSNumber *number in irregularDays) {
-            if (index % 2 == 0) {
-                int numberMonth = (number.intValue - (number.intValue % 100)) / 100;
-                if (month == numberMonth) {//the month in the number will be held in the 100s place
-                    int numberDay = number.intValue % 100;
-                    if (day == numberDay) {
-                        dayType = [irregularDays[index + 1] intValue];
-                        break;
-                    }
-                }
-            }
-            index++;
-        }
-        
+        int dayTypeInt = [self dayTypeForDate:[NSDate date]];
         //determine the type of day
-        switch (dayType) {
+        switch (dayTypeInt) {
             case 1:
                 typeOfDay = Late;
                 break;
@@ -94,6 +69,36 @@
     [self setUpSchedulesArray];
     
     return self;
+}
+
+- (int)dayTypeForDate:(NSDate *)date {
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"ShortDays" ofType:@"plist"];
+    NSArray *irregularDays = [NSArray arrayWithContentsOfFile:path];
+    
+    NSDate *today = [NSDate date];
+    dateFormatter.dateFormat = @"M";//month format
+    int month = [[dateFormatter stringFromDate:today] intValue];//will be 1-12
+    dateFormatter.dateFormat = @"D"; //day format
+    int day = [[dateFormatter stringFromDate:today] intValue];
+    
+    int dayTypeInt = 0;//if 1, then latestart, if 2, then halfday, if 3, then no school
+    
+    int index = 0;
+    for (NSNumber *number in irregularDays) {
+        if (index % 2 == 0) {
+            int numberMonth = (number.intValue - (number.intValue % 100)) / 100;
+            if (month == numberMonth) {//the month in the number will be held in the 100s place
+                int numberDay = number.intValue % 100;
+                if (day == numberDay) {
+                    dayTypeInt = [irregularDays[index + 1] intValue];
+                    break;
+                }
+            }
+        }
+        index++;
+    }
+    
+    return dayTypeInt;
 }
 
 - (void)setUpSchedulesArray
@@ -248,34 +253,25 @@
     return isADay;
 }
 
-- (BOOL)noSchool
-{
-    BOOL noSchoolBool = false;
+- (BOOL)noSchool {
     if (typeOfDay == NoSchool) {
-        noSchoolBool = TRUE;
+        return true;
     }
-    
-    return noSchoolBool;
+    return false;
 }
 
-- (BOOL)halfDay
-{
-    BOOL halfDayBool = FALSE;
+- (BOOL)halfDay {
     if (typeOfDay == Half) {
-        halfDayBool = TRUE;
+        return true;
     }
-    
-    return halfDayBool;
+    return false;
 }
 
-- (BOOL)lateStart
-{
-    BOOL lateBool = false;
+- (BOOL)lateStart {
     if (typeOfDay == Late) {
-        lateBool = TRUE;
+        return true;
     }
-    
-    return lateBool;
+    return false;
 }
 
 @end

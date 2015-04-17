@@ -69,7 +69,6 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    
     self.isADay = [[TodayManager sharedClassManager] todayIsAnADay:[NSDate date]]; //get bool value on whether it is an a day
     UIImage *todayImage;
     if (self.isADay) {
@@ -103,28 +102,6 @@
         [self.view insertSubview:self.scheduleView aboveSubview:self.tableView];
     }
 }
-////check
-//- (void)viewDidLayoutSubviews
-//{
-//    [super viewDidLayoutSubviews];
-//    
-//    //        //add the dayImageView - sorry for the complicated calculations, but this is just how i chose to position it
-//    CGPoint origin = self.calendarHeaderView.frame.origin;
-//    CGSize size = self.calendarHeaderView.frame.size;
-//    //        CGRect rect = CGRectMake(self.view.center.x - (size.width/2), origin.y + size.height, size.width, size.width);
-//    CGRect rect = CGRectMake(origin.x, origin.y + size.height, size.width, size.width);
-//    self.dayImageView.frame = rect;
-//    [self.view insertSubview:self.dayImageView aboveSubview:self.calendarHeaderView];
-//    
-//    //add the scheduleView
-//    CGRect calendarFrame = self.dayImageView.frame;
-//    CGFloat centerY = ((calendarFrame.origin.y + calendarFrame.size.height) + (self.tableView.frame.origin.y)) / 2;
-//    self.scheduleView.center = CGPointMake(self.view.center.x, centerY);
-//    [self.view insertSubview:self.scheduleView aboveSubview:self.tableView];
-//    
-//    
-//    [self.view layoutSubviews];
-//}
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -198,22 +175,46 @@
         self.isADay = [[TodayManager sharedClassManager] todayIsAnADay:[NSDate date]]; //get bool value on whether it is an a day
         
         NSDate *now = [NSDate date];
-        dateFormatter.dateFormat = @"W";//set format to day of week
+        dateFormatter.dateFormat = @"e";//set format to day of week
         int dayOfWeek = [[dateFormatter stringFromDate:now] intValue];//get number value for weekday
         UIImage *imageToInsert;
         UIImageView *newImageView;
-        //if weekend
+        //
         if (dayOfWeek == 1 || dayOfWeek == 7 || [[TodayManager sharedClassManager] noSchool]) {
-            imageToInsert = [UIImage imageNamed:@"noschool"];
+//            imageToInsert = [UIImage imageNamed:@"noschool"];
             //!!!!!!make it so that something says what it will be later in month
+            
+            
+            NSDate *testDate = [now dateByAddingTimeInterval:86400];
+            for (int i = 0; i < 1000; testDate = [testDate dateByAddingTimeInterval:86400]) {
+                //3 if no school that day
+                int testWeekday = [[dateFormatter stringFromDate:testDate] intValue];//get number value for weekday
+                BOOL noBreakBool = [[TodayManager sharedClassManager] dayTypeForDate:testDate] != 3;
+                BOOL weekDayBool = (testWeekday != 7) && (testWeekday != 1);
+                if (noBreakBool && weekDayBool) {
+                    BOOL nextDayIsADay = [[TodayManager sharedClassManager] todayIsAnADay:testDate];
+                    if (nextDayIsADay) {
+                        //aday
+                        imageToInsert = [UIImage imageNamed:@"nextaday.png"];
+                    } else {
+                        //bday
+                        imageToInsert = [UIImage imageNamed:@"nextbday.png"];
+                    }
+                    break;//leave the loop
+                }
+                
+                i++;
+            }
+            
+            
         } else {
             //remember that this will handle changing the aday BOOL value for you
-            if (!self.isADay) {
-                //bday
-                imageToInsert = self.bImage;
-            } else {
+            if (self.isADay) {
                 //aday
                 imageToInsert = self.aImage;
+            } else {
+                //bday
+                imageToInsert = self.bImage;
             }
         }
         

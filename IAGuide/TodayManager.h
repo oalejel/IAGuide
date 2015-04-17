@@ -23,6 +23,7 @@ enum DayType {
 + (instancetype)sharedClassManager;
 - (BOOL)todayIsAnADay:(NSDate *)date;
 - (int)findCurrentClassForFirstLunch:(BOOL)firstLunch;
+- (int)dayTypeForDate:(NSDate *)date;
 
 - (BOOL)noSchool;
 - (BOOL)halfDay;
