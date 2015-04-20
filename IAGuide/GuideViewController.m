@@ -181,10 +181,6 @@
         UIImageView *newImageView;
         //
         if (dayOfWeek == 1 || dayOfWeek == 7 || [[TodayManager sharedClassManager] noSchool]) {
-//            imageToInsert = [UIImage imageNamed:@"noschool"];
-            //!!!!!!make it so that something says what it will be later in month
-            
-            
             NSDate *testDate = [now dateByAddingTimeInterval:86400];
             for (int i = 0; i < 1000; testDate = [testDate dateByAddingTimeInterval:86400]) {
                 //3 if no school that day

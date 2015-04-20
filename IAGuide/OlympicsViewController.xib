@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OlympicsViewController">
@@ -12,6 +11,8 @@
                 <outlet property="freshmenBar" destination="8EG-Pf-aC6" id="Kvn-Oh-SAq"/>
                 <outlet property="infoTextView" destination="SQ6-K6-pmS" id="g0R-Gc-hGb"/>
                 <outlet property="juniorBar" destination="ocS-UG-phL" id="XnD-rI-3Ju"/>
+                <outlet property="refreshBarView" destination="YIA-2w-YgJ" id="6cu-HC-xwK"/>
+                <outlet property="refreshingIndicator" destination="teW-Iw-m84" id="1sd-y8-2US"/>
                 <outlet property="scoresContainer" destination="TT9-HQ-iy0" id="SWA-XT-b2a"/>
                 <outlet property="scrollView" destination="Blz-Bi-k4z" id="a4B-XX-83Z"/>
                 <outlet property="seniorBar" destination="Z3u-Cl-niD" id="pWh-Z5-hQd"/>
@@ -28,7 +29,7 @@
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0mv-tN-OtU" userLabel="Header Box">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olympic Feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBh-H1-zOX">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IA Olympics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBh-H1-zOX">
                             <rect key="frame" x="241" y="20" width="118" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="118" id="P8S-v9-Zbv"/>
@@ -64,9 +65,32 @@
             <point key="canvasLocation" x="363" y="399"/>
         </view>
         <view contentMode="scaleToFill" id="5BR-3c-ePW">
-            <rect key="frame" x="0.0" y="0.0" width="670" height="791"/>
+            <rect key="frame" x="0.0" y="0.0" width="670" height="634"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YIA-2w-YgJ" userLabel="refreshbar">
+                    <rect key="frame" x="283" y="163" width="104" height="227"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1e-ld-BTv">
+                            <rect key="frame" x="0.0" y="197" width="104" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="104" id="9lg-Ea-Gs0"/>
+                            </constraints>
+                            <state key="normal" title="Refresh">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="refreshPressed:" destination="-1" eventType="touchUpInside" id="iUI-cF-eBR"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="H1e-ld-BTv" secondAttribute="bottom" id="hKk-nq-0eB"/>
+                        <constraint firstAttribute="centerX" secondItem="H1e-ld-BTv" secondAttribute="centerX" id="pnH-og-Xi5"/>
+                        <constraint firstItem="H1e-ld-BTv" firstAttribute="leading" secondItem="YIA-2w-YgJ" secondAttribute="leading" id="qMI-2M-Ktm"/>
+                    </constraints>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dav-Pa-TGK">
                     <rect key="frame" x="268" y="8" width="135" height="35"/>
                     <constraints>
@@ -82,30 +106,25 @@
                         <action selector="showFeedWebView:" destination="-1" eventType="touchUpInside" id="gTO-bK-mkf"/>
                     </connections>
                 </button>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0e-wA-zCD">
-                    <rect key="frame" x="8" y="404" width="654" height="176"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Status Pending..." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SQ6-K6-pmS">
+                    <rect key="frame" x="43" y="51" width="584" height="54"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" priority="999" constant="176" id="5Of-n1-NsR"/>
-                        <constraint firstAttribute="width" constant="654" id="HTX-Lv-Bwt"/>
-                    </constraints>
-                    <string key="text">Scoring Policy: Point values are in increments of 2: 1st place is 10 points, 2nd place is 8 points, 3rd place is 6 points, and 4th places is 4 points. In case of a tie, point values are rounded down. For example, a tie for 2nd place would mean that both teams would receive 7 points instead of 8.                                                                                                     </string>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="16"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Current events" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQ6-K6-pmS">
-                    <rect key="frame" x="43" y="51" width="584" height="28"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="584" id="NIG-3n-mH7"/>
-                        <constraint firstAttribute="height" constant="28" id="Pmy-SN-AnR"/>
+                        <constraint firstAttribute="height" constant="54" id="Pmy-SN-AnR"/>
                     </constraints>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="16"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TT9-HQ-iy0">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iGP-I5-rPc">
+                    <rect key="frame" x="8" y="403" width="654" height="190"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <string key="text">Scoring policy: Point values are in increments of 2: 1st place is 10 points, 2nd place is 8 points, 3rd place is 6 points, and 4th places is 4 points. In case of a tie, point values are rounded down. For example, a tie for 2nd place would mean that both teams would receive 7 points instead of 8.</string>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TT9-HQ-iy0" userLabel="Score container">
                     <rect key="frame" x="137" y="113" width="396" height="246"/>
                     <subviews>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8EG-Pf-aC6">
@@ -124,24 +143,35 @@
                             <rect key="frame" x="62" y="167" width="21" height="79"/>
                             <color key="backgroundColor" red="0.10588235294117647" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="teW-Iw-m84">
+                            <rect key="frame" x="188" y="113" width="20" height="20"/>
+                        </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="TT9-HQ-iy0" secondAttribute="height" multiplier="418:289" constant="40.193771626297575" id="Oj1-0F-7HG"/>
+                        <constraint firstAttribute="width" priority="999" constant="396" id="ClR-Uq-Vsy"/>
+                        <constraint firstAttribute="centerX" secondItem="teW-Iw-m84" secondAttribute="centerX" id="GQs-6D-6E5"/>
+                        <constraint firstAttribute="centerY" secondItem="teW-Iw-m84" secondAttribute="centerY" id="qA3-H4-nrm"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="iGP-I5-rPc" firstAttribute="top" secondItem="TT9-HQ-iy0" secondAttribute="bottom" constant="44" id="3Cg-ym-zc4"/>
                 <constraint firstItem="SQ6-K6-pmS" firstAttribute="top" secondItem="dav-Pa-TGK" secondAttribute="bottom" constant="8" id="3ND-4c-3DX"/>
-                <constraint firstAttribute="trailing" secondItem="g0e-wA-zCD" secondAttribute="trailing" constant="8" id="8bj-Ig-tKP"/>
-                <constraint firstItem="g0e-wA-zCD" firstAttribute="top" secondItem="SQ6-K6-pmS" secondAttribute="bottom" constant="325" id="Mx1-Xc-Qml"/>
-                <constraint firstItem="TT9-HQ-iy0" firstAttribute="top" secondItem="SQ6-K6-pmS" secondAttribute="bottom" constant="34" id="N3W-fC-zzO"/>
-                <constraint firstItem="g0e-wA-zCD" firstAttribute="top" secondItem="TT9-HQ-iy0" secondAttribute="bottom" constant="45" id="czX-CN-ddG"/>
+                <constraint firstAttribute="trailing" secondItem="iGP-I5-rPc" secondAttribute="trailing" constant="8" id="B84-5X-bYj"/>
+                <constraint firstItem="TT9-HQ-iy0" firstAttribute="top" secondItem="SQ6-K6-pmS" secondAttribute="bottom" constant="8" id="N3W-fC-zzO"/>
+                <constraint firstAttribute="bottom" secondItem="iGP-I5-rPc" secondAttribute="bottom" constant="41" id="SVQ-Li-YbK"/>
+                <constraint firstItem="YIA-2w-YgJ" firstAttribute="top" secondItem="TT9-HQ-iy0" secondAttribute="bottom" constant="-196" id="Soe-t1-UaW"/>
+                <constraint firstAttribute="trailing" secondItem="SQ6-K6-pmS" secondAttribute="trailing" constant="43" id="Znd-BY-UhQ"/>
                 <constraint firstAttribute="centerX" secondItem="SQ6-K6-pmS" secondAttribute="centerX" id="fuK-MF-rPG"/>
-                <constraint firstItem="g0e-wA-zCD" firstAttribute="leading" secondItem="5BR-3c-ePW" secondAttribute="leading" constant="8" id="iRB-aS-TqC"/>
+                <constraint firstItem="YIA-2w-YgJ" firstAttribute="centerX" secondItem="TT9-HQ-iy0" secondAttribute="centerX" id="gbF-Bc-A28"/>
+                <constraint firstItem="YIA-2w-YgJ" firstAttribute="bottom" secondItem="TT9-HQ-iy0" secondAttribute="bottom" constant="31" id="icK-xB-bJj"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TT9-HQ-iy0" secondAttribute="trailing" constant="20" id="j84-jA-r1p"/>
+                <constraint firstItem="SQ6-K6-pmS" firstAttribute="leading" secondItem="5BR-3c-ePW" secondAttribute="leading" constant="43" id="ndB-hf-2iV"/>
+                <constraint firstItem="YIA-2w-YgJ" firstAttribute="top" secondItem="TT9-HQ-iy0" secondAttribute="top" constant="50" id="p9M-AP-dzx"/>
                 <constraint firstItem="dav-Pa-TGK" firstAttribute="top" secondItem="5BR-3c-ePW" secondAttribute="top" constant="8" id="q9K-c2-yXp"/>
+                <constraint firstItem="iGP-I5-rPc" firstAttribute="leading" secondItem="5BR-3c-ePW" secondAttribute="leading" constant="8" id="s8x-TT-fJC"/>
                 <constraint firstItem="TT9-HQ-iy0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5BR-3c-ePW" secondAttribute="leading" constant="20" id="zh2-8G-QeX"/>
                 <constraint firstAttribute="centerX" secondItem="dav-Pa-TGK" secondAttribute="centerX" constant="-0.5" id="zxX-zs-pjw"/>
                 <constraint firstAttribute="centerX" secondItem="TT9-HQ-iy0" secondAttribute="centerX" id="zzZ-qm-hGX"/>
@@ -151,7 +181,7 @@
             <nil key="simulatedBottomBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="1069" y="537.5"/>
+            <point key="canvasLocation" x="1069" y="459"/>
         </view>
     </objects>
     <resources>

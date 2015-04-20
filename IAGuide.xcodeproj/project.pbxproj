@@ -15,6 +15,7 @@
 		3D1F8B961A367706007173A8 /* star_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D1F8B951A367706007173A8 /* star_selected@2x.png */; };
 		3D24D3B61A5DF510008AC1AF /* ShortDays.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D24D3B51A5DF510008AC1AF /* ShortDays.plist */; };
 		3D2C3B881A354F900040B3E6 /* compass_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D2C3B871A354F900040B3E6 /* compass_sel@2x.png */; };
+		3D3D9D0F1AE1E5F2007F8945 /* digital-7 (mono).ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D3D9D0E1AE1E5F2007F8945 /* digital-7 (mono).ttf */; };
 		3D4059121A3F4224004A7F79 /* mapoutline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D4059111A3F4224004A7F79 /* mapoutline@2x.png */; };
 		3D51838E1A0B9B7A00245E66 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D51838C1A0B9B7A00245E66 /* InfoViewController.m */; };
 		3D51838F1A0B9B7A00245E66 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D51838D1A0B9B7A00245E66 /* InfoViewController.xib */; };
@@ -42,7 +43,6 @@
 		3D83B6CB1A0B129800480E2F /* bday.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D83B6C81A0B129800480E2F /* bday.png */; };
 		3D841F541A20040E004D8769 /* Classes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D841F531A20040E004D8769 /* Classes.plist */; };
 		3D8AE3701A3D31E10055A312 /* LocationTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8AE36F1A3D31E10055A312 /* LocationTable.m */; };
-		3D8F6D0E1ADE753F00CA5646 /* Digital-7 in Resources */ = {isa = PBXBuildFile; fileRef = 3D8F6D0D1ADE753F00CA5646 /* Digital-7 */; };
 		3D943A421A89555E0041DC6D /* decal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D943A411A89555E0041DC6D /* decal@2x.png */; };
 		3D943A441A895A070041DC6D /* gradient@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D943A431A895A070041DC6D /* gradient@2x.png */; };
 		3D96AAE41A8962550018D4F7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D96AAE31A8962550018D4F7 /* Images.xcassets */; };
@@ -85,6 +85,7 @@
 		3D1F8B951A367706007173A8 /* star_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_selected@2x.png"; sourceTree = "<group>"; };
 		3D24D3B51A5DF510008AC1AF /* ShortDays.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ShortDays.plist; sourceTree = "<group>"; };
 		3D2C3B871A354F900040B3E6 /* compass_sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compass_sel@2x.png"; sourceTree = "<group>"; };
+		3D3D9D0E1AE1E5F2007F8945 /* digital-7 (mono).ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7 (mono).ttf"; sourceTree = "<group>"; };
 		3D4059111A3F4224004A7F79 /* mapoutline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapoutline@2x.png"; sourceTree = "<group>"; };
 		3D51838B1A0B9B7A00245E66 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		3D51838C1A0B9B7A00245E66 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
@@ -130,7 +131,6 @@
 		3D841F531A20040E004D8769 /* Classes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Classes.plist; sourceTree = "<group>"; };
 		3D8AE36E1A3D31E10055A312 /* LocationTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTable.h; sourceTree = "<group>"; };
 		3D8AE36F1A3D31E10055A312 /* LocationTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationTable.m; sourceTree = "<group>"; };
-		3D8F6D0D1ADE753F00CA5646 /* Digital-7 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Digital-7"; sourceTree = "<group>"; };
 		3D943A411A89555E0041DC6D /* decal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "decal@2x.png"; sourceTree = "<group>"; };
 		3D943A431A895A070041DC6D /* gradient@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gradient@2x.png"; sourceTree = "<group>"; };
 		3D96AAE31A8962550018D4F7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 		3DF32E0E19FC22CB005AEA8B /* ExtrasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtrasViewController.h; sourceTree = "<group>"; };
 		3DF32E0F19FC22CB005AEA8B /* ExtrasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtrasViewController.m; sourceTree = "<group>"; };
 		3DFD8BD41A350ED000279A2E /* OlympicsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OlympicsViewController.h; sourceTree = "<group>"; };
-		3DFD8BD51A350ED000279A2E /* OlympicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OlympicsViewController.m; sourceTree = "<group>"; };
+		3DFD8BD51A350ED000279A2E /* OlympicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OlympicsViewController.m; sourceTree = "<group>"; tabWidth = 4; };
 		3DFD8BD61A350ED000279A2E /* OlympicsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OlympicsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -217,6 +217,7 @@
 		3D551AB219AB82D10082C393 /* IAGuide */ = {
 			isa = PBXGroup;
 			children = (
+				3D3D9D0E1AE1E5F2007F8945 /* digital-7 (mono).ttf */,
 				3D551AB719AB82D10082C393 /* AppDelegate.h */,
 				3D551AB819AB82D10082C393 /* AppDelegate.m */,
 				3DA36BA71A5C7BDF00C369CA /* Location.swift */,
@@ -227,7 +228,6 @@
 				3DA36BB51A5C99BA00C369CA /* Extras */,
 				3D187B411A3548E50051B3FA /* Other */,
 				3DAFF91E19F6D8C0002605AE /* Images */,
-				3D8F6D0D1ADE753F00CA5646 /* Digital-7 */,
 				3D96AAE31A8962550018D4F7 /* Images.xcassets */,
 				3D551AB319AB82D10082C393 /* Supporting Files */,
 			);
@@ -499,13 +499,13 @@
 				3DC221701ADDD9EC00158C7D /* pressed@2x.png in Resources */,
 				3D518C0E1A150E4B000BBCC9 /* Circle.png in Resources */,
 				3D1F8B941A36749C007173A8 /* more_selected@2x.png in Resources */,
-				3D8F6D0E1ADE753F00CA5646 /* Digital-7 in Resources */,
 				3DEF22C71A15615300FBED5C /* toggle.png in Resources */,
 				3D943A421A89555E0041DC6D /* decal@2x.png in Resources */,
 				3D83B6CA1A0B129800480E2F /* aday.png in Resources */,
 				3D841F541A20040E004D8769 /* Classes.plist in Resources */,
 				3D2C3B881A354F900040B3E6 /* compass_sel@2x.png in Resources */,
 				3DC221501ADD935200158C7D /* next.png in Resources */,
+				3D3D9D0F1AE1E5F2007F8945 /* digital-7 (mono).ttf in Resources */,
 				3DA1E8561A361B19007E500B /* star@2x.png in Resources */,
 				3D0F690F19FDE12D0080DC35 /* ExtrasViewController.xib in Resources */,
 				3DD81F0419B68BAA00794B17 /* MapViewController.xib in Resources */,
