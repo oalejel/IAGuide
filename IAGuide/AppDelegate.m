@@ -18,6 +18,7 @@ NSDateFormatter *dateFormatter = nil;
 @interface AppDelegate ()
 //need to hold on to this vc so that it can be notified when there is a new day
 @property (nonatomic) GuideViewController *gvc;
+
 @end
 
 @implementation AppDelegate

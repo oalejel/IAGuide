@@ -42,6 +42,11 @@
 		3D83B6CA1A0B129800480E2F /* aday.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D83B6C71A0B129800480E2F /* aday.png */; };
 		3D83B6CB1A0B129800480E2F /* bday.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D83B6C81A0B129800480E2F /* bday.png */; };
 		3D841F541A20040E004D8769 /* Classes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D841F531A20040E004D8769 /* Classes.plist */; };
+		3D879FEB1AEC607200275DDD /* Me.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D879FEA1AEC607200275DDD /* Me.xib */; };
+		3D879FEE1AEC633800275DDD /* press.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D879FEC1AEC633800275DDD /* press.png */; };
+		3D879FEF1AEC633800275DDD /* nopress.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D879FED1AEC633800275DDD /* nopress.png */; };
+		3D879FF11AEC63A300275DDD /* Me.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D879FF01AEC63A300275DDD /* Me.swift */; };
+		3D879FF31AEC646B00275DDD /* me.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3D879FF21AEC646B00275DDD /* me.jpg */; };
 		3D8AE3701A3D31E10055A312 /* LocationTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8AE36F1A3D31E10055A312 /* LocationTable.m */; };
 		3D943A421A89555E0041DC6D /* decal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D943A411A89555E0041DC6D /* decal@2x.png */; };
 		3D943A441A895A070041DC6D /* gradient@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D943A431A895A070041DC6D /* gradient@2x.png */; };
@@ -129,6 +134,11 @@
 		3D83B6C71A0B129800480E2F /* aday.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aday.png; sourceTree = "<group>"; };
 		3D83B6C81A0B129800480E2F /* bday.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bday.png; sourceTree = "<group>"; };
 		3D841F531A20040E004D8769 /* Classes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Classes.plist; sourceTree = "<group>"; };
+		3D879FEA1AEC607200275DDD /* Me.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Me.xib; sourceTree = "<group>"; };
+		3D879FEC1AEC633800275DDD /* press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = press.png; sourceTree = "<group>"; };
+		3D879FED1AEC633800275DDD /* nopress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nopress.png; sourceTree = "<group>"; };
+		3D879FF01AEC63A300275DDD /* Me.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Me.swift; sourceTree = "<group>"; };
+		3D879FF21AEC646B00275DDD /* me.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = me.jpg; sourceTree = "<group>"; };
 		3D8AE36E1A3D31E10055A312 /* LocationTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTable.h; sourceTree = "<group>"; };
 		3D8AE36F1A3D31E10055A312 /* LocationTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationTable.m; sourceTree = "<group>"; };
 		3D943A411A89555E0041DC6D /* decal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "decal@2x.png"; sourceTree = "<group>"; };
@@ -220,6 +230,8 @@
 				3D3D9D0E1AE1E5F2007F8945 /* digital-7 (mono).ttf */,
 				3D551AB719AB82D10082C393 /* AppDelegate.h */,
 				3D551AB819AB82D10082C393 /* AppDelegate.m */,
+				3D879FEA1AEC607200275DDD /* Me.xib */,
+				3D879FF01AEC63A300275DDD /* Me.swift */,
 				3DA36BA71A5C7BDF00C369CA /* Location.swift */,
 				3DA36BB31A5C8DDD00C369CA /* IAGuide-Bridging-Header.h */,
 				3DA36BB41A5C95B500C369CA /* Guide */,
@@ -380,6 +392,9 @@
 		3DAFF91E19F6D8C0002605AE /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3D879FF21AEC646B00275DDD /* me.jpg */,
+				3D879FEC1AEC633800275DDD /* press.png */,
+				3D879FED1AEC633800275DDD /* nopress.png */,
 				3DC221591ADDA26400158C7D /* noconnection@2x.png */,
 				3DC2216D1ADDD9EC00158C7D /* notpressed@2x.png */,
 				3DC2216E1ADDD9EC00158C7D /* pressed@2x.png */,
@@ -489,9 +504,12 @@
 			files = (
 				3D4059121A3F4224004A7F79 /* mapoutline@2x.png in Resources */,
 				3DA1E85B1A361CEB007E500B /* trophy@2x.png in Resources */,
+				3D879FEF1AEC633800275DDD /* nopress.png in Resources */,
 				3DA1E8591A361B72007E500B /* compass@2x.png in Resources */,
 				3D6CFCC91A5A0F9000931143 /* ClassBlockView.xib in Resources */,
 				3D832AE81A5488D000174B61 /* Teachers.plist in Resources */,
+				3D879FEE1AEC633800275DDD /* press.png in Resources */,
+				3D879FF31AEC646B00275DDD /* me.jpg in Resources */,
 				3DC2216F1ADDD9EC00158C7D /* notpressed@2x.png in Resources */,
 				3D7FEE351AE04C76005F0A66 /* nextbday.png in Resources */,
 				3D943A441A895A070041DC6D /* gradient@2x.png in Resources */,
@@ -519,6 +537,7 @@
 				3D7FEE361AE04C76005F0A66 /* nextaday.png in Resources */,
 				3DA1E8571A361B19007E500B /* more@2x.png in Resources */,
 				3DC2214E1ADD92E500158C7D /* swift.png in Resources */,
+				3D879FEB1AEC607200275DDD /* Me.xib in Resources */,
 				3D83303C1A0A7C3C00447A4D /* GuideViewController.xib in Resources */,
 				3D24D3B61A5DF510008AC1AF /* ShortDays.plist in Resources */,
 			);
@@ -547,6 +566,7 @@
 				3D51838E1A0B9B7A00245E66 /* InfoViewController.m in Sources */,
 				3D551AB919AB82D10082C393 /* AppDelegate.m in Sources */,
 				3D66EA8219CF132700432B20 /* LocationStore.m in Sources */,
+				3D879FF11AEC63A300275DDD /* Me.swift in Sources */,
 				3DFD8BD71A350ED000279A2E /* OlympicsViewController.m in Sources */,
 				3D79969A1A3F26FA007CF0E5 /* MXLCalendar.m in Sources */,
 				3D1524921A578D090006F9F4 /* ClassBlockViewContainer.m in Sources */,

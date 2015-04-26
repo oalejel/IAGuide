@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14E7f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Me">
+            <connections>
+                <outlet property="button" destination="xJ0-4c-KRN" id="wJh-52-v1W"/>
+                <outlet property="imageView" destination="z8D-CQ-j73" id="cbf-pw-bOx"/>
+                <outlet property="view" destination="iN0-l3-epB" id="1jW-2R-oem"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oOA-Kc-3LY">
+                    <rect key="frame" x="101" y="183" width="398" height="201"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="201" id="pi2-CF-KHY"/>
+                        <constraint firstAttribute="width" constant="398" id="w2y-DC-aHZ"/>
+                    </constraints>
+                    <string key="text">Hello fellow Apple Person. I believe this app demonstrates my skill and knowledge in iOS programming, as it was my first and most developed app. I made this app because I found a need that I shared with many of my classmates, and I felt like I could fill it. If you find the app not intuitive enough to understand its use, then I have not done my job well enough. I hope you will understand the value of this app to my Friends, Classmates, Teachers, and I. Enjoy.                                                                                                                  - Omar Al-Ejel</string>
+                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="13"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJ0-4c-KRN">
+                    <rect key="frame" x="245" y="402" width="110" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="110" id="POQ-Oz-UfG"/>
+                        <constraint firstAttribute="width" secondItem="xJ0-4c-KRN" secondAttribute="height" multiplier="1028:309" id="dHW-NJ-tRH"/>
+                    </constraints>
+                    <state key="normal" image="nopress.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="continue:" destination="-1" eventType="touchUpInside" id="fzb-Td-tYe"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="z8D-CQ-j73">
+                    <rect key="frame" x="185" y="34" width="230" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="JvL-jy-YML"/>
+                        <constraint firstAttribute="width" constant="230" id="mc2-sI-MF5"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="oOA-Kc-3LY" secondAttribute="centerX" id="7Y2-TW-lYY"/>
+                <constraint firstItem="z8D-CQ-j73" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="34" id="SjY-wc-59S"/>
+                <constraint firstItem="xJ0-4c-KRN" firstAttribute="top" secondItem="oOA-Kc-3LY" secondAttribute="bottom" constant="18" id="XES-gX-LzW"/>
+                <constraint firstAttribute="centerX" secondItem="xJ0-4c-KRN" secondAttribute="centerX" id="ihd-zK-ICd"/>
+                <constraint firstItem="oOA-Kc-3LY" firstAttribute="top" secondItem="z8D-CQ-j73" secondAttribute="bottom" constant="21" id="sIp-0z-bKx"/>
+                <constraint firstAttribute="centerX" secondItem="z8D-CQ-j73" secondAttribute="centerX" id="tfj-1q-K7v"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oOA-Kc-3LY" secondAttribute="trailing" constant="8" id="w2B-Co-KkB"/>
+                <constraint firstItem="oOA-Kc-3LY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="xSa-Ee-LeQ"/>
+            </constraints>
+            <point key="canvasLocation" x="267" y="399"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="me.jpg" width="4000" height="2248"/>
+        <image name="nopress.png" width="1028" height="309"/>
+    </resources>
+</document>
