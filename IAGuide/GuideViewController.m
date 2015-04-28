@@ -14,7 +14,6 @@
 #import "MXLCalendarEvent.h"
 #import "MXLCalendarManager.h"
 #import "ClassBlockViewContainer.h"
-#import "IAGuide-Swift.h"           //import all swift
 
 @interface GuideViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -32,7 +31,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *calendarHeaderView; // dont mess with this
 @property (weak, nonatomic) UIDatePicker *picker;
-@property (nonatomic) Me *I;
 
 @end
 
@@ -81,7 +79,6 @@
     
     self.dayImageView = [[UIImageView alloc] initWithImage:todayImage];
     self.finishedAnimaton = true; //this will be set to false later
-    self.I = [[Me alloc] initWithNibName:@"Me" bundle:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -103,7 +100,6 @@
         CGFloat centerY = ((calendarFrame.origin.y + calendarFrame.size.height) + (self.tableView.frame.origin.y)) / 2;
         self.scheduleView.center = CGPointMake(self.view.center.x, centerY);
         [self.view insertSubview:self.scheduleView aboveSubview:self.tableView];
-        
     }
 }
 
@@ -114,15 +110,7 @@
     if (!self.viewAppearedBefore) {
         self.viewAppearedBefore = true;
         [self switchDayImage];
-        
-        [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(show) userInfo:nil repeats:false];
     }
-}
-
-- (void)show {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self presentViewController:self.I animated:true completion:nil];
-    });
 }
 
 //set the purple to blue background gradient
