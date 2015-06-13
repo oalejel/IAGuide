@@ -31,6 +31,7 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear: animated];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:self.url];
     [(UIWebView *)self.view loadRequest:request];
 }

@@ -455,7 +455,7 @@
 				TargetAttributes = {
 					3D551AAF19AB82D00082C393 = {
 						CreatedOnToolsVersion = 6.0;
-						DevelopmentTeam = DL7989H5XT;
+						DevelopmentTeam = FNU3YT2Q2N;
 					};
 					3D551AC819AB82D10082C393 = {
 						CreatedOnToolsVersion = 6.0;
@@ -672,7 +672,7 @@
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "IAGuide/IAGuide-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -691,7 +691,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "IAGuide/IAGuide-Bridging-Header.h";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

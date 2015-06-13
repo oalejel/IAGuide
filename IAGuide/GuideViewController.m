@@ -113,7 +113,7 @@
     }
 }
 
-//set the purple to blue background gradient
+//set the lgiht blue to blue background gradient
 - (void)setBackgroundGradient
 {
     //create a gradient for the background
