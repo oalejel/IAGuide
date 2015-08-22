@@ -23,14 +23,13 @@
 @property (nonatomic) ClassBlockViewContainer *scheduleView;
 @property (nonatomic) MXLCalendar *eventsCalendar;
 @property (nonatomic) NSMutableArray *eventsArray;
+
 @property (nonatomic) UIImage *aImage; //aday
 @property (nonatomic) UIImage *bImage; //bday
-@property (nonatomic) UIRefreshControl *refreshControl;
 @property (strong, nonatomic) UIImageView *dayImageView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *tableLoadingView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *calendarHeaderView; // dont mess with this
-@property (weak, nonatomic) UIDatePicker *picker;
 
 @end
 
@@ -63,21 +62,21 @@
     self.scheduleView.layer.masksToBounds = YES;
     
     // Do any additional setup after loading the view from its nib.
-    self.dayImageView.image = [UIImage imageNamed:@"bday"];
+    //self.dayImageView.image = [UIImage imageNamed:@"bday"];
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.backgroundView.backgroundColor = [UIColor clearColor];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
     self.isADay = [[TodayManager sharedClassManager] todayIsAnADay:[NSDate date]]; //get bool value on whether it is an a day
-    UIImage *todayImage;
+    UIImage *yesterdayImage;
     if (self.isADay) {
-        todayImage = self.bImage; //using opposite image so that i can animate a change
+        yesterdayImage = self.bImage; //using opposite image so that i can animate a change
     } else {
-        todayImage = self.aImage;
+        yesterdayImage = self.aImage;
     }
     
-    self.dayImageView = [[UIImageView alloc] initWithImage:todayImage];
+    self.dayImageView = [[UIImageView alloc] initWithImage:yesterdayImage];
     self.finishedAnimaton = true; //this will be set to false later
 }
 
@@ -134,7 +133,7 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
     MXLCalendarManager *manager = [[MXLCalendarManager alloc] init];
     
-        [manager scanICSFileAtRemoteURL:[NSURL URLWithString:@"http://www.iatoday.org/_infrastructure/ICalendarHandler.ashx?Tokens=757278"] withCompletionHandler:^(MXLCalendar *calendar, NSError *error) {
+        [manager scanICSFileAtRemoteURL:[NSURL URLWithString:@"http://www.iatoday.org/_infrastructure/ICalendarHandler.ashx?Tokens=757278"] withCompletionHandler:^(MXLCalendar *calendar, NSData *nilFileData, NSError *error) {
             
             self.eventsCalendar = calendar;
             
@@ -142,9 +141,9 @@
                 [self.tableView reloadData];
             });
             if (error) {//no connection, try reading from file
-                NSLog(@"File reading error: %@", error.description);
+                NSLog(@"Error getting data from online: %@", error.description);
                 
-                [manager scanICSFileAtLocalPath:[self itemArchivePath] withCompletionHandler:^(MXLCalendar *calendar, NSError *error) {
+                [manager scanICSFileAtLocalPath:[self itemArchivePath] withCompletionHandler:^(MXLCalendar *calendar, NSData *nilFileData, NSError *error) {
                     self.eventsCalendar = calendar;
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [self.tableView reloadData];
@@ -171,10 +170,10 @@
 - (void)switchDayImage
 {
     if (self.finishedAnimaton) {
-        //make sure its up to date the moment this is called (for new days)
-        self.isADay = [[TodayManager sharedClassManager] todayIsAnADay:[NSDate date]]; //get bool value on whether it is an a day
-        
         NSDate *now = [NSDate date];
+        //make sure its up to date the moment this is called (for new days)
+        self.isADay = [[TodayManager sharedClassManager] todayIsAnADay:now]; //get bool value on whether it is an a day
+        
         dateFormatter.dateFormat = @"e";//set format to day of week
         int dayOfWeek = [[dateFormatter stringFromDate:now] intValue];//get number value for weekday
         UIImage *imageToInsert;
@@ -184,9 +183,11 @@
             NSDate *testDate = [now dateByAddingTimeInterval:86400];
             for (int i = 0; i < 1000; testDate = [testDate dateByAddingTimeInterval:86400]) {
                 //3 if no school that day
+                dateFormatter.dateFormat = @"e";//set format to day of week
                 int testWeekday = [[dateFormatter stringFromDate:testDate] intValue];//get number value for weekday
                 BOOL noBreakBool = [[TodayManager sharedClassManager] dayTypeForDate:testDate] != 3;
                 BOOL weekDayBool = (testWeekday != 7) && (testWeekday != 1);
+                NSLog(@"Test Weekday: %d, weekdaybool: %@, nobreakbool: %@", testWeekday, weekDayBool ? @"t" : @"f", noBreakBool ? @"t" : @"f");
                 if (noBreakBool && weekDayBool) {
                     BOOL nextDayIsADay = [[TodayManager sharedClassManager] todayIsAnADay:testDate];
                     if (nextDayIsADay) {
@@ -217,7 +218,7 @@
         newImageView = [[UIImageView alloc] initWithImage:imageToInsert];
         newImageView.frame = self.dayImageView.frame;
         [self.view insertSubview:newImageView belowSubview:self.dayImageView];
-            self.finishedAnimaton = false;
+        self.finishedAnimaton = false;
         CGPoint newCenter = CGPointMake(self.dayImageView.center.x, self.view.frame.size.height + self.dayImageView.frame.size.height);
         
             [UIView animateWithDuration:1.0 delay:0.1 options:UIViewAnimationOptionTransitionNone animations:^{
@@ -227,7 +228,7 @@
                 self.finishedAnimaton = finished;
                 [self.dayImageView removeFromSuperview];
                 self.dayImageView = nil;
-                self.dayImageView = (UIImageView *)newImageView;
+                self.dayImageView = newImageView;
             }];
     }
 }
@@ -264,7 +265,7 @@
     cell.backgroundColor = [UIColor clearColor];
 
     if (self.eventsArray.count == indexPath.row) { //last object will be nil
-        cell.textLabel.text = @"That's it for the Week!";
+        cell.textLabel.text = @"That's it for the Month!";
         cell.detailTextLabel.text = nil;
         return cell;
     }
@@ -300,20 +301,32 @@
     }
     
     NSDate *today = [NSDate date];
+    dateFormatter.dateFormat = @"d";
+    int dayOfMonth = [[dateFormatter stringFromDate:today] intValue];
+    dateFormatter.dateFormat = @"M";//set to month format
+    int monthNumber = [[dateFormatter stringFromDate:today] intValue];
+    dateFormatter.dateFormat = @"y";//set to year format
+    int year = [[dateFormatter stringFromDate:today] intValue];
     
-    for (int i = 0; i < 7; i++) {
+    NSDictionary *daysInMonths = @{@1:@31, @2:@28, @3:@31, @4:@30, @5:@31, @6:@30, @7:@31, @8:@31, @9:@30, @10:@31, @11:@30, @12:@31};
+    int daysLeft = [[daysInMonths objectForKey:@(monthNumber)] intValue] - dayOfMonth;
+    if (monthNumber == 3 && year % 4 == 0) {
+        daysLeft = 29 - dayOfMonth;
+    }
+    
+    for (int i = 0; i < daysLeft; i++) {
         NSDate *newDate = [today dateByAddingTimeInterval:i * 86400];
         dateFormatter.dateFormat = @"d";
-        int dayOfMonth = [[dateFormatter stringFromDate:newDate] intValue];
+        int testDayOfMonth = [[dateFormatter stringFromDate:newDate] intValue];
         dateFormatter.dateFormat = @"M";//set to month format
-        int monthNumber = [[dateFormatter stringFromDate:newDate] intValue];
+        int testMonthNumber = [[dateFormatter stringFromDate:newDate] intValue];
         
         for (MXLCalendarEvent *event in eventsCalendar.events) {
             dateFormatter.dateFormat = @"M";//must set month again since reiteration will change dateFormat
-            if ([[dateFormatter stringFromDate:event.eventStartDate] intValue] == monthNumber) {
+            if ([[dateFormatter stringFromDate:event.eventStartDate] intValue] == testMonthNumber) {
                 dateFormatter.dateFormat = @"d"; //set to day format
                 int f = [[dateFormatter stringFromDate:event.eventStartDate] intValue];
-                if (f == dayOfMonth) {
+                if (f == testDayOfMonth) {
                     [self.eventsArray addObject:event];
                 }
             }

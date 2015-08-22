@@ -9,9 +9,10 @@
 #import "AppDelegate.h"
 #import "MapViewController.h"
 #import "ExtrasViewController.h"
-#import "GuideViewController.h"
 #import "OlympicsViewController.h"
-#import "IAGuide-Swift.h"           //import all swift
+#import "GuideViewController.h"
+
+#import "IAGuide-Swift.h"//this will allow swift files to interact with objc
 
 NSDateFormatter *dateFormatter = nil;
 
@@ -32,7 +33,7 @@ NSDateFormatter *dateFormatter = nil;
     dateFormatter = [[NSDateFormatter alloc] init];
     
     //set the root view controller as the startupcontroller
-    _gvc = [[GuideViewController alloc] init];
+    _gvc = [[GuideViewController alloc] initWithNibName:@"GuideViewController" bundle:[NSBundle mainBundle]];
     MapViewController *mvc = [[MapViewController alloc] init];
     OlympicsViewController *ovc = [[OlympicsViewController alloc] init];
     ExtrasViewController *evc = [[ExtrasViewController alloc] init];
@@ -48,6 +49,12 @@ NSDateFormatter *dateFormatter = nil;
     NSInteger x = [[mvc view] tag];
     x++;
     
+    
+//    GlassScrollController *gsc = [[GlassScrollController alloc] init];
+//    [gsc loadView];
+//    [gsc setStartIndex:0];
+//    [gsc setViewControllers:@[mvc, ovc, evc]];
+//    self.window.rootViewController = gsc;
     self.window.rootViewController = tbc;
     //to find time til tomorrow, subtract seconds in a day (86400)
     long secondsSince1970 = time(NULL);

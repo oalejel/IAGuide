@@ -75,11 +75,11 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:@"ShortDays" ofType:@"plist"];
     NSArray *irregularDays = [NSArray arrayWithContentsOfFile:path];
     
-    NSDate *today = [NSDate date];
+    //NSDate *today = [NSDate date];
     dateFormatter.dateFormat = @"M";//month format
-    int month = [[dateFormatter stringFromDate:today] intValue];//will be 1-12
-    dateFormatter.dateFormat = @"D"; //day format
-    int day = [[dateFormatter stringFromDate:today] intValue];
+    int month = [[dateFormatter stringFromDate:date] intValue];//will be 1-12
+    dateFormatter.dateFormat = @"d"; //day format
+    int day = [[dateFormatter stringFromDate:date] intValue];
     
     int dayTypeInt = 0;//if 1, then latestart, if 2, then halfday, if 3, then no school
     
@@ -159,25 +159,18 @@
         if (now_TotalSeconds <= totalSeconds) {
             //create a timer for the next change in class
             int timeInterval = totalSeconds - now_TotalSeconds;
-            NSTimer *timer;
-            if (firstLunch) {
-                timer = self.firstLunchTimer;
-            } else {
-                timer = self.secondLunchTimer;
-            }
             
-            NSNumber *lunchViewIndex;
-            if (firstLunch) {
-                lunchViewIndex = @0;
-            } else {
-                lunchViewIndex = @1;
-            }
+            NSNumber *lunchViewIndex = firstLunch ? @0 : @1;
             
             NSNumber *labelIndex = [NSNumber numberWithInt:currentIndex];
             NSArray *arguments = @[labelIndex, lunchViewIndex];
             
-            timer = [NSTimer timerWithTimeInterval:timeInterval target:self selector:@selector(notifyDelegate:) userInfo:arguments repeats:NO];
-            [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
+            NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:timeInterval target:self selector:@selector(notifyDelegate:) userInfo:arguments repeats:NO];
+            if (firstLunch) {
+                self.firstLunchTimer = timer;
+            } else {
+                self.secondLunchTimer = timer;
+            }
             
             return currentIndex - 1;
         } else if (number.intValue == 2359) {
@@ -216,9 +209,10 @@
 - (BOOL)todayIsAnADay:(NSDate *)date
 {
     NSDictionary *monthInfoDictionary = @{
+                                          @8: @[@YES, @21], @9: @[@NO], @10: @[@YES], @11: @[@NO, @30],
                                           @12: @[@YES], //december of 2014. Key is month, [0:(odd is A day), 1:exception, 2:exception]
-                                          @1: @[@NO, @20], @2: @[@NO, @23],
-                                          @3: @[@YES], @4: @[@NO], @5: @[@NO, @26],
+                                          @1: @[@YES, @19], @2: @[@YES, @22],
+                                          @3: @[@YES, @28], @4: @[@NO], @5: @[@NO, @31],
                                           @6: @[@NO]
                                           };
     
@@ -237,7 +231,7 @@
     }
     BOOL isADay = NO;
     int rule = [[monthArray objectAtIndex:0] intValue];
-    NSLog(@"today is odd: %d, odds are aday: %d", todayIsOdd ? 1 : 0, rule ? 1 : 0);
+    NSLog(@"today is odd: %@, odds are aday: %@", todayIsOdd ? (@"true") : (@"false"), rule ? (@"true") : (@"false"));
     if ((todayIsOdd && rule) || (!todayIsOdd && !rule)) {
         isADay = true;
     }

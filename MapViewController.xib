@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Medium</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController">
             <connections>
@@ -25,9 +30,11 @@
             <subviews>
                 <mapView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" showsUserLocation="YES" showsBuildings="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loK-km-Anp">
                     <rect key="frame" x="8" y="107" width="584" height="485"/>
+                    <animations/>
                 </mapView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wXq-Fg-ma7">
                     <rect key="frame" x="542" y="107" width="50" height="50"/>
+                    <animations/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="9Eg-gV-uFc"/>
@@ -39,6 +46,7 @@
                     <subviews>
                         <button contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TiG-2c-SSl">
                             <rect key="frame" x="545" y="4" width="47" height="41"/>
+                            <animations/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="TiG-2c-SSl" secondAttribute="height" multiplier="47:41" id="UZL-nk-ERb"/>
                             </constraints>
@@ -53,6 +61,7 @@
                         </button>
                         <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DlS-Ch-8i4">
                             <rect key="frame" x="196" y="70" width="208" height="29"/>
+                            <animations/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="208" id="0VU-7U-yDi"/>
                             </constraints>
@@ -63,6 +72,7 @@
                         </segmentedControl>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter By" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNN-8a-38I">
                             <rect key="frame" x="267" y="45" width="67" height="24"/>
+                            <animations/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="67" id="euo-1C-8Nn"/>
                                 <constraint firstAttribute="height" constant="24" id="qwv-Fi-Gs5"/>
@@ -73,6 +83,7 @@
                         </label>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tap to Search by Room #" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="X7f-DN-vcW">
                             <rect key="frame" x="8" y="0.0" width="529" height="50"/>
+                            <animations/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="Kpx-hN-JOr"/>
                             </constraints>
@@ -81,6 +92,7 @@
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                         </textField>
                     </subviews>
+                    <animations/>
                     <color key="backgroundColor" white="0.86118600040000004" alpha="0.81999999999999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <gestureRecognizers/>
                     <constraints>
@@ -102,6 +114,7 @@
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find Your Way" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDz-vv-21d">
                             <rect key="frame" x="241" y="20" width="118" height="21"/>
+                            <animations/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="118" id="ZaS-Hl-oA8"/>
                             </constraints>
@@ -110,6 +123,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
+                    <animations/>
                     <color key="backgroundColor" red="0.16862745100000001" green="0.51764705879999995" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="centerX" secondItem="kDz-vv-21d" secondAttribute="centerX" id="6fQ-Hh-jtX"/>
@@ -120,6 +134,7 @@
                     </constraints>
                 </view>
             </subviews>
+            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="loK-km-Anp" secondAttribute="trailing" constant="8" id="3Sd-fk-mpb">

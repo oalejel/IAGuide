@@ -16,7 +16,7 @@
 #import "IAGuide-Swift.h"//this will allow swift files to interact with objc
 
 @interface MapViewController ()
-/// @brief setting this to 'true' sets the tableview search rooms by teacher
+//setting this to 'true' sets the tableview search rooms by teacher
 @property (nonatomic) BOOL filterByTeacher;
 @property (nonatomic) BOOL inputViewIsToggled;
 @property (nonatomic) BOOL isEditing;
@@ -91,8 +91,7 @@
     }
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
+- (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
     if (!self.viewAppearedBefore) {
@@ -135,7 +134,7 @@
     CLLocationDegrees lon = -83.226150;
     CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(lat, lon);
     
-    //watchthe y value here
+    //watch the y value here
     MKCoordinateRegion schoolRegion = MKCoordinateRegionMakeWithDistance(coordinate, 155, 100);
     MKCoordinateRegion region = [self.mapView regionThatFits:schoolRegion];
     [self.mapView setRegion:region];
@@ -148,8 +147,6 @@
     MKMapCamera *camera = [self.mapView.camera copy];
     [camera setHeading:179.0];
     [self.mapView setCamera:camera];
-    //keep it from changing after this - this might actually not be necessary
-    self.mapView.rotateEnabled = NO;
 }
 
 //changes the alpha of the mapview after it loads so things do look laggy
@@ -241,7 +238,8 @@
 //this function creates an InfoViewCOntroller to show info on a class's schedule
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
-    //if a custom annotation was tapped: open a view controller with some info
+    
+    
     if ([view.annotation isKindOfClass:[Location class]]) {
         Location *loc = (Location *)view.annotation;
         InfoViewController *ivc = [[InfoViewController alloc] initWithRoomNumber:(int)loc.roomNumber]; // you might want to have a strong property for this so you do not have to constantly waste memory on new ones

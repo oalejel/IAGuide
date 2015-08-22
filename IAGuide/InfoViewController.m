@@ -76,7 +76,7 @@
                 int lower = fullCode % 100;
                 //check if teacher EVER teaches in this class
                 if (self.teacherCode == upper || self.teacherCode == lower) {
-                    NSString *classString = teachers[i+8];
+                    NSString *classString = teachers[i + 8];
                     NSString *sem1String;
                     NSString *sem2String;
                     if (self.teacherCode == upper) { //do they teach 1st sem
@@ -90,7 +90,7 @@
                                 sem1String = classString;
                                 sem2String = classString;
                             }
-                        } else {//there is a subject in the string that the teacher does not teach
+                        } else {
                             NSUInteger splitIndex = [classString rangeOfString:@","].location;
                             NSRange extrasRange = NSMakeRange(splitIndex, [classString length] - splitIndex);
                             NSString *extractedString = [classString stringByReplacingCharactersInRange:extrasRange withString:@""];
@@ -98,7 +98,7 @@
                         }
                     } else {
                         if (self.teacherCode == lower) {
-                            NSUInteger splitIndex = [classString rangeOfString:@"- "].location + 2;//create a range and add 1 since we want what is after this
+                            NSUInteger splitIndex = [classString rangeOfString:@"- "].location + 2;//create a range and add 2 since we want what is after this
                             if (splitIndex > 2) {//since we add 2 to offset the deletion point
                                 NSRange classesTaughtRange = NSMakeRange(0, splitIndex);
                                 NSString *extractedString = [classString stringByReplacingCharactersInRange:classesTaughtRange withString:@""];
@@ -108,6 +108,7 @@
                             }
                         }
                     }
+                    
                     
                     if (sem1String) {
                         sem1Classes[i] = [NSString stringWithFormat:@"%@ - %@", sem1String, key];

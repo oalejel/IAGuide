@@ -15,14 +15,14 @@
         
         <key>101</key>
         <array>
-            <string>0400</string><!-- Casper -->
-            <string>1699</string><!--Jones-->
-            <string>0499</string><!-- Casper -->
-            <string>0499</string><!-- Casper -->
-            <string>0499</string><!-- Casper -->
-            <string>3299</string><!-- Weinger -->
-            <string>0499</string><!-- Casper -->
-            <string>0499</string><!-- Casper -->
+            <string>0400</string><!-- Casper A1 || casper at sem1, no one at sem2-->
+            <string>1699</string><!-- Jones  A2-->
+            <string>0499</string><!-- Casper A3-->
+            <string>0499</string><!-- Casper A4-->
+            <string>0499</string><!-- Casper B1-->
+            <string>3299</string><!-- WeingerB2-->
+            <string>0499</string><!-- Casper B3-->
+            <string>0499</string><!-- Casper B4-->
             
             <!-- numbers 9-17 contain the class subject -->
             <string>MYP Product Team, Sem2- None</string>

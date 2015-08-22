@@ -14,6 +14,7 @@
 		3D1F8B941A36749C007173A8 /* more_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D1F8B931A36749C007173A8 /* more_selected@2x.png */; };
 		3D1F8B961A367706007173A8 /* star_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D1F8B951A367706007173A8 /* star_selected@2x.png */; };
 		3D24D3B61A5DF510008AC1AF /* ShortDays.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D24D3B51A5DF510008AC1AF /* ShortDays.plist */; };
+		3D26ABF91B339BD800514279 /* _GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D26ABF81B339BD800514279 /* _GuideViewController.swift */; };
 		3D2C3B881A354F900040B3E6 /* compass_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D2C3B871A354F900040B3E6 /* compass_sel@2x.png */; };
 		3D3D9D0F1AE1E5F2007F8945 /* digital-7 (mono).ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D3D9D0E1AE1E5F2007F8945 /* digital-7 (mono).ttf */; };
 		3D4059121A3F4224004A7F79 /* mapoutline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D4059111A3F4224004A7F79 /* mapoutline@2x.png */; };
@@ -37,7 +38,6 @@
 		3D7FEE351AE04C76005F0A66 /* nextbday.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7FEE331AE04C76005F0A66 /* nextbday.png */; };
 		3D7FEE361AE04C76005F0A66 /* nextaday.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7FEE341AE04C76005F0A66 /* nextaday.png */; };
 		3D832AE81A5488D000174B61 /* Teachers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D832AE71A5488D000174B61 /* Teachers.plist */; };
-		3D83303B1A0A7C3C00447A4D /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8330391A0A7C3C00447A4D /* GuideViewController.m */; };
 		3D83303C1A0A7C3C00447A4D /* GuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D83303A1A0A7C3C00447A4D /* GuideViewController.xib */; };
 		3D83B6CA1A0B129800480E2F /* aday.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D83B6C71A0B129800480E2F /* aday.png */; };
 		3D83B6CB1A0B129800480E2F /* bday.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D83B6C81A0B129800480E2F /* bday.png */; };
@@ -52,11 +52,13 @@
 		3DA1E8591A361B72007E500B /* compass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DA1E8581A361B72007E500B /* compass@2x.png */; };
 		3DA1E85B1A361CEB007E500B /* trophy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DA1E85A1A361CEB007E500B /* trophy@2x.png */; };
 		3DA36BA81A5C7BDF00C369CA /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA36BA71A5C7BDF00C369CA /* Location.swift */; };
+		3DC05ACF1B5DEBC200F4C9CF /* GlassScrollController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC05ACE1B5DEBC200F4C9CF /* GlassScrollController.swift */; };
 		3DC2214E1ADD92E500158C7D /* swift.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DC2214D1ADD92E500158C7D /* swift.png */; };
 		3DC221501ADD935200158C7D /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DC2214F1ADD935200158C7D /* next.png */; };
 		3DC2215A1ADDA26400158C7D /* noconnection@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DC221591ADDA26400158C7D /* noconnection@2x.png */; };
 		3DC2216F1ADDD9EC00158C7D /* notpressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DC2216D1ADDD9EC00158C7D /* notpressed@2x.png */; };
 		3DC221701ADDD9EC00158C7D /* pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DC2216E1ADDD9EC00158C7D /* pressed@2x.png */; };
+		3DC7BA8E1B74F5EC0046AC82 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8330391A0A7C3C00447A4D /* GuideViewController.m */; };
 		3DD81F0419B68BAA00794B17 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DD81F0319B68BAA00794B17 /* MapViewController.xib */; };
 		3DD81F0619B6A08D00794B17 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DD81F0519B6A08D00794B17 /* MapKit.framework */; };
 		3DEF22C71A15615300FBED5C /* toggle.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DEF22C61A15615300FBED5C /* toggle.png */; };
@@ -84,6 +86,7 @@
 		3D1F8B931A36749C007173A8 /* more_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more_selected@2x.png"; sourceTree = "<group>"; };
 		3D1F8B951A367706007173A8 /* star_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_selected@2x.png"; sourceTree = "<group>"; };
 		3D24D3B51A5DF510008AC1AF /* ShortDays.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ShortDays.plist; sourceTree = "<group>"; };
+		3D26ABF81B339BD800514279 /* _GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _GuideViewController.swift; sourceTree = "<group>"; };
 		3D2C3B871A354F900040B3E6 /* compass_sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compass_sel@2x.png"; sourceTree = "<group>"; };
 		3D3D9D0E1AE1E5F2007F8945 /* digital-7 (mono).ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7 (mono).ttf"; sourceTree = "<group>"; };
 		3D4059111A3F4224004A7F79 /* mapoutline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapoutline@2x.png"; sourceTree = "<group>"; };
@@ -142,6 +145,7 @@
 		3DA1E85A1A361CEB007E500B /* trophy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trophy@2x.png"; sourceTree = "<group>"; };
 		3DA36BA71A5C7BDF00C369CA /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		3DA36BB31A5C8DDD00C369CA /* IAGuide-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IAGuide-Bridging-Header.h"; sourceTree = "<group>"; };
+		3DC05ACE1B5DEBC200F4C9CF /* GlassScrollController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassScrollController.swift; sourceTree = "<group>"; };
 		3DC2214D1ADD92E500158C7D /* swift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swift.png; sourceTree = "<group>"; };
 		3DC2214F1ADD935200158C7D /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
 		3DC221591ADDA26400158C7D /* noconnection@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noconnection@2x.png"; sourceTree = "<group>"; };
@@ -217,6 +221,7 @@
 		3D551AB219AB82D10082C393 /* IAGuide */ = {
 			isa = PBXGroup;
 			children = (
+				3DC05ACE1B5DEBC200F4C9CF /* GlassScrollController.swift */,
 				3D3D9D0E1AE1E5F2007F8945 /* digital-7 (mono).ttf */,
 				3D551AB719AB82D10082C393 /* AppDelegate.h */,
 				3D551AB819AB82D10082C393 /* AppDelegate.m */,
@@ -314,6 +319,7 @@
 		3DA36BB61A5C9A3900C369CA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				3D26ABF81B339BD800514279 /* _GuideViewController.swift */,
 				3D8330381A0A7C3C00447A4D /* GuideViewController.h */,
 				3D8330391A0A7C3C00447A4D /* GuideViewController.m */,
 				3D83303A1A0A7C3C00447A4D /* GuideViewController.xib */,
@@ -450,7 +456,8 @@
 		3D551AA819AB82D00082C393 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Omar Alejel";
 				TargetAttributes = {
 					3D551AAF19AB82D00082C393 = {
@@ -549,15 +556,17 @@
 				3D66EA8219CF132700432B20 /* LocationStore.m in Sources */,
 				3DFD8BD71A350ED000279A2E /* OlympicsViewController.m in Sources */,
 				3D79969A1A3F26FA007CF0E5 /* MXLCalendar.m in Sources */,
+				3DC05ACF1B5DEBC200F4C9CF /* GlassScrollController.swift in Sources */,
 				3D1524921A578D090006F9F4 /* ClassBlockViewContainer.m in Sources */,
+				3DC7BA8E1B74F5EC0046AC82 /* GuideViewController.m in Sources */,
 				3D79969D1A3F26FA007CF0E5 /* NSTimeZone+ProperAbbreviation.m in Sources */,
 				3DA36BA81A5C7BDF00C369CA /* Location.swift in Sources */,
 				3D551AB619AB82D10082C393 /* main.m in Sources */,
-				3D83303B1A0A7C3C00447A4D /* GuideViewController.m in Sources */,
 				3D79969B1A3F26FA007CF0E5 /* MXLCalendarEvent.m in Sources */,
 				3D8AE3701A3D31E10055A312 /* LocationTable.m in Sources */,
 				3D551ADB19AB83E40082C393 /* MapViewController.m in Sources */,
 				3DF32E1019FC22CB005AEA8B /* ExtrasViewController.m in Sources */,
+				3D26ABF91B339BD800514279 /* _GuideViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,6 +609,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -667,6 +677,7 @@
 				INFOPLIST_FILE = IAGuide/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DL7989H5XT.com.alejel.iaguide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
@@ -687,6 +698,7 @@
 				INFOPLIST_FILE = IAGuide/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DL7989H5XT.com.alejel.iaguide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
@@ -709,6 +721,7 @@
 				);
 				INFOPLIST_FILE = IAGuideTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Alejel.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IAGuide.app/IAGuide";
 			};
@@ -724,6 +737,7 @@
 				);
 				INFOPLIST_FILE = IAGuideTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Alejel.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IAGuide.app/IAGuide";
 			};

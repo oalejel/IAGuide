@@ -279,7 +279,15 @@ const int y_offset = 20;
     NSMutableArray *dictStorage = [[NSMutableArray alloc] initWithCapacity:6];
     int index = 0;
     for (NSURL *url in urls) {
-        NSData *webData = [[NSData alloc] initWithContentsOfURL:url];
+        
+//        NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+//        NSURLResponse *response = nil;
+//        NSError *error = nil;
+//        NSData *webData = [NSURLConnection sendSynchronousRequest:urlRequest
+//                                              returningResponse:&response
+//                                                          error:&error];
+        NSData *webData = [NSData dataWithContentsOfURL:url];
+
         if (!webData) {
             return;//data retrieval failed
         }
@@ -398,5 +406,49 @@ const int y_offset = 20;
     
     [self presentViewController:nvc animated:true completion:nil];
 }
+
+/*
+ 
+ - (void)startRequests {
+ // Create the request.
+ NSArray *urlStrings = @[@"http://www.iaolympics.com/api/scores", @"http://www.iaolympics.com/api/freshman",
+ @"http://www.iaolympics.com/api/sophomore", @"http://www.iaolympics.com/api/junior",
+ @"http://www.iaolympics.com/api/senior", @"http://www.iaolympics.com/api/status"];
+ NSMutableArray *urls = [[NSMutableArray alloc] initWithCapacity:5];
+ for (NSString *str in urlStrings) {
+ NSURL *url = [NSURL URLWithString:str];
+ [urls addObject:url];
+ }
+ 
+ NSMutableArray *dictStorage = [[NSMutableArray alloc] initWithCapacity:6];
+ int index = 0;
+ for (NSURL *url in urls) {
+ 
+ NSData *webData = [[NSData alloc] initWithContentsOfURL:url];
+ 
+ if (!webData) {
+ return;//data retrieval failed
+ }
+ if (index != 5) {
+ NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:webData options:0 error:nil];
+ [dictStorage addObject:dataDictionary];
+ } else {
+ NSString *dataString = [[NSString alloc] initWithData:webData encoding:NSUTF8StringEncoding];
+ [dictStorage addObject:dataString];
+ }
+ 
+ index++;
+ }
+ self.scoreDictionary = dictStorage[0];
+ self.freshmanDictionary = dictStorage[1];
+ self.sophomoreDictionary = dictStorage[2];
+ self.juniorDictionary = dictStorage[3];
+ self.seniorDictionary = dictStorage[4];
+ self.statusString = dictStorage[5];
+ 
+ NSLog(@"%@", self.scoreDictionary);
+ }
+ 
+ */
 
 @end

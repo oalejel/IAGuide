@@ -28,13 +28,13 @@
 
 @interface MXLCalendarManager ()
 
--(void)parseICSString:(NSString *)icsString withCompletionHandler:(void (^)(MXLCalendar *, NSError *))callback;
+-(void)parseICSString:(NSString *)icsString withCompletionHandler:(void (^)(MXLCalendar *, NSData *fileData, NSError *))callback;
 
 @end
 
 @implementation MXLCalendarManager
 
--(void)scanICSFileAtRemoteURL:(NSURL *)fileURL withCompletionHandler:(void (^)(MXLCalendar *, NSError *))callback {
+-(void)scanICSFileAtRemoteURL:(NSURL *)fileURL withCompletionHandler:(void (^)(MXLCalendar *, NSData *, NSError *))callback {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
 
     dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -43,7 +43,7 @@
 
         if (downloadError) {
             [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-            callback(nil, downloadError);
+            callback(nil, fileData, downloadError);
             return;
         }
         
@@ -56,12 +56,12 @@
 
 }
 
--(void)scanICSFileAtLocalPath:(NSString *)filePath withCompletionHandler:(void (^)(MXLCalendar *, NSError *))callback {
+-(void)scanICSFileAtLocalPath:(NSString *)filePath withCompletionHandler:(void (^)(MXLCalendar *, NSData *fileData, NSError *))callback {
     NSError *fileError;
     NSString *calendarFile = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:&fileError];
     
     if (fileError) {
-        callback(nil, fileError);
+        callback(nil, nil, fileError);
         return;
     }
     
@@ -69,7 +69,7 @@
     
 }
 
--(void)parseICSString:(NSString *)icsString withCompletionHandler:(void (^)(MXLCalendar *, NSError *))callback {
+-(void)parseICSString:(NSString *)icsString withCompletionHandler:(void (^)(MXLCalendar *, NSData *fileData, NSError *))callback {
 
     // Pull out each line from the calendar file
     NSMutableArray *eventsArray = [NSMutableArray arrayWithArray:[icsString componentsSeparatedByString:@"BEGIN:VEVENT"]];
@@ -259,7 +259,7 @@
         
     }
     
-    callback(calendar, nil);
+    callback(calendar, nil, nil);
 }
 
 @end
