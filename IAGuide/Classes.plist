@@ -44,7 +44,7 @@
             <string>2599 </string><!-- Slade -->
             <string>2099 </string><!-- Slade -->
             <string>2599 </string> 
-            <string>2599 </string><!-- Stibitz -->
+            <string>2599 </string> 
             <string>2599 </string><!-- Slade -->
             <string>2599 </string><!-- Slade -->
             <string>2099 </string><!-- Slade -->
@@ -220,7 +220,7 @@
         
         <key>111</key>
         <array>
-            <string>2499</string><!-- Stibitz --><!-- None -->
+            <string>2499</string> <!-- None -->
             <string>2799</string><!-- Shamanski -->
             <string>2499</string><!-- Shamanski -->
             <string>2499</string><!-- Shamanski -->
@@ -440,257 +440,256 @@
         <key>303</key>
         <array>
             <string>0899 </string><!-- DeZwaan -->
-            <string>3299 </string><!-- Weinger -->
+            <string>0899 </string><!-- Weinger -->
             <string>0899 </string><!-- DeZwaan -->
+            <string>0199 </string><!-- DeZwaan -->
             <string>0899 </string><!-- DeZwaan -->
+            <string>0899 </string><!-- Fairman --> 
             <string>0899 </string><!-- DeZwaan -->
-            <string>1130 </string><!-- Fairman --><!-- Stibitz -->
-            <string>0899 </string><!-- DeZwaan -->
-            <string>0899 </string><!-- DeZwaan -->
+            <string>0000 </string><!-- DeZwaan -->
             
             <string>IB2 History</string>
-            <string>AC/Health 9, Sem2- AC/Health 10</string>
+            <string>American Studies</string>
             <string>IB2 History</string>
-            <string>IB1 History</string>
-            <string>IB2 History</string>
-            <string>MYP Product Team, Sem2- SLC</string>
+            <string>Product Team, Sem2- Product Team</string>
             <string>American Studies</string>
             <string>American Studies</string>
+            <string>IB2 History</string>
+            <string>None</string>
         </array>
         
         
         <key>304</key>
         <array>
-            <string>3299</string><!-- Weinger -->
+            <string>0599</string><!-- Weinger -->
             <string>0599</string><!-- Cinader -->
-            <string>3099</string><!-- Stibitz -->
-            <string>0599</string><!-- Cinader --> <!--- Check for verity-->
-            <string>2199</string><!-- Merchant -->
-            <string>2199</string><!-- Merchant -->
-            <string>3099</string><!-- Stibitz -->
-            <string>3299</string><!-- Weinger -->
+            <string>0599</string> 
+            <string>27999</string><!-- Cinader --> <!--- Check for verity-->
+            <string>0000</string><!-- Merchant -->
+            <string>0599</string><!-- Merchant -->
+            <string>0599</string> 
+            <string>2799</string><!-- Weinger -->
             
-            <string>AC/Health 9, Sem2- AC/Health 10</string>
-            <string>French 9/ALF 1</string>
+            <string>IB1 History</string>
+            <string>None</string>
+            <string>IB1 History</string>
+            <string>IB1 History</string>
+            <string>None</string> <!--- Check for verity-->
             <string>World Studies</string>
-            <string>IB1 French</string>
-            <string>French 10/ALF 2</string> <!--- Check for verity-->
-            <string>Product Team, Sem2- Product Team</string>
+            <string>IB GLC, Sem2- Product Team</string>
             <string>World Studies</string>
-            <string>AC/Health 9, Sem2- AC/Health 10</string>
         </array>
-        
         
         <key>305</key>
         <array>
-            <string>3199</string><!-- Uhelski -->
-            <string>3199</string><!-- Uhelski -->
-            <string>0000</string><!-- None -->
-            <string>3199</string><!-- Uhelski -->
-            <string>3199</string><!-- Uhelski -->
-            <string>3199</string><!-- Uhelski -->
-            <string>0000</string><!-- None -->
-            <string>3199</string><!-- Uhelski -->
+            <string>2999</string><!-- Zwolinski -->
+            <string>0000</string> 
+            <string>2999</string><!-- Zwolinski -->
+            <string>2999</string><!-- Zwolinski -->
+            <string>0000</string><!-- Griffin -->
+            <string>0299</string><!-- Zwolinski -->
+            <string>2999</string><!-- Zwolinski -->
+            <string>2999</string><!-- Zwolinski -->
             
+            <string>IB1 History</string>
+            <string>None</string>
+            <string>IB1 History</string>
+            <string>IB1 History</string>
+            <string>None</string>
             <string>World Studies</string>
-            <string>World Studies, Sem2- World Studies</string>
-            <string>None</string>
             <string>IB GLC, Sem2- Product Team</string>
-            <string>IB1 History</string>
-            <string>IB1 History</string>
-            <string>None</string>
-            <string>IB1 History</string>
+            <string>World Studies</string>
         </array>
         
         
         <key>306</key>
         <array>
-            <string>3599</string><!-- Zwolinski -->
-            <string>3099</string><!-- Stibitz -->
-            <string>3599</string><!-- Zwolinski -->
-            <string>3599</string><!-- Zwolinski -->
-            <string>1399</string><!-- Griffin -->
-            <string>3599</string><!-- Zwolinski -->
-            <string>3599</string><!-- Zwolinski -->
-            <string>3599</string><!-- Zwolinski -->
+            <string>2799</string><!-- Uhelski -->
+            <string>3399</string><!-- Uhelski -->
+            <string>3399</string><!-- None -->
+            <string>3399</string><!-- Uhelski -->
+            <string>3399</string><!-- Uhelski -->
+            <string>2799</string><!-- Uhelski -->
+            <string>3399</string><!-- None -->
+            <string>3399</string><!-- Uhelski -->
             
-            <string>Gov’t, Sem2- Online Gov’t </string>
             <string>IB SLC, Sem2- SLC</string>
+            <string>IB2 History</string>
+            <string>IB2 History</string>
+            <string>IB2 History</string>
+            <string>Government, Sem2- Government</string>
+            <string>World Studies</string>
             <string>American Studies</string>
             <string>American Studies</string>
-            <string>MYP Product Team, Sem2- IB Exam Prep</string>
-            <string>IB2 History</string>
-            <string>IB2 History</string>
-            <string>IB2 History</string>
         </array>
+        
         
         
         <key>308</key>
         <array>
             <string>0299</string><!-- Cafcalas -->
             <string>0299</string><!-- Cafcalas -->
+            <string>0000</string><!-- Cafcalas -->
+            <string>0299</string>
             <string>0299</string><!-- Cafcalas -->
-            <string>0000</string>
-            <string>0299</string><!-- Cafcalas -->
-            <string>0000</string>
-            <string>0299</string><!-- Cafcalas -->
+            <string>0299</string>
+            <string>0000</string><!-- Cafcalas -->
             <string>0299</string><!-- Cafcalas -->
             
             <string>Art 1</string>
-            <string>IB2 Visual Arts</string>
-            <string>Art 1</string>
-            <string>None</string>
-            <string>Art 2</string>
-            <string>None</string>
             <string>IB1 Visual Arts</string>
+            <string>None</string>
+            <string>Art 1</string>
             <string>Art 2</string>
+            <string>IB2 Visual Arts</string>
+            <string>None</string>
+            <string>IB2 Visual Arts</string>
         </array>
         
         <key>310</key>
         <array>
-            <string>0010 </string><!-- Tecmire -->
-            <string>1099</string><!-- Tecmire -->
-            <string>1099</string><!-- Tecmire -->
-            <string>1011 </string><!-- Tecmire --><!-- Fairman -->
-            <string>3299</string><!-- Weinger -->
-            <string>1099</string><!-- Tecmire -->
-            <string>1099</string><!-- Tecmire -->
-            <string>1099</string><!-- Tecmire -->
+            <string>2199 </string><!-- Tecmire -->
+            <string>2899</string><!-- Tecmire -->
+            <string>2899</string><!-- Tecmire -->
+            <string>2899 </string><!-- Tecmire --><!-- Fairman -->
+            <string>2899</string><!-- Weinger -->
+            <string>None</string><!-- Tecmire -->
+            <string>2899</string><!-- Tecmire -->
                        
-            <string>None, Sem2- Product Team</string>
-            <string>IB2 Economics</string>
-            <string>Econ 9, Sem2- Econ 9</string>
-            <string>Econ 9, Sem2- IB Exam Prep</string>
-            <string>AC/Health 9, Sem2- AC/Health 10</string>
+            <string>IB2 TOK, Sem2- IB1 TOK</string>
             <string>IB1 Economics</string>
             <string>Econ 9, Sem2- Econ 9</string>
-            <string>Econ 9, Sem2- None</string>
+            <string>Econ 9, Sem2- Econ 9</string>
+            <string>Econ 9, Sem2- Product Team</string>
+            <string>IB2 Economics</string>
+            <string>None</string>
+            <string>Econ 9, Sem2- Product Team</string>
         </array>
         
         <key>403</key>
         <array>
             <string>0699</string><!-- Clancy -->
-            <string>3399</string><!-- Wolf -->
+            <string>3099</string><!-- Wolf -->
             <string>0699</string><!-- Clancy -->
             <string>0699</string><!-- Clancy -->
             <string>0699</string><!-- Clancy -->
-            <string>0699</string><!-- Clancy -->
-            <string>2499</string> 
+            <string>3099</string><!-- Clancy -->
+            <string>0699</string>
             <string>0699</string><!-- Clancy -->
             
-            <string>American Literature</string>
-            <string>IB2 Tok, Sem2- IB1 Tok</string>
-            <string>American Literature</string>
-            <string>American Literature</string>
+            <string>IB2 English</string>
+            <string>PEH 9, Sem2- PEH 10</string>
             <string>IB2 English</string>
             <string>IB2 English</string>
-            <string>Speech, Sem2- Speech</string>
-            <string>IB2 English</string>
+            <string>American Literature</string>
+            <string>PEH 9, Sem2- PEH 10</string>
+            <string>American Literature</string>
+            <string>American Literature</string>
         </array>
         
         <key>404</key>
         <array>
-            <string>2099</string><!-- McCabe -->
-            <string>2099</string><!-- McCabe -->
-            <string>2099</string><!-- McCabe -->
-            <string>0100</string><!-- Acton --><!-- none -->
-            <string>2099</string><!-- McCabe -->
-            <string>2099</string><!-- McCabe -->
-            <string>2099</string><!-- McCabe -->
-            <string>2499</string> 
+            <string>0000</string><!-- McCabe -->
+            <string>1699</string><!-- McCabe -->
+            <string>1699</string><!-- McCabe -->
+            <string>1699</string><!-- Acton --><!-- none -->
+            <string>1699</string><!-- McCabe -->
+            <string>0000</string><!-- McCabe -->
+            <string>1699</string><!-- McCabe -->
+            <string>1699</string>
             
+            <string>None</string>
             <string>World Literature</string>
             <string>World Literature</string>
+            <string>IB1 English</string>
             <string>World Literature</string>
-            <string>Product Team, Sem2- None</string>
+            <string>None</string>
             <string>IB1 English</string>
             <string>IB1 English</string>
-            <string>IB1 English</string>
-            <string>MYP Product Team, Sem2- Speech</string>
         </array>
         
         <key>405</key>
         <array>
-            <string>1299</string><!-- Gardner -->
-            <string>1299</string><!-- Gardner -->
-            <string>1299</string><!-- Gardner -->
-            <string>3099</string><!-- Stibitz -->
-            <string>1299</string><!-- Gardner -->
-            <string>1299</string><!-- Gardner -->
-            <string>0599</string><!-- Cinader -->
-            <string>1299</string><!-- Gardner -->
+            <string>0999</string> 
+            <string>1299</string> 
+            <string>0999</string> 
+            <string>0999</string> 
+            <string>3099</string> 
+            <string>0999</string>
+            <string>0999</string><!-- Cinader -->
+            <string>0999</string>
             
+            <string>American Literature</string>
+            <string>MYP Product Team, Sem2- IB Exam Prep</string>
+            <string>American Literature</string>
+            <string>American Literature</string>
+            <string>PEH 9, Sem2- PEH 10</string>
             <string>IB2 English</string>
             <string>IB2 English</string>
-            <string>American Literature</string>
-            <string>IB SLC, Sem2- SLC</string>
             <string>IB2 English</string>
-            <string>American Literature</string>
-            <string>French 9, Sem2 - ALF 1</string>
-            <string>American Literature</string>
         </array>
         
         <key>406</key>
         <array>
-            <string>3499</string><!-- Woods -->
-            <string>3499</string><!-- Woods -->
-            <string>3499</string><!-- Woods -->
-            <string>3399</string><!-- Wolf -->
-            <string>3499</string><!-- Woods -->
-            <string>3499</string><!-- Woods -->
-            <string>3399</string><!-- Wolf -->
-            <string>3499</string><!-- Woods -->
+            <string>3299</string><!-- Woods -->
+            <string>3199</string><!-- Woods -->
+            <string>3299</string><!-- Woods -->
+            <string>3299</string><!-- Wolf -->
+            <string>3299</string><!-- Woods -->
+            <string>3199</string><!-- Woods -->
+            <string>3299</string><!-- Wolf -->
+            <string>3299</string><!-- Woods -->
             
             <string>IB1 English</string>
+            <string>IB2 TOK, Sem2- IB1 TOK</string>
             <string>IB1 English</string>
             <string>IB1 English</string>
-            <string>IB2 Tok, Sem2- IB1 Tok</string>
             <string>World Literature</string>
+            <string>IB2 TOK, Sem2- IB1 TOK</string>
             <string>World Literature</string>
-            <string>IB2 Tok, Sem2- IB1 Tok</string>
             <string>World Literature</string>
         </array>
         
         <key>408</key>
         <array>
-            <string>0000</string>
-            <string>2399</string><!-- Morrison -->
-            <string>2399</string><!-- Morrison -->
-            <string>2399</string><!-- Morrison -->
-            <string>3310 </string><!-- Wolf --><!-- Tecmire -->
-            <string>2399</string><!-- Morrison -->
-            <string>2399</string><!-- Morrison -->
-            <string>2399</string><!-- Morrison -->
+            <string>1999</string>
+            <string>1999</string><!-- Morrison -->
+            <string>1999</string><!-- Morrison -->
+            <string>0000</string><!-- Morrison -->
+            <string>1999 </string><!-- Wolf --><!-- Tecmire -->
+            <string>0000</string><!-- Morrison -->
+            <string>1999</string><!-- Morrison -->
+            <string>1999</string><!-- Morrison -->
             
-            <string>None</string>
+            <string>World Studies</string>
             <string>World Studies</string>
             <string>IB1 History</string>
-            <string>American Studies</string>
-            <string>IB2 Tok, Sem2- Product Team</string>
-            <string>World Studies</string>
+            <string>None</string>
+            <string>IB1 History</string>
+            <string>None</string>
             <string>American Studies</string>
             <string>IB1 History</string>
         </array>
         
         <key>999</key>
         <array>
-            <string>3299</string><!-- Weinger -->
-            <string>3299</string><!-- Weinger -->
+            <string>0000</string><!-- Weinger -->
+            <string>0000</string><!-- Weinger -->
             <string>0000</string><!-- None -->
-            <string>3299</string><!-- Weinger -->
-            <string>3299</string><!-- Weinger -->
-            <string>3299</string><!-- Weinger -->
+            <string>0000</string><!-- Weinger -->
+            <string>0000</string><!-- Weinger -->
+            <string>0000</string><!-- Weinger -->
             <string>0000</string><!-- none -->
-            <string>3299</string><!-- Weinger -->
+            <string>0000</string><!-- Weinger -->
             
-            <string>AC/Health 9, Sem2- AC/Health 10</string>
-            <string>AC/Health 9, Sem2- AC/Health 10</string>
             <string>None</string>
-            <string>AC/Health 9, Sem2- AC/Health 10</string>
-            <string>AC/Health 9, Sem2- AC/Health 10</string>
-            <string>AC/Health 9, Sem2- AC/Health 10</string>
             <string>None</string>
-            <string>AC/Health 9, Sem2- AC/Health 10</string>
+            <string>None</string>
+            <string>None</string>
+            <string>None</string>
+            <string>None</string>
+            <string>None</string>
+            <string>None</string>
         </array>
         
     </dict>
