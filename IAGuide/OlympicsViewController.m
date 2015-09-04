@@ -277,15 +277,17 @@ const int y_offset = 20;
     }
     
     NSMutableArray *dictStorage = [[NSMutableArray alloc] initWithCapacity:6];
+    
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[urls objectAtIndex:0]];
+    NSURLResponse *response = nil;
+    NSError *error = nil;
+    NSData *sampleData = [NSURLConnection sendSynchronousRequest:urlRequest
+                                               returningResponse:&response
+                                                           error:&error];
+    
     int index = 0;
     for (NSURL *url in urls) {
         
-//        NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
-//        NSURLResponse *response = nil;
-//        NSError *error = nil;
-//        NSData *webData = [NSURLConnection sendSynchronousRequest:urlRequest
-//                                              returningResponse:&response
-//                                                          error:&error];
         NSData *webData = [NSData dataWithContentsOfURL:url];
 
         if (!webData) {
