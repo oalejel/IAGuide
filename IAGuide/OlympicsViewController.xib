@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14E7f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OlympicsViewController">
@@ -30,16 +30,16 @@
                     <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IA Olympics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBh-H1-zOX">
-                            <rect key="frame" x="241" y="20" width="118" height="21"/>
+                            <rect key="frame" x="241" y="17" width="118" height="24"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="118" id="P8S-v9-Zbv"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.16862745100000001" green="0.51764705879999995" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.25490196078431371" green="0.36862745098039218" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="vBh-H1-zOX" secondAttribute="bottom" constant="8" id="2Bl-37-f7i"/>
                         <constraint firstAttribute="height" constant="49" id="g4b-jk-Dmc">
@@ -72,10 +72,11 @@
                     <rect key="frame" x="283" y="163" width="104" height="227"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1e-ld-BTv">
-                            <rect key="frame" x="0.0" y="197" width="104" height="30"/>
+                            <rect key="frame" x="0.0" y="194" width="104" height="33"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="104" id="9lg-Ea-Gs0"/>
                             </constraints>
+                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                             <state key="normal" title="Refresh">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -106,22 +107,12 @@
                         <action selector="showFeedWebView:" destination="-1" eventType="touchUpInside" id="gTO-bK-mkf"/>
                     </connections>
                 </button>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Status Pending..." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SQ6-K6-pmS">
-                    <rect key="frame" x="43" y="51" width="584" height="54"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="54" id="Pmy-SN-AnR"/>
-                    </constraints>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="16"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iGP-I5-rPc">
                     <rect key="frame" x="8" y="403" width="654" height="190"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <string key="text">Scoring policy: Point values are in increments of 2: 1st place is 10 points, 2nd place is 8 points, 3rd place is 6 points, and 4th places is 4 points. In case of a tie, point values are rounded down. For example, a tie for 2nd place would mean that both teams would receive 7 points instead of 8.</string>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="16"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TT9-HQ-iy0" userLabel="Score container">
@@ -129,15 +120,15 @@
                     <subviews>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8EG-Pf-aC6">
                             <rect key="frame" x="0.0" y="167" width="21" height="79"/>
-                            <color key="backgroundColor" red="0.62352941176470589" green="0.29803921568627451" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pCT-Gc-tue">
                             <rect key="frame" x="21" y="167" width="21" height="79"/>
-                            <color key="backgroundColor" red="0.34509803921568627" green="0.65490196078431373" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.57343453168869019" green="0.09179939329624176" blue="0.75023472309112549" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ocS-UG-phL">
                             <rect key="frame" x="42" y="167" width="21" height="79"/>
-                            <color key="backgroundColor" red="0.16862745098039217" green="0.11372549019607843" blue="0.63137254901960782" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.85845619379872029" green="0.15657229925431701" blue="0.2043661095400624" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z3u-Cl-niD">
                             <rect key="frame" x="62" y="167" width="21" height="79"/>
@@ -154,6 +145,16 @@
                         <constraint firstAttribute="centerY" secondItem="teW-Iw-m84" secondAttribute="centerY" id="qA3-H4-nrm"/>
                     </constraints>
                 </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="...Status Pending..." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SQ6-K6-pmS">
+                    <rect key="frame" x="43" y="51" width="584" height="54"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="Pmy-SN-AnR"/>
+                    </constraints>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>

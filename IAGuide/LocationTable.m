@@ -81,7 +81,7 @@
     cell.textLabel.textColor = [UIColor darkGrayColor];
     cell.backgroundView.backgroundColor = [UIColor clearColor];
     cell.backgroundColor = [UIColor clearColor];
-    
+        
     if (self.searchByTeacher) {
         NSString *name = self.teacherNames[(indexPath.row * 2) + 1];
         cell.textLabel.text = name;

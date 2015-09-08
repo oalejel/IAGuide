@@ -18,7 +18,7 @@
     
     CGContextAddRect(context, aRect);
     
-    UIImage *image = [UIImage imageNamed:@"mapoutline.png"];
+    UIImage *image = [UIImage imageNamed:@"mapoutline"];
     CGImageRef ref = image.CGImage;
     
     //flip coordinate system and adjust angle

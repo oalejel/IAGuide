@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14E7f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExtrasViewController">
             <connections>
+                <outlet property="directionsButton" destination="h8F-Fs-A5K" id="j81-Z0-gYt"/>
+                <outlet property="feedbackButton" destination="MsW-Gq-YR1" id="ryO-Ez-DtZ"/>
+                <outlet property="githubButton" destination="Tmb-dM-r7m" id="pdr-4O-b24"/>
+                <outlet property="safariButton" destination="QoJ-Gb-Gmv" id="cUV-CY-OcP"/>
                 <outlet property="view" destination="Dwd-up-N1j" id="bB0-iw-Cu1"/>
             </connections>
         </placeholder>
@@ -20,16 +24,16 @@
                     <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mE5-n3-eJf">
-                            <rect key="frame" x="241" y="20" width="118" height="21"/>
+                            <rect key="frame" x="241" y="17" width="118" height="24"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="118" id="WCJ-N3-t2P"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.16862745100000001" green="0.51764705879999995" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.25490196078431371" green="0.36862745098039218" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="mE5-n3-eJf" secondAttribute="bottom" constant="8" id="kSL-aB-W7h"/>
                         <constraint firstAttribute="height" constant="49" id="nRx-Xt-nDu">
@@ -39,11 +43,11 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed By Omar Al-ejel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXh-kN-5b6">
-                    <rect key="frame" x="197" y="119" width="207" height="46"/>
+                    <rect key="frame" x="193" y="119" width="215" height="46"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="46" id="P2c-D5-fkA"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -72,61 +76,69 @@
                         <constraint firstAttribute="width" constant="207" id="Eom-Ps-nLA"/>
                         <constraint firstAttribute="height" constant="44" id="ZDN-cS-foj"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8F-Fs-A5K">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8F-Fs-A5K" customClass="SqueezeButton" customModule="IAGuide" customModuleProvider="target">
                     <rect key="frame" x="171" y="190" width="258" height="40"/>
-                    <color key="backgroundColor" white="0.7184103261" alpha="0.62" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.83000000000000007" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="258" id="LwI-dD-5ex"/>
                         <constraint firstAttribute="height" constant="40" id="qHP-7n-H9U"/>
                     </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                     <state key="normal" title="Get Driving Directions">
                         <color key="titleColor" red="0.14582487059509119" green="0.32856206293706175" blue="0.82684337721102408" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="openMapApp:" destination="-1" eventType="touchUpInside" id="zJd-rC-eTG"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoJ-Gb-Gmv">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoJ-Gb-Gmv" customClass="SqueezeButton" customModule="IAGuide" customModuleProvider="target">
                     <rect key="frame" x="171" y="253" width="258" height="40"/>
-                    <color key="backgroundColor" white="0.7184103261" alpha="0.62" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.83000000000000007" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="258" id="cjd-GC-gWV"/>
                         <constraint firstAttribute="height" constant="40" id="tqj-MQ-F4V"/>
                     </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                     <state key="normal" title="Open &quot;IAToday&quot; in Safari">
                         <color key="titleColor" red="0.14582487059509119" green="0.32856206293706175" blue="0.82684337721102408" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="openHomeWebsite:" destination="-1" eventType="touchUpInside" id="MfN-nb-hbp"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tmb-dM-r7m">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tmb-dM-r7m" customClass="SqueezeButton" customModule="IAGuide" customModuleProvider="target">
                     <rect key="frame" x="171" y="379" width="258" height="40"/>
-                    <color key="backgroundColor" white="0.7184103261" alpha="0.62" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.83000000000000007" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="eD7-oE-spV"/>
                         <constraint firstAttribute="width" constant="258" id="ns1-3y-q72"/>
                     </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                     <state key="normal" title="View Source on Github">
                         <color key="titleColor" red="0.14582487059999999" green="0.32856206290000001" blue="0.82684337720000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="viewSourcePressed:" destination="-1" eventType="touchUpInside" id="nUI-hA-MQo"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsW-Gq-YR1">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsW-Gq-YR1" customClass="SqueezeButton" customModule="IAGuide" customModuleProvider="target">
                     <rect key="frame" x="171" y="316" width="258" height="40"/>
-                    <color key="backgroundColor" white="0.7184103261" alpha="0.62" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.83000000000000007" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="B4o-Jj-v4c"/>
                         <constraint firstAttribute="width" constant="258" id="dBl-g7-43L"/>
                     </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                     <state key="normal" title="Send Feedback/Suggestions">
                         <color key="titleColor" red="0.14582487059999999" green="0.32856206290000001" blue="0.82684337720000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="feedbackButtonPressed:" destination="-1" eventType="touchUpInside" id="NcT-2F-C5z"/>

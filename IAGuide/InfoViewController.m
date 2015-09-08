@@ -98,11 +98,13 @@
                         }
                     } else {
                         if (self.teacherCode == lower) {
-                            NSUInteger splitIndex = [classString rangeOfString:@"- "].location + 2;//create a range and add 2 since we want what is after this
-                            if (splitIndex > 2) {//since we add 2 to offset the deletion point
-                                NSRange classesTaughtRange = NSMakeRange(0, splitIndex);
-                                NSString *extractedString = [classString stringByReplacingCharactersInRange:classesTaughtRange withString:@""];
-                                sem2String = extractedString;
+                            if ([classString containsString:@"- "]) {
+                                NSUInteger splitIndex = [classString rangeOfString:@"- "].location + 2;//create a range and add 2 since we want what is after this
+                                if (splitIndex > 2) {//since we add 2 to offset the deletion point
+                                    NSRange classesTaughtRange = NSMakeRange(0, splitIndex);
+                                    NSString *extractedString = [classString stringByReplacingCharactersInRange:classesTaughtRange withString:@""];
+                                    sem2String = extractedString;
+                            }
                             } else {
                                 sem2String = classString;
                             }
@@ -176,7 +178,7 @@
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
 {
     if (section == tableView.numberOfSections - 1) {
-        return @"As of 2014-2015"; //change every year once info is updated!
+        return @"As of 2015-2016"; //change every year once info is updated!
     }
     
     return nil;

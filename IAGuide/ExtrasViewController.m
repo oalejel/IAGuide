@@ -9,12 +9,17 @@
 #import "ExtrasViewController.h"
 #import <MapKit/MapKit.h>
 #import <MessageUI/MessageUI.h>
+#import "IAGuide-Swift.h"
 
 @interface ExtrasViewController () <MFMailComposeViewControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic) BOOL viewAppearedBefore;
 @property (nonatomic) NSArray *locations;
 @property (nonatomic) NSDictionary *launchOptions;
+@property (weak, nonatomic) IBOutlet SqueezeButton *directionsButton;
+@property (weak, nonatomic) IBOutlet SqueezeButton *safariButton;
+@property (weak, nonatomic) IBOutlet SqueezeButton *feedbackButton;
+@property (weak, nonatomic) IBOutlet SqueezeButton *githubButton;
 
 @end
 
@@ -27,6 +32,15 @@
         self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"More" image:[UIImage imageNamed:@"more"] selectedImage:[UIImage imageNamed:@"more_selected"]];
     }
     return self;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.directionsButton.layer.cornerRadius = 5;
+    self.safariButton.layer.cornerRadius = 5;
+    self.feedbackButton.layer.cornerRadius = 5;
+    self.githubButton.layer.cornerRadius = 5;
 }
 
 - (void)viewWillAppear:(BOOL)animated

@@ -29,7 +29,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *toggleButton; //toggle table with room/teacher choices
 @property (weak, nonatomic) IBOutlet UITextField *searchField;//to search by room/possibly teachers
 @property (weak, nonatomic) IBOutlet UIView *headerView;//blue box above map that says "find your way"
-@property (weak, nonatomic) IBOutlet UIView *inputView;//contains textfield and tableview
+@property (strong, nonatomic) IBOutlet UIView *inputView;//contains textfield and tableview
 @property (weak, nonatomic) IBOutlet UISegmentedControl *filterSegmentControl;
 
 @end
@@ -106,6 +106,20 @@
         
         self.locationTable = [[LocationTable alloc] initWithTableviewFrame:tableRect homeController:self];
         [self.inputView insertSubview:self.locationTable atIndex:0];
+        
+//        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
+//
+//
+//            self.inputView.backgroundColor = [UIColor clearColor];
+//            UIToolbar *fakeToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 1000, 1000)];
+//            fakeToolbar.autoresizingMask = self.inputView.autoresizingMask;
+//            UIVisualEffectView *ev = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
+//            ev.frame = CGRectMake(0, 0, 1000, 1000);
+//            ev.autoresizingMask = self.inputView.autoresizingMask;
+//            [self.inputView insertSubview:ev atIndex:0]; // Place it below everything    self.inputView.backgroundColor = [UIColor clearColor];
+//
+//        }
+        
         self.viewAppearedBefore = true;
     }
 }
@@ -244,7 +258,7 @@
         Location *loc = (Location *)view.annotation;
         InfoViewController *ivc = [[InfoViewController alloc] initWithRoomNumber:(int)loc.roomNumber]; // you might want to have a strong property for this so you do not have to constantly waste memory on new ones
         UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:ivc];
-        nvc.navigationBar.barTintColor = [UIColor colorWithRed:0.2 green:0.4 blue:0.9 alpha:1.0];
+        nvc.navigationBar.barTintColor = [UIColor colorWithRed:0.2549 green:0.3686 blue:0.92549 alpha:1.0];
         nvc.navigationBar.tintColor = [UIColor whiteColor];
         NSDictionary *attrib = @{ NSForegroundColorAttributeName : [UIColor whiteColor] };
         nvc.navigationBar.titleTextAttributes = attrib;

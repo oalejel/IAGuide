@@ -267,9 +267,9 @@ const int y_offset = 20;
 //    bootData = nil;
 //    bootURL = nil;
     
-    NSArray *urlStrings = @[@"http://www.iaolympics.com/api/scores", @"http://www.iaolympics.com/api/freshman",
-                            @"http://www.iaolympics.com/api/sophomore", @"http://www.iaolympics.com/api/junior",
-                            @"http://www.iaolympics.com/api/senior", @"http://www.iaolympics.com/api/status"];
+    NSArray *urlStrings = @[@"http://iaolympics-scoreboard.herokuapp.com/api/scores", @"http://iaolympics-scoreboard.herokuapp.com/api/freshman",
+                            @"http://iaolympics-scoreboard.herokuapp.com/api/sophomore", @"http://iaolympics-scoreboard.herokuapp.com/api/junior",
+                            @"http://iaolympics-scoreboard.herokuapp.com/api/senior", @"http://iaolympics-scoreboard.herokuapp.com/api/status"];
     NSMutableArray *urls = [[NSMutableArray alloc] initWithCapacity:5];
     for (NSString *str in urlStrings) {
         NSURL *url = [NSURL URLWithString:str];
@@ -278,23 +278,25 @@ const int y_offset = 20;
     
     NSMutableArray *dictStorage = [[NSMutableArray alloc] initWithCapacity:6];
     
-    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[urls objectAtIndex:0]];
-    NSURLResponse *response = nil;
-    NSError *error = nil;
-    NSData *sampleData = [NSURLConnection sendSynchronousRequest:urlRequest
-                                               returningResponse:&response
-                                                           error:&error];
+   // NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[urls objectAtIndex:0]];
+ //   NSURLResponse *response = nil;
+   // NSError *error = nil;
+    //NSData *sampleData = [NSURLConnection sendSynchronousRequest:urlRequest
+                                              // returningResponse:&response
+                                                     //      error:&error];
     
     int index = 0;
     for (NSURL *url in urls) {
         
         NSData *webData = [NSData dataWithContentsOfURL:url];
-
         if (!webData) {
             return;//data retrieval failed
         }
         if (index != 5) {
             NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:webData options:0 error:nil];
+            if (dataDictionary == nil) {
+                return;
+            }
             [dictStorage addObject:dataDictionary];
         } else {
             NSString *dataString = [[NSString alloc] initWithData:webData encoding:NSUTF8StringEncoding];
@@ -401,7 +403,7 @@ const int y_offset = 20;
     NSURL *url = [[NSURL alloc] initWithString:@"http://www.ustream.tv/embed/19967600?wmode=direct&showtitle=false"];
     WebViewController *wvc = [[WebViewController alloc] initWithURL:url];
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:wvc];
-    nvc.navigationBar.barTintColor = [UIColor colorWithRed:0.2 green:0.4 blue:0.9 alpha:1.0];
+    nvc.navigationBar.barTintColor = [UIColor colorWithRed:0.2549 green:0.3686 blue:0.92549 alpha:1.0];
     nvc.navigationBar.tintColor = [UIColor whiteColor];
     NSDictionary *attrib = @{ NSForegroundColorAttributeName : [UIColor whiteColor] };
     nvc.navigationBar.titleTextAttributes = attrib;

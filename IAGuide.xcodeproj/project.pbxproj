@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D0647971B9C90070074B9FC /* SqueezeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0647961B9C90070074B9FC /* SqueezeButton.swift */; };
 		3D0F690F19FDE12D0080DC35 /* ExtrasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D0F690E19FDE12D0080DC35 /* ExtrasViewController.xib */; };
 		3D1524921A578D090006F9F4 /* ClassBlockViewContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1524911A578D090006F9F4 /* ClassBlockViewContainer.m */; };
 		3D1524941A578D820006F9F4 /* ClassBlockViewContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D1524931A578D820006F9F4 /* ClassBlockViewContainer.xib */; };
@@ -78,6 +79,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D0647961B9C90070074B9FC /* SqueezeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqueezeButton.swift; sourceTree = "<group>"; };
 		3D0F690E19FDE12D0080DC35 /* ExtrasViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExtrasViewController.xib; sourceTree = "<group>"; };
 		3D1524901A578D090006F9F4 /* ClassBlockViewContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassBlockViewContainer.h; sourceTree = "<group>"; };
 		3D1524911A578D090006F9F4 /* ClassBlockViewContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassBlockViewContainer.m; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 		3DA36BB51A5C99BA00C369CA /* Extras */ = {
 			isa = PBXGroup;
 			children = (
+				3D0647961B9C90070074B9FC /* SqueezeButton.swift */,
 				3DF32E0E19FC22CB005AEA8B /* ExtrasViewController.h */,
 				3DF32E0F19FC22CB005AEA8B /* ExtrasViewController.m */,
 				3D0F690E19FDE12D0080DC35 /* ExtrasViewController.xib */,
@@ -560,6 +563,7 @@
 				3D1524921A578D090006F9F4 /* ClassBlockViewContainer.m in Sources */,
 				3DC7BA8E1B74F5EC0046AC82 /* GuideViewController.m in Sources */,
 				3D79969D1A3F26FA007CF0E5 /* NSTimeZone+ProperAbbreviation.m in Sources */,
+				3D0647971B9C90070074B9FC /* SqueezeButton.swift in Sources */,
 				3DA36BA81A5C7BDF00C369CA /* Location.swift in Sources */,
 				3D551AB619AB82D10082C393 /* main.m in Sources */,
 				3D79969B1A3F26FA007CF0E5 /* MXLCalendarEvent.m in Sources */,

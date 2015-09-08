@@ -18,15 +18,8 @@
 	<string> Davies</string>
 	<integer>8</integer>
 	<string> DeZwaan</string>
-<!--	<integer>9</integer>-->
-<!--	<string> Dittus</string>-->
-<!--	<integer>9</integer>-->
-<!--	<string> Tecmire</string>-->
-<!--	<integer>10</integer>-->
-<!--	<string> Fairman</string>-->
 	<integer>09</integer>
 	<string> Gardner</string>
-
 	<integer>10</integer>
 	<string> Hessler</string>
 	<integer>11</integer>
@@ -59,18 +52,14 @@
 	<string> Shamanski</string>
 	<integer>25</integer>
 	<string> Slade</string>
-    
     <integer>26</integer>
     <string> Speicher</string>
-    
 	<integer>27</integer>
 	<string> Stibitz</string>
 	<integer>28</integer>
 	<string> Tecmire</string>
-    
     <integer>29</integer>
     <string> Uhelski</string>
-    
 	<integer>30</integer>
 	<string> Weinger</string>
 	<integer>31</integer>
