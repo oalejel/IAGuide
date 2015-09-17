@@ -129,7 +129,7 @@ class _GuideViewController: UIViewController, UITableViewDataSource, UITableView
         //go to background thread
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             let calendarManager = MXLCalendarManager()
-            let calendarURL = NSURL(string: "http://www.iatoday.org/_infrastructure/ICalendarHandler.ashx?Tokens=757278")
+            let calendarURL = NSURL(string: "https://www.iatoday.org/_infrastructure/ICalendarHandler.ashx?Tokens=757278")
             
             
             calendarManager.scanICSFileAtRemoteURL(calendarURL, withCompletionHandler: { (onlineCalendar, onlineFileData, error) -> Void in

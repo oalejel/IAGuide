@@ -133,7 +133,7 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
     MXLCalendarManager *manager = [[MXLCalendarManager alloc] init];
     
-        [manager scanICSFileAtRemoteURL:[NSURL URLWithString:@"http://www.iatoday.org/_infrastructure/ICalendarHandler.ashx?Tokens=757278"] withCompletionHandler:^(MXLCalendar *calendar, NSData *nilFileData, NSError *error) {
+        [manager scanICSFileAtRemoteURL:[NSURL URLWithString:@"https://www.iatoday.org/_infrastructure/ICalendarHandler.ashx?Tokens=757278"] withCompletionHandler:^(MXLCalendar *calendar, NSData *nilFileData, NSError *error) {
             
             self.eventsCalendar = calendar;
             
@@ -151,7 +151,7 @@
                 }];
                 
             } else {//there is a connection, download for online use
-                NSData *calendarFile = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://www.iatoday.org/_infrastructure/ICalendarHandler.ashx?Tokens=757278"]];
+                NSData *calendarFile = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://www.iatoday.org/_infrastructure/ICalendarHandler.ashx?Tokens=757278"]];
                 
                 NSError *writingError;
                 [calendarFile writeToFile:[self itemArchivePath] options:0 error:&writingError];

@@ -79,7 +79,7 @@
 }
 - (IBAction)openHomeWebsite:(id)sender
 {
-    NSURL *websiteurl = [NSURL URLWithString:@"http://www.iatoday.org/international/index.aspx"];
+    NSURL *websiteurl = [NSURL URLWithString:@"https://www.iatoday.org/international/index.aspx"];
     [[UIApplication sharedApplication] openURL:websiteurl];
 }
 
