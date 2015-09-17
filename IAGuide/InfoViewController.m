@@ -76,7 +76,7 @@
                 int lower = fullCode % 100;
                 //check if teacher EVER teaches in this class
                 if (self.teacherCode == upper || self.teacherCode == lower) {
-                    NSString *classString = teachers[i + 8];
+                    NSString *classString = (NSString *)teachers[i + 8];
                     NSString *sem1String;
                     NSString *sem2String;
                     if (self.teacherCode == upper) { //do they teach 1st sem
@@ -98,16 +98,17 @@
                         }
                     } else {
                         if (self.teacherCode == lower) {
-                            if ([classString containsString:@"- "]) {
+                            if ([classString rangeOfString:@"- "].location != NSNotFound) {
                                 NSUInteger splitIndex = [classString rangeOfString:@"- "].location + 2;//create a range and add 2 since we want what is after this
                                 if (splitIndex > 2) {//since we add 2 to offset the deletion point
                                     NSRange classesTaughtRange = NSMakeRange(0, splitIndex);
                                     NSString *extractedString = [classString stringByReplacingCharactersInRange:classesTaughtRange withString:@""];
                                     sem2String = extractedString;
-                            }
+                                }
                             } else {
                                 sem2String = classString;
                             }
+                            
                         }
                     }
                     

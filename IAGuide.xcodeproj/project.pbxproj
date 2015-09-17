@@ -63,6 +63,7 @@
 		3DD81F0419B68BAA00794B17 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DD81F0319B68BAA00794B17 /* MapViewController.xib */; };
 		3DD81F0619B6A08D00794B17 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DD81F0519B6A08D00794B17 /* MapKit.framework */; };
 		3DEF22C71A15615300FBED5C /* toggle.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DEF22C61A15615300FBED5C /* toggle.png */; };
+		3DF1EBA21BAB51D000B834AC /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF1EBA11BAB51D000B834AC /* test.swift */; };
 		3DF32E1019FC22CB005AEA8B /* ExtrasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF32E0F19FC22CB005AEA8B /* ExtrasViewController.m */; };
 		3DFD8BD71A350ED000279A2E /* OlympicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFD8BD51A350ED000279A2E /* OlympicsViewController.m */; };
 		3DFD8BD81A350ED000279A2E /* OlympicsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DFD8BD61A350ED000279A2E /* OlympicsViewController.xib */; };
@@ -156,6 +157,7 @@
 		3DD81F0319B68BAA00794B17 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MapViewController.xib; path = ../MapViewController.xib; sourceTree = "<group>"; };
 		3DD81F0519B6A08D00794B17 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3DEF22C61A15615300FBED5C /* toggle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toggle.png; sourceTree = "<group>"; };
+		3DF1EBA11BAB51D000B834AC /* test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		3DF32E0E19FC22CB005AEA8B /* ExtrasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtrasViewController.h; sourceTree = "<group>"; };
 		3DF32E0F19FC22CB005AEA8B /* ExtrasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtrasViewController.m; sourceTree = "<group>"; };
 		3DFD8BD41A350ED000279A2E /* OlympicsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OlympicsViewController.h; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				3D551AB719AB82D10082C393 /* AppDelegate.h */,
 				3D551AB819AB82D10082C393 /* AppDelegate.m */,
 				3DA36BA71A5C7BDF00C369CA /* Location.swift */,
+				3DF1EBA11BAB51D000B834AC /* test.swift */,
 				3DA36BB31A5C8DDD00C369CA /* IAGuide-Bridging-Header.h */,
 				3DA36BB41A5C95B500C369CA /* Guide */,
 				3DAFF91C19F6D8A1002605AE /* Map */,
@@ -561,6 +564,7 @@
 				3D79969A1A3F26FA007CF0E5 /* MXLCalendar.m in Sources */,
 				3DC05ACF1B5DEBC200F4C9CF /* GlassScrollController.swift in Sources */,
 				3D1524921A578D090006F9F4 /* ClassBlockViewContainer.m in Sources */,
+				3DF1EBA21BAB51D000B834AC /* test.swift in Sources */,
 				3DC7BA8E1B74F5EC0046AC82 /* GuideViewController.m in Sources */,
 				3D79969D1A3F26FA007CF0E5 /* NSTimeZone+ProperAbbreviation.m in Sources */,
 				3D0647971B9C90070074B9FC /* SqueezeButton.swift in Sources */,
@@ -612,6 +616,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -654,6 +659,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;

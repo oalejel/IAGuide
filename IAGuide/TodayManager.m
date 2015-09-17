@@ -209,8 +209,8 @@
 - (BOOL)todayIsAnADay:(NSDate *)date
 {
     NSDictionary *monthInfoDictionary = @{
-                                          @8: @[@YES, @21], @9: @[@NO], @10: @[@YES], @11: @[@NO, @30],
-                                          @12: @[@YES], //december of 2014. Key is month, [0:(odd is A day), 1:exception, 2:exception]
+                                          @8: @[@YES, @21], @9: @[@YES], @10: @[@YES], @11: @[@NO, @30],
+                                          @12: @[@YES], //december of 2015. Key is month, [0:(odd is A day), 1:exception, 2:exception]
                                           @1: @[@YES, @19], @2: @[@YES, @22],
                                           @3: @[@YES, @28], @4: @[@NO], @5: @[@NO, @31],
                                           @6: @[@NO]
