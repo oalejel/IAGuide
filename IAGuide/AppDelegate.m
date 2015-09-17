@@ -12,7 +12,7 @@
 #import "OlympicsViewController.h"
 #import "GuideViewController.h"
 
-//#import "IAGuide-Swift.h"//this will allow swift files to interact with objc
+#import "IAGuide-Swift.h"//this will allow swift files to interact with objc
 
 NSDateFormatter *dateFormatter = nil;
 

@@ -36,7 +36,7 @@ class GlassScrollController: UIViewController, UIScrollViewDelegate {
         numberOfPages = controllers.count
         let contentWidth = bounds.size.width * CGFloat(numberOfPages)
         scrollView.contentSize = CGSizeMake(contentWidth, bounds.size.height)
-        for (index, vc) in controllers.enumerate() {
+        for (index, vc) in enumerate(controllers) {
             addChildViewController(vc)
             let subview = vc.view
             scrollView.addSubview(subview)

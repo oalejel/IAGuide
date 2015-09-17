@@ -46,7 +46,7 @@ class _GuideViewController: UIViewController, UITableViewDataSource, UITableView
     }
 
     //this is just there because i overrided the init(nib... method
-    required init?(coder aDecoder: NSCoder) {
+    required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -129,16 +129,16 @@ class _GuideViewController: UIViewController, UITableViewDataSource, UITableView
         //go to background thread
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             let calendarManager = MXLCalendarManager()
-            let calendarURL = NSURL(string: "https://www.iatoday.org/_infrastructure/ICalendarHandler.ashx?Tokens=757278")
+            let calendarURL = NSURL(string: "http://www.iatoday.org/_infrastructure/ICalendarHandler.ashx?Tokens=757278")
             
             
             calendarManager.scanICSFileAtRemoteURL(calendarURL, withCompletionHandler: { (onlineCalendar, onlineFileData, error) -> Void in
                     //if you cant get data from online, check for saved data
                     if error != nil {
-                        print("Error getting data from Online: \(error.description)", terminator: "")
+                        print("Error getting data from Online: \(error.description)")
                         calendarManager.scanICSFileAtLocalPath(self.itemArchivePath(), withCompletionHandler: { (fileCalendar, nilFileData, fileError) -> Void in
                             if fileError != nil {
-                                print("Error getting data from File: \(fileError.description)", terminator: "")
+                                print("Error getting data from File: \(fileError.description)")
                             } else if fileError == nil {
                                 self.updateTableWithCalendar(fileCalendar)
                             }
@@ -170,17 +170,17 @@ class _GuideViewController: UIViewController, UITableViewDataSource, UITableView
             isADay = TodayManager.sharedClassManager().todayIsAnADay(now)
             
             dateFormatter.dateFormat = "e"//day of week format (1-7)
-            let dayOfWeek = Int(dateFormatter.stringFromDate(now))
+            var dayOfWeek = dateFormatter.stringFromDate(now).toInt()
             
             var imageToInsert: UIImage!
             
             if dayOfWeek == 1 || dayOfWeek == 7 || TodayManager.sharedClassManager().noSchool() {
                 var testDate = now.dateByAddingTimeInterval(86400)
                 
-                repeat {
+                do {
                     testDate = testDate.dateByAddingTimeInterval(86400)
                     //get weekday from the date (1-7)
-                    let testWeekday = Int(dateFormatter.stringFromDate(testDate))
+                    let testWeekday = dateFormatter.stringFromDate(testDate).toInt()
                     let noHolidayBool = TodayManager.sharedClassManager().dayTypeForDate(testDate) != 3 //3 is when there is a holiday
                     let weekdayBool = (testWeekday != 7) && (testWeekday != 1)
                     
@@ -239,7 +239,7 @@ class _GuideViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) 
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
         //setup colors
         cell.textLabel!.textColor = UIColor.whiteColor()
         cell.detailTextLabel!.textColor = UIColor.whiteColor()
@@ -279,15 +279,15 @@ class _GuideViewController: UIViewController, UITableViewDataSource, UITableView
         for _ in 1...7 {
             date = date.dateByAddingTimeInterval(86400)
             dateFormatter.dateFormat = "d"//day of month format
-            let dayOfMonth = Int(dateFormatter.stringFromDate(date))
+            let dayOfMonth = dateFormatter.stringFromDate(date).toInt()
             dateFormatter.dateFormat = "M"//month format
-            let monthNumber = Int(dateFormatter.stringFromDate(date))
+            let monthNumber = dateFormatter.stringFromDate(date).toInt()
             for event in eventsCalendar.events {
                 if let eventStart = event.eventStartDate {
                     dateFormatter.dateFormat = "M"//reset to month format
-                    if Int(dateFormatter.stringFromDate(eventStart)) == monthNumber {
+                    if dateFormatter.stringFromDate(eventStart).toInt() == monthNumber {
                         dateFormatter.dateFormat = "d"//day format
-                        let f = Int(dateFormatter.stringFromDate(eventStart))
+                        let f = dateFormatter.stringFromDate(eventStart).toInt()
                         if f == dayOfMonth {
                             let x = 9
                             eventsArray.append(event as! MXLCalendarEvent)

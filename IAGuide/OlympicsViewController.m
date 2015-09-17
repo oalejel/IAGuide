@@ -262,14 +262,14 @@ const int y_offset = 20;
 
 - (void)getData {
     //there is an issue wiht the website. must access main website first...
-//    NSURL *bootURL = [NSURL URLWithString:@"https://www.iaolympics.com"];
+//    NSURL *bootURL = [NSURL URLWithString:@"http://www.iaolympics.com"];
 //    NSData *bootData = [NSData dataWithContentsOfURL:bootURL];
 //    bootData = nil;
 //    bootURL = nil;
     
-    NSArray *urlStrings = @[@"https://iaolympics-scoreboard.herokuapp.com/api/scores", @"https://iaolympics-scoreboard.herokuapp.com/api/freshman",
-                            @"https://iaolympics-scoreboard.herokuapp.com/api/sophomore", @"https://iaolympics-scoreboard.herokuapp.com/api/junior",
-                            @"https://iaolympics-scoreboard.herokuapp.com/api/senior", @"https://iaolympics-scoreboard.herokuapp.com/api/status"];
+    NSArray *urlStrings = @[@"http://iaolympics-scoreboard.herokuapp.com/api/scores", @"http://iaolympics-scoreboard.herokuapp.com/api/freshman",
+                            @"http://iaolympics-scoreboard.herokuapp.com/api/sophomore", @"http://iaolympics-scoreboard.herokuapp.com/api/junior",
+                            @"http://iaolympics-scoreboard.herokuapp.com/api/senior", @"http://iaolympics-scoreboard.herokuapp.com/api/status"];
     NSMutableArray *urls = [[NSMutableArray alloc] initWithCapacity:5];
     for (NSString *str in urlStrings) {
         NSURL *url = [NSURL URLWithString:str];
@@ -400,7 +400,7 @@ const int y_offset = 20;
 #pragma MARK - IBACTIONS
 
 - (IBAction)showFeedWebView:(id)sender {
-    NSURL *url = [[NSURL alloc] initWithString:@"https://www.ustream.tv/embed/19967600?wmode=direct&showtitle=false"];
+    NSURL *url = [[NSURL alloc] initWithString:@"http://www.ustream.tv/embed/19967600?wmode=direct&showtitle=false"];
     WebViewController *wvc = [[WebViewController alloc] initWithURL:url];
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:wvc];
     nvc.navigationBar.barTintColor = [UIColor colorWithRed:0.2549 green:0.3686 blue:0.92549 alpha:1.0];
@@ -415,9 +415,9 @@ const int y_offset = 20;
  
  - (void)startRequests {
  // Create the request.
- NSArray *urlStrings = @[@"https://www.iaolympics.com/api/scores", @"https://www.iaolympics.com/api/freshman",
- @"https://www.iaolympics.com/api/sophomore", @"https://www.iaolympics.com/api/junior",
- @"https://www.iaolympics.com/api/senior", @"https://www.iaolympics.com/api/status"];
+ NSArray *urlStrings = @[@"http://www.iaolympics.com/api/scores", @"http://www.iaolympics.com/api/freshman",
+ @"http://www.iaolympics.com/api/sophomore", @"http://www.iaolympics.com/api/junior",
+ @"http://www.iaolympics.com/api/senior", @"http://www.iaolympics.com/api/status"];
  NSMutableArray *urls = [[NSMutableArray alloc] initWithCapacity:5];
  for (NSString *str in urlStrings) {
  NSURL *url = [NSURL URLWithString:str];
