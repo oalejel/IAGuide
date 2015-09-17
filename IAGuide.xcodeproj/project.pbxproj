@@ -31,6 +31,7 @@
 		3D66EA8219CF132700432B20 /* LocationStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D66EA8119CF132700432B20 /* LocationStore.m */; };
 		3D6CFCC71A5A0F6500931143 /* ClassBlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6CFCC61A5A0F6500931143 /* ClassBlockView.m */; };
 		3D6CFCC91A5A0F9000931143 /* ClassBlockView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D6CFCC81A5A0F9000931143 /* ClassBlockView.xib */; };
+		3D76274F1BAB2D9C007B373E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA36BA71A5C7BDF00C369CA /* Location.swift */; settings = {ASSET_TAGS = (); }; };
 		3D793A2719E87C9200BBAD68 /* OutlineOverlayRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D793A2619E87C9200BBAD68 /* OutlineOverlayRenderer.m */; };
 		3D79969A1A3F26FA007CF0E5 /* MXLCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7996931A3F26FA007CF0E5 /* MXLCalendar.m */; };
 		3D79969B1A3F26FA007CF0E5 /* MXLCalendarEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7996951A3F26FA007CF0E5 /* MXLCalendarEvent.m */; };
@@ -52,7 +53,6 @@
 		3DA1E8571A361B19007E500B /* more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DA1E8551A361B19007E500B /* more@2x.png */; };
 		3DA1E8591A361B72007E500B /* compass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DA1E8581A361B72007E500B /* compass@2x.png */; };
 		3DA1E85B1A361CEB007E500B /* trophy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DA1E85A1A361CEB007E500B /* trophy@2x.png */; };
-		3DA36BA81A5C7BDF00C369CA /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA36BA71A5C7BDF00C369CA /* Location.swift */; };
 		3DC05ACF1B5DEBC200F4C9CF /* GlassScrollController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC05ACE1B5DEBC200F4C9CF /* GlassScrollController.swift */; };
 		3DC2214E1ADD92E500158C7D /* swift.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DC2214D1ADD92E500158C7D /* swift.png */; };
 		3DC221501ADD935200158C7D /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DC2214F1ADD935200158C7D /* next.png */; };
@@ -459,6 +459,7 @@
 		3D551AA819AB82D00082C393 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Omar Alejel";
@@ -562,9 +563,9 @@
 				3DC05ACF1B5DEBC200F4C9CF /* GlassScrollController.swift in Sources */,
 				3D1524921A578D090006F9F4 /* ClassBlockViewContainer.m in Sources */,
 				3DC7BA8E1B74F5EC0046AC82 /* GuideViewController.m in Sources */,
+				3D76274F1BAB2D9C007B373E /* Location.swift in Sources */,
 				3D79969D1A3F26FA007CF0E5 /* NSTimeZone+ProperAbbreviation.m in Sources */,
 				3D0647971B9C90070074B9FC /* SqueezeButton.swift in Sources */,
-				3DA36BA81A5C7BDF00C369CA /* Location.swift in Sources */,
 				3D551AB619AB82D10082C393 /* main.m in Sources */,
 				3D79969B1A3F26FA007CF0E5 /* MXLCalendarEvent.m in Sources */,
 				3D8AE3701A3D31E10055A312 /* LocationTable.m in Sources */,
@@ -612,6 +613,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -631,6 +633,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -654,6 +657,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				DEFINES_MODULE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -665,6 +669,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

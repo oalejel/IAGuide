@@ -11,7 +11,6 @@
 #import "LocationStore.h"
 #import "LocationTable.h"//table with room (maybe class) choices
 #import "OutlineOverlayRenderer.h"
-//#import "StartupViewController.h"
 
 #import "IAGuide-Swift.h"//this will allow swift files to interact with objc
 
@@ -176,7 +175,7 @@
 {
     //this statement is important since the userlocation view is sent through here
     //you might want to change the current location pin view so it's just a circle
-    if ([annotation isKindOfClass:[Location class]]) {
+    if ([annotation isKindOfClass: [Location class]]) {
         
         MKPinAnnotationView *annotationPin = (MKPinAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:@"Annotation"];
         
