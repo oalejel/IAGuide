@@ -49,12 +49,6 @@ NSDateFormatter *dateFormatter = nil;
     NSInteger x = [[mvc view] tag];
     x++;
     
-    
-//    GlassScrollController *gsc = [[GlassScrollController alloc] init];
-//    [gsc loadView];
-//    [gsc setStartIndex:0];
-//    [gsc setViewControllers:@[mvc, ovc, evc]];
-//    self.window.rootViewController = gsc;
     self.window.rootViewController = tbc;
     //to find time til tomorrow, subtract seconds in a day (86400)
     long secondsSince1970 = time(NULL);
@@ -81,7 +75,7 @@ NSDateFormatter *dateFormatter = nil;
         [UITabBarItem.appearance setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor yellowColor], NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];//selected text is yellow
         tabBarController.tabBar.translucent = NO;
         //give tabbar the custom blue color
-        tabBarController.tabBar.barTintColor = [UIColor colorWithRed:43.0/255.0 green:132.0/255.0 blue:211.0/255 alpha:1.0];
+        tabBarController.tabBar.barTintColor = [UIColor colorWithRed:65.0/255.0 green:94.0/255.0 blue:236.0/255 alpha:1.0];
 
         return tabBarController;
 }

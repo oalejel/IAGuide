@@ -267,9 +267,9 @@ const int y_offset = 20;
 //    bootData = nil;
 //    bootURL = nil;
     
-    NSArray *urlStrings = @[@"https://iaolympics-scoreboard.herokuapp.com/api/scores", @"https://iaolympics-scoreboard.herokuapp.com/api/freshman",
-                            @"https://iaolympics-scoreboard.herokuapp.com/api/sophomore", @"https://iaolympics-scoreboard.herokuapp.com/api/junior",
-                            @"https://iaolympics-scoreboard.herokuapp.com/api/senior", @"https://iaolympics-scoreboard.herokuapp.com/api/status"];
+    NSArray *urlStrings = @[@"http://iaolympics-scoreboard.herokuapp.com/api/scores", @"http://iaolympics-scoreboard.herokuapp.com/api/freshman",
+                            @"http://iaolympics-scoreboard.herokuapp.com/api/sophomore", @"http://iaolympics-scoreboard.herokuapp.com/api/junior",
+                            @"http://iaolympics-scoreboard.herokuapp.com/api/senior", @"http://iaolympics-scoreboard.herokuapp.com/api/status"];
     NSMutableArray *urls = [[NSMutableArray alloc] initWithCapacity:5];
     for (NSString *str in urlStrings) {
         NSURL *url = [NSURL URLWithString:str];
