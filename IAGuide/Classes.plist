@@ -108,11 +108,11 @@
         <array>
             <string>2299 </string><!-- Riggs -->
             <string>2299 </string><!-- Riggs -->
-            <string>2200</string>
+            <string>2299</string>
             <string>3199 </string><!-- Riggs -->
             <string>3199 </string><!-- Riggs -->
             <string>2299 </string><!-- Riggs -->
-            <string>2200</string>
+            <string>2299</string>
             <string>2299 </string><!-- Riggs -->
             
             <string>IB2 Spanish</string>
@@ -548,12 +548,13 @@
         
         <key>310</key>
         <array>
-            <string>2199 </string><!-- Tecmire -->
-            <string>2899</string><!-- Tecmire -->
-            <string>2899</string><!-- Tecmire -->
-            <string>2899 </string><!-- Tecmire --><!-- Fairman -->
-            <string>2899</string><!-- Weinger -->
-            <string>None</string><!-- Tecmire -->
+            <string>2199 </string>
+            <string>2899</string>
+            <string>2899</string>
+            <string>2899 </string>
+            <string>2899</string>
+            <string>2899</string>
+            <string>None</string>
             <string>2899</string><!-- Tecmire -->
                        
             <string>IB2 TOK, Sem2- IB1 TOK</string>

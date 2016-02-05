@@ -112,7 +112,6 @@
                         }
                     }
                     
-                    
                     if (sem1String) {
                         sem1Classes[i] = [NSString stringWithFormat:@"%@ - %@", sem1String, key];
                     }

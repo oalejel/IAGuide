@@ -252,8 +252,6 @@
 //this function creates an InfoViewCOntroller to show info on a class's schedule
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
-    
-    
     if ([view.annotation isKindOfClass:[Location class]]) {
         Location *loc = (Location *)view.annotation;
         InfoViewController *ivc = [[InfoViewController alloc] initWithRoomNumber:(int)loc.roomNumber]; // you might want to have a strong property for this so you do not have to constantly waste memory on new ones
