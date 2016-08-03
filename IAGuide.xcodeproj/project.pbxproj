@@ -19,10 +19,6 @@
 		3D2C3B881A354F900040B3E6 /* compass_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D2C3B871A354F900040B3E6 /* compass_sel@2x.png */; };
 		3D3D9D0F1AE1E5F2007F8945 /* digital-7 (mono).ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D3D9D0E1AE1E5F2007F8945 /* digital-7 (mono).ttf */; };
 		3D4059121A3F4224004A7F79 /* mapoutline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D4059111A3F4224004A7F79 /* mapoutline@2x.png */; };
-		3D4416D61C05036600329AA0 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4416D51C05036600329AA0 /* NotificationCenter.framework */; };
-		3D4416D91C05036600329AA0 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4416D81C05036600329AA0 /* TodayViewController.swift */; };
-		3D4416DC1C05036600329AA0 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4416DA1C05036600329AA0 /* MainInterface.storyboard */; };
-		3D4416E01C05036600329AA0 /* IAExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3D4416D31C05036600329AA0 /* IAExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3D51838E1A0B9B7A00245E66 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D51838C1A0B9B7A00245E66 /* InfoViewController.m */; };
 		3D51838F1A0B9B7A00245E66 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D51838D1A0B9B7A00245E66 /* InfoViewController.xib */; };
 		3D518C0E1A150E4B000BBCC9 /* Circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D518C0D1A150E4B000BBCC9 /* Circle.png */; };
@@ -64,55 +60,21 @@
 		3DC2216F1ADDD9EC00158C7D /* notpressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DC2216D1ADDD9EC00158C7D /* notpressed@2x.png */; };
 		3DC221701ADDD9EC00158C7D /* pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DC2216E1ADDD9EC00158C7D /* pressed@2x.png */; };
 		3DC7BA8E1B74F5EC0046AC82 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8330391A0A7C3C00447A4D /* GuideViewController.m */; };
-		3DD082651BE180D700A0F5E4 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DD082631BE180D700A0F5E4 /* Interface.storyboard */; };
-		3DD082671BE180D700A0F5E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DD082661BE180D700A0F5E4 /* Assets.xcassets */; };
-		3DD0826E1BE180D700A0F5E4 /* IAWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3DD0826D1BE180D700A0F5E4 /* IAWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		3DD082751BE180D700A0F5E4 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD082741BE180D700A0F5E4 /* InterfaceController.swift */; };
-		3DD082771BE180D700A0F5E4 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD082761BE180D700A0F5E4 /* ExtensionDelegate.swift */; };
-		3DD082791BE180D700A0F5E4 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD082781BE180D700A0F5E4 /* NotificationController.swift */; };
-		3DD0827B1BE180D700A0F5E4 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD0827A1BE180D700A0F5E4 /* GlanceController.swift */; };
-		3DD0827D1BE180D700A0F5E4 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD0827C1BE180D700A0F5E4 /* ComplicationController.swift */; };
-		3DD0827F1BE180D700A0F5E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DD0827E1BE180D700A0F5E4 /* Assets.xcassets */; };
-		3DD082831BE180D700A0F5E4 /* IAWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 3DD082611BE180D700A0F5E4 /* IAWatch.app */; };
-		3DD0828D1BE1852000A0F5E4 /* a_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DD0828C1BE1852000A0F5E4 /* a_circle.png */; };
-		3DD0828F1BE1857D00A0F5E4 /* b_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DD0828E1BE1857D00A0F5E4 /* b_circle.png */; };
 		3DD81F0419B68BAA00794B17 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DD81F0319B68BAA00794B17 /* MapViewController.xib */; };
 		3DD81F0619B6A08D00794B17 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DD81F0519B6A08D00794B17 /* MapKit.framework */; };
 		3DEF22C71A15615300FBED5C /* toggle.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DEF22C61A15615300FBED5C /* toggle.png */; };
-		3DF1EBA21BAB51D000B834AC /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF1EBA11BAB51D000B834AC /* test.swift */; };
 		3DF32E1019FC22CB005AEA8B /* ExtrasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF32E0F19FC22CB005AEA8B /* ExtrasViewController.m */; };
 		3DFD8BD71A350ED000279A2E /* OlympicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFD8BD51A350ED000279A2E /* OlympicsViewController.m */; };
 		3DFD8BD81A350ED000279A2E /* OlympicsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DFD8BD61A350ED000279A2E /* OlympicsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3D4416DE1C05036600329AA0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3D551AA819AB82D00082C393 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3D4416D21C05036600329AA0;
-			remoteInfo = IAExtension;
-		};
 		3D551ACA19AB82D10082C393 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3D551AA819AB82D00082C393 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3D551AAF19AB82D00082C393;
 			remoteInfo = IAGuide;
-		};
-		3DD0826F1BE180D700A0F5E4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3D551AA819AB82D00082C393 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3DD0826C1BE180D700A0F5E4;
-			remoteInfo = "IAWatch Extension";
-		};
-		3DD082811BE180D700A0F5E4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3D551AA819AB82D00082C393 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3DD082601BE180D600A0F5E4;
-			remoteInfo = IAWatch;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -123,18 +85,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				3D4416E01C05036600329AA0 /* IAExtension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3DD082891BE180D700A0F5E4 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				3DD0826E1BE180D700A0F5E4 /* IAWatch Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,7 +95,6 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				3DD082831BE180D700A0F5E4 /* IAWatch.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,11 +115,7 @@
 		3D2C3B871A354F900040B3E6 /* compass_sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compass_sel@2x.png"; sourceTree = "<group>"; };
 		3D3D9D0E1AE1E5F2007F8945 /* digital-7 (mono).ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7 (mono).ttf"; sourceTree = "<group>"; };
 		3D4059111A3F4224004A7F79 /* mapoutline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapoutline@2x.png"; sourceTree = "<group>"; };
-		3D4416D31C05036600329AA0 /* IAExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = IAExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4416D51C05036600329AA0 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		3D4416D81C05036600329AA0 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		3D4416DB1C05036600329AA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		3D4416DD1C05036600329AA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D51838B1A0B9B7A00245E66 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		3D51838C1A0B9B7A00245E66 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		3D51838D1A0B9B7A00245E66 /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
@@ -232,25 +177,9 @@
 		3DC221591ADDA26400158C7D /* noconnection@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noconnection@2x.png"; sourceTree = "<group>"; };
 		3DC2216D1ADDD9EC00158C7D /* notpressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "notpressed@2x.png"; sourceTree = "<group>"; };
 		3DC2216E1ADDD9EC00158C7D /* pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pressed@2x.png"; sourceTree = "<group>"; };
-		3DD082611BE180D700A0F5E4 /* IAWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IAWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DD082641BE180D700A0F5E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		3DD082661BE180D700A0F5E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3DD082681BE180D700A0F5E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3DD0826D1BE180D700A0F5E4 /* IAWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "IAWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DD082731BE180D700A0F5E4 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		3DD082741BE180D700A0F5E4 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		3DD082761BE180D700A0F5E4 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		3DD082781BE180D700A0F5E4 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		3DD0827A1BE180D700A0F5E4 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
-		3DD0827C1BE180D700A0F5E4 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
-		3DD0827E1BE180D700A0F5E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3DD082801BE180D700A0F5E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3DD0828C1BE1852000A0F5E4 /* a_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a_circle.png; sourceTree = "<group>"; };
-		3DD0828E1BE1857D00A0F5E4 /* b_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_circle.png; sourceTree = "<group>"; };
 		3DD81F0319B68BAA00794B17 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MapViewController.xib; path = ../MapViewController.xib; sourceTree = "<group>"; };
 		3DD81F0519B6A08D00794B17 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3DEF22C61A15615300FBED5C /* toggle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toggle.png; sourceTree = "<group>"; };
-		3DF1EBA11BAB51D000B834AC /* test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		3DF32E0E19FC22CB005AEA8B /* ExtrasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtrasViewController.h; sourceTree = "<group>"; };
 		3DF32E0F19FC22CB005AEA8B /* ExtrasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtrasViewController.m; sourceTree = "<group>"; };
 		3DFD8BD41A350ED000279A2E /* OlympicsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OlympicsViewController.h; sourceTree = "<group>"; };
@@ -259,14 +188,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3D4416D01C05036600329AA0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3D4416D61C05036600329AA0 /* NotificationCenter.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3D551AAD19AB82D00082C393 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -276,13 +197,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3D551AC619AB82D10082C393 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3DD0826A1BE180D700A0F5E4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -319,25 +233,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3D4416D71C05036600329AA0 /* IAExtension */ = {
-			isa = PBXGroup;
-			children = (
-				3D4416D81C05036600329AA0 /* TodayViewController.swift */,
-				3D4416DA1C05036600329AA0 /* MainInterface.storyboard */,
-				3D4416DD1C05036600329AA0 /* Info.plist */,
-			);
-			path = IAExtension;
-			sourceTree = "<group>";
-		};
 		3D551AA719AB82D00082C393 = {
 			isa = PBXGroup;
 			children = (
 				3DD81F0519B6A08D00794B17 /* MapKit.framework */,
 				3D551AB219AB82D10082C393 /* IAGuide */,
 				3D551ACC19AB82D10082C393 /* IAGuideTests */,
-				3DD082621BE180D700A0F5E4 /* IAWatch */,
-				3DD082711BE180D700A0F5E4 /* IAWatch Extension */,
-				3D4416D71C05036600329AA0 /* IAExtension */,
 				3D4416D41C05036600329AA0 /* Frameworks */,
 				3D551AB119AB82D10082C393 /* Products */,
 			);
@@ -348,9 +249,6 @@
 			children = (
 				3D551AB019AB82D10082C393 /* IAGuide.app */,
 				3D551AC919AB82D10082C393 /* IAGuideTests.xctest */,
-				3DD082611BE180D700A0F5E4 /* IAWatch.app */,
-				3DD0826D1BE180D700A0F5E4 /* IAWatch Extension.appex */,
-				3D4416D31C05036600329AA0 /* IAExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -363,7 +261,6 @@
 				3D551AB719AB82D10082C393 /* AppDelegate.h */,
 				3D551AB819AB82D10082C393 /* AppDelegate.m */,
 				3DA36BA71A5C7BDF00C369CA /* Location.swift */,
-				3DF1EBA11BAB51D000B834AC /* test.swift */,
 				3DA36BB31A5C8DDD00C369CA /* IAGuide-Bridging-Header.h */,
 				3DA36BB41A5C95B500C369CA /* Guide */,
 				3DAFF91C19F6D8A1002605AE /* Map */,
@@ -551,61 +448,9 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
-		3DD082621BE180D700A0F5E4 /* IAWatch */ = {
-			isa = PBXGroup;
-			children = (
-				3DD0828C1BE1852000A0F5E4 /* a_circle.png */,
-				3DD0828E1BE1857D00A0F5E4 /* b_circle.png */,
-				3DD082631BE180D700A0F5E4 /* Interface.storyboard */,
-				3DD082661BE180D700A0F5E4 /* Assets.xcassets */,
-				3DD082681BE180D700A0F5E4 /* Info.plist */,
-			);
-			path = IAWatch;
-			sourceTree = "<group>";
-		};
-		3DD082711BE180D700A0F5E4 /* IAWatch Extension */ = {
-			isa = PBXGroup;
-			children = (
-				3DD082741BE180D700A0F5E4 /* InterfaceController.swift */,
-				3DD082761BE180D700A0F5E4 /* ExtensionDelegate.swift */,
-				3DD082781BE180D700A0F5E4 /* NotificationController.swift */,
-				3DD0827A1BE180D700A0F5E4 /* GlanceController.swift */,
-				3DD0827C1BE180D700A0F5E4 /* ComplicationController.swift */,
-				3DD0827E1BE180D700A0F5E4 /* Assets.xcassets */,
-				3DD082801BE180D700A0F5E4 /* Info.plist */,
-				3DD082721BE180D700A0F5E4 /* Supporting Files */,
-			);
-			path = "IAWatch Extension";
-			sourceTree = "<group>";
-		};
-		3DD082721BE180D700A0F5E4 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				3DD082731BE180D700A0F5E4 /* PushNotificationPayload.apns */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3D4416D21C05036600329AA0 /* IAExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3D4416E31C05036700329AA0 /* Build configuration list for PBXNativeTarget "IAExtension" */;
-			buildPhases = (
-				3D4416CF1C05036600329AA0 /* Sources */,
-				3D4416D01C05036600329AA0 /* Frameworks */,
-				3D4416D11C05036600329AA0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = IAExtension;
-			productName = IAExtension;
-			productReference = 3D4416D31C05036600329AA0 /* IAExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		3D551AAF19AB82D00082C393 /* IAGuide */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D551AD319AB82D10082C393 /* Build configuration list for PBXNativeTarget "IAGuide" */;
@@ -619,8 +464,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				3DD082821BE180D700A0F5E4 /* PBXTargetDependency */,
-				3D4416DF1C05036600329AA0 /* PBXTargetDependency */,
 			);
 			name = IAGuide;
 			productName = IAGuide;
@@ -645,40 +488,6 @@
 			productReference = 3D551AC919AB82D10082C393 /* IAGuideTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3DD082601BE180D600A0F5E4 /* IAWatch */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3DD0828A1BE180D700A0F5E4 /* Build configuration list for PBXNativeTarget "IAWatch" */;
-			buildPhases = (
-				3DD0825F1BE180D600A0F5E4 /* Resources */,
-				3DD082891BE180D700A0F5E4 /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3DD082701BE180D700A0F5E4 /* PBXTargetDependency */,
-			);
-			name = IAWatch;
-			productName = IAWatch;
-			productReference = 3DD082611BE180D700A0F5E4 /* IAWatch.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		3DD0826C1BE180D700A0F5E4 /* IAWatch Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3DD082881BE180D700A0F5E4 /* Build configuration list for PBXNativeTarget "IAWatch Extension" */;
-			buildPhases = (
-				3DD082691BE180D700A0F5E4 /* Sources */,
-				3DD0826A1BE180D700A0F5E4 /* Frameworks */,
-				3DD0826B1BE180D700A0F5E4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "IAWatch Extension";
-			productName = "IAWatch Extension";
-			productReference = 3DD0826D1BE180D700A0F5E4 /* IAWatch Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -690,10 +499,6 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Omar Alejel";
 				TargetAttributes = {
-					3D4416D21C05036600329AA0 = {
-						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = FNU3YT2Q2N;
-					};
 					3D551AAF19AB82D00082C393 = {
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = FNU3YT2Q2N;
@@ -701,13 +506,6 @@
 					3D551AC819AB82D10082C393 = {
 						CreatedOnToolsVersion = 6.0;
 						TestTargetID = 3D551AAF19AB82D00082C393;
-					};
-					3DD082601BE180D600A0F5E4 = {
-						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = FNU3YT2Q2N;
-					};
-					3DD0826C1BE180D700A0F5E4 = {
-						CreatedOnToolsVersion = 7.1;
 					};
 				};
 			};
@@ -726,22 +524,11 @@
 			targets = (
 				3D551AAF19AB82D00082C393 /* IAGuide */,
 				3D551AC819AB82D10082C393 /* IAGuideTests */,
-				3DD082601BE180D600A0F5E4 /* IAWatch */,
-				3DD0826C1BE180D700A0F5E4 /* IAWatch Extension */,
-				3D4416D21C05036600329AA0 /* IAExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3D4416D11C05036600329AA0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3D4416DC1C05036600329AA0 /* MainInterface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3D551AAE19AB82D00082C393 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -790,36 +577,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3DD0825F1BE180D600A0F5E4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3DD082671BE180D700A0F5E4 /* Assets.xcassets in Resources */,
-				3DD0828D1BE1852000A0F5E4 /* a_circle.png in Resources */,
-				3DD0828F1BE1857D00A0F5E4 /* b_circle.png in Resources */,
-				3DD082651BE180D700A0F5E4 /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3DD0826B1BE180D700A0F5E4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3DD0827F1BE180D700A0F5E4 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3D4416CF1C05036600329AA0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3D4416D91C05036600329AA0 /* TodayViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3D551AAC19AB82D00082C393 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -837,7 +597,6 @@
 				3D79969A1A3F26FA007CF0E5 /* MXLCalendar.m in Sources */,
 				3DC05ACF1B5DEBC200F4C9CF /* GlassScrollController.swift in Sources */,
 				3D1524921A578D090006F9F4 /* ClassBlockViewContainer.m in Sources */,
-				3DF1EBA21BAB51D000B834AC /* test.swift in Sources */,
 				3DC7BA8E1B74F5EC0046AC82 /* GuideViewController.m in Sources */,
 				3D79969D1A3F26FA007CF0E5 /* NSTimeZone+ProperAbbreviation.m in Sources */,
 				3D0647971B9C90070074B9FC /* SqueezeButton.swift in Sources */,
@@ -859,97 +618,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3DD082691BE180D700A0F5E4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3DD082791BE180D700A0F5E4 /* NotificationController.swift in Sources */,
-				3DD082771BE180D700A0F5E4 /* ExtensionDelegate.swift in Sources */,
-				3DD0827D1BE180D700A0F5E4 /* ComplicationController.swift in Sources */,
-				3DD082751BE180D700A0F5E4 /* InterfaceController.swift in Sources */,
-				3DD0827B1BE180D700A0F5E4 /* GlanceController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3D4416DF1C05036600329AA0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3D4416D21C05036600329AA0 /* IAExtension */;
-			targetProxy = 3D4416DE1C05036600329AA0 /* PBXContainerItemProxy */;
-		};
 		3D551ACB19AB82D10082C393 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3D551AAF19AB82D00082C393 /* IAGuide */;
 			targetProxy = 3D551ACA19AB82D10082C393 /* PBXContainerItemProxy */;
 		};
-		3DD082701BE180D700A0F5E4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3DD0826C1BE180D700A0F5E4 /* IAWatch Extension */;
-			targetProxy = 3DD0826F1BE180D700A0F5E4 /* PBXContainerItemProxy */;
-		};
-		3DD082821BE180D700A0F5E4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3DD082601BE180D600A0F5E4 /* IAWatch */;
-			targetProxy = 3DD082811BE180D700A0F5E4 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		3D4416DA1C05036600329AA0 /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3D4416DB1C05036600329AA0 /* Base */,
-			);
-			name = MainInterface.storyboard;
-			sourceTree = "<group>";
-		};
-		3DD082631BE180D700A0F5E4 /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3DD082641BE180D700A0F5E4 /* Base */,
-			);
-			name = Interface.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		3D4416E11C05036700329AA0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = IAExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = DL7989H5XT.com.alejel.iaguide.IAExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		3D4416E21C05036700329AA0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = IAExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = DL7989H5XT.com.alejel.iaguide.IAExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 		3D551AD119AB82D10082C393 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1108,95 +787,9 @@
 			};
 			name = Release;
 		};
-		3DD082841BE180D700A0F5E4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IBSC_MODULE = IAWatch_Extension;
-				INFOPLIST_FILE = IAWatch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = DL7989H5XT.com.alejel.iaguide.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		3DD082851BE180D700A0F5E4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IBSC_MODULE = IAWatch_Extension;
-				INFOPLIST_FILE = IAWatch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = DL7989H5XT.com.alejel.iaguide.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		3DD082861BE180D700A0F5E4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "IAWatch Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = DL7989H5XT.com.alejel.iaguide.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		3DD082871BE180D700A0F5E4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "IAWatch Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = DL7989H5XT.com.alejel.iaguide.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3D4416E31C05036700329AA0 /* Build configuration list for PBXNativeTarget "IAExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3D4416E11C05036700329AA0 /* Debug */,
-				3D4416E21C05036700329AA0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
 		3D551AAB19AB82D00082C393 /* Build configuration list for PBXProject "IAGuide" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1220,24 +813,6 @@
 			buildConfigurations = (
 				3D551AD719AB82D10082C393 /* Debug */,
 				3D551AD819AB82D10082C393 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3DD082881BE180D700A0F5E4 /* Build configuration list for PBXNativeTarget "IAWatch Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3DD082861BE180D700A0F5E4 /* Debug */,
-				3DD082871BE180D700A0F5E4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3DD0828A1BE180D700A0F5E4 /* Build configuration list for PBXNativeTarget "IAWatch" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3DD082841BE180D700A0F5E4 /* Debug */,
-				3DD082851BE180D700A0F5E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
