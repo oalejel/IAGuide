@@ -209,12 +209,28 @@
 - (BOOL)todayIsAnADay:(NSDate *)date
 {
     NSDictionary *monthInfoDictionary = @{
-                                          @8: @[@YES, @21], @9: @[@YES], @10: @[@YES], @11: @[@NO, @30],
-                                          @12: @[@YES], //december of 2015. Key is month, [0:(odd is A day), 1:exception, 2:exception]
-                                          @1: @[@YES, @19], @2: @[@YES, @22],
-                                          @3: @[@YES, @28], @4: @[@NO], @5: @[@NO, @31],
-                                          @6: @[@NO]
+                                          @8: @[@NO, @21],
+                                          @9: @[@NO],
+                                          @10: @[@NO],
+                                          @11: @[@NO, @8],
+                                          @12: @[@NO], //december of 2015. Key is month, [0:(odd is A day), 1:exception, 2:exception]
+                                          @1: @[@NO, @7],
+                                          @2: @[@YES, @18],
+                                          @3: @[@NO],
+                                          @4: @[@NO, @15],
+                                          @5: @[@YES, @27],
+                                          @6: @[@YES]
                                           };
+    
+    /*
+     @{
+     @8: @[@YES, @21], @9: @[@YES], @10: @[@YES], @11: @[@NO, @30],
+     @12: @[@YES], //december of 2015. Key is month, [0:(odd is A day), 1:exception, 2:exception]
+     @1: @[@YES, @19], @2: @[@YES, @22],
+     @3: @[@YES, @28], @4: @[@NO], @5: @[@NO, @31],
+     @6: @[@NO]
+     };
+     */
     
     dateFormatter.dateFormat = @"M"; //this date formatter variable is a global variable in the app delegate
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];

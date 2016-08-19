@@ -8,7 +8,7 @@
 
 import UIKit
 
-class _GuideViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class __GuideViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     //booleans
     var finishedAnimation = false
@@ -36,13 +36,13 @@ class _GuideViewController: UIViewController, UITableViewDataSource, UITableView
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
-        //set the tab bar item (tab that you use to select the guide controller)
-        let iconUnselected = UIImage(named: "star")
-        let iconSelected = UIImage(named: "star_selected")
-        tabBarItem = UITabBarItem(title: "Today", image: iconUnselected, selectedImage: iconSelected)
-        //set the images so that they are available [make this a computed property later]
-        aImage = UIImage(named: "aday")
-        bImage = UIImage(named: "bday")
+//        //set the tab bar item (tab that you use to select the guide controller)
+//        let iconUnselected = UIImage(named: "star")
+//        let iconSelected = UIImage(named: "star_selected")
+//        tabBarItem = UITabBarItem(title: "Today", image: iconUnselected, selectedImage: iconSelected)
+//        //set the images so that they are available [make this a computed property later]
+//        aImage = UIImage(named: "aday")
+//        bImage = UIImage(named: "bday")
     }
 
     //this is just there because i overrided the init(nib... method
@@ -54,31 +54,31 @@ class _GuideViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //set the table cell for events table to detailtablecell
-        tableView.registerClass(DetailTableCell.self, forCellReuseIdentifier: "cell")
-        
-        //setup the view that shows class times
-        scheduleView = ClassBlockViewContainer()
-        scheduleView.layer.cornerRadius = 5//!move to init method of the class
-        scheduleView.layer.masksToBounds = true
-        
-        //tableview setup
-        tableView.backgroundColor = UIColor.clearColor()
-        tableView.backgroundView?.backgroundColor = UIColor.clearColor()
-        tableView.delegate = self
-        tableView.dataSource = self
-        
-        //configure A/B day info and images
-        isADay = TodayManager.sharedClassManager().todayIsAnADay(NSDate())
-        var yesterdayImage: UIImage!
-        if isADay {
-            yesterdayImage = bImage
-        } else {
-            yesterdayImage = aImage
-        }
-        //give the dayImageView an image for yesterdays A/B day value so we can animate it tearing off once the view appears to show the actual A/B day image
-        dayImageView = UIImageView(image: yesterdayImage)
-        finishedAnimation = true//!change the name to animatingDayImage so false is default
+//        //set the table cell for events table to detailtablecell
+//        tableView.registerClass(DetailTableCell.self, forCellReuseIdentifier: "cell")
+//        
+//        //setup the view that shows class times
+//        scheduleView = ClassBlockViewContainer()
+//        scheduleView.layer.cornerRadius = 5//!move to init method of the class
+//        scheduleView.layer.masksToBounds = true
+//        
+//        //tableview setup
+//        tableView.backgroundColor = UIColor.clearColor()
+//        tableView.backgroundView?.backgroundColor = UIColor.clearColor()
+//        tableView.delegate = self
+//        tableView.dataSource = self
+//        
+//        //configure A/B day info and images
+//        isADay = TodayManager.sharedClassManager().todayIsAnADay(NSDate())
+//        var yesterdayImage: UIImage!
+//        if isADay {
+//            yesterdayImage = bImage
+//        } else {
+//            yesterdayImage = aImage
+//        }
+//        //give the dayImageView an image for yesterdays A/B day value so we can animate it tearing off once the view appears to show the actual A/B day image
+//        dayImageView = UIImageView(image: yesterdayImage)
+//        finishedAnimation = true//!change the name to animatingDayImage so false is default
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -86,21 +86,21 @@ class _GuideViewController: UIViewController, UITableViewDataSource, UITableView
         
         if !viewAppearedBefore {
             setBackgroundGradient()
-            updateCurrentEvents()
+//            updateCurrentEvents()
             
-            ///!!!!!fix this section (make it neat and say what it does/....)
-            let origin = calendarHeaderView.frame.origin
-            let size = calendarHeaderView.frame.size
-            //this all needs to change!!!
-            let rect = CGRectMake(view.center.x - size.width / 2, origin.y + size.height, size.width, size.width)
-            dayImageView.frame = rect
-            view.insertSubview(dayImageView, aboveSubview: calendarHeaderView)
-            
-            let calendarFrame = dayImageView.frame
-            let centerY = ((calendarFrame.origin.y + calendarFrame.size.height) + (tableView.frame.origin.y)) / 2
-            scheduleView.center = CGPointMake(view.center.x, centerY)
-            //just make sure its in the right heirarchy
-            view.addSubview(scheduleView)//& = diff!
+//            ///!!!!!fix this section (make it neat and say what it does/....)
+//            let origin = calendarHeaderView.frame.origin
+//            let size = calendarHeaderView.frame.size
+//            //this all needs to change!!!
+//            let rect = CGRectMake(view.center.x - size.width / 2, origin.y + size.height, size.width, size.width)
+//            dayImageView.frame = rect
+//            view.insertSubview(dayImageView, aboveSubview: calendarHeaderView)
+//            
+//            let calendarFrame = dayImageView.frame
+//            let centerY = ((calendarFrame.origin.y + calendarFrame.size.height) + (tableView.frame.origin.y)) / 2
+//            scheduleView.center = CGPointMake(view.center.x, centerY)
+//            //just make sure its in the right heirarchy
+//            view.addSubview(scheduleView)//& = diff!
         }
     }
     
@@ -108,8 +108,8 @@ class _GuideViewController: UIViewController, UITableViewDataSource, UITableView
         super.viewDidAppear(animated)
         
         if !viewAppearedBefore {
-            viewAppearedBefore = true
-            switchDayImage()//animate from A->B or vice versa
+//            viewAppearedBefore = true
+//            switchDayImage()//animate from A->B or vice versa
         }
     }
     

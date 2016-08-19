@@ -10,7 +10,7 @@
 #import "MapViewController.h"
 #import "ExtrasViewController.h"
 #import "OlympicsViewController.h"
-#import "GuideViewController.h"
+#import "GuideViewController.h"//remove this if using the swift file
 
 #import "IAGuide-Swift.h"//this will allow swift files to interact with objc
 

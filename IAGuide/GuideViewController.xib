@@ -5,12 +5,12 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GuideViewController" customModule="IAGuide" customModuleProvider="target">
             <connections>
-                <outlet property="calendarHeaderView" destination="DWw-OH-Vz4" id="73E-wD-LCN"/>
-                <outlet property="tableLoadingView" destination="A8F-JK-75S" id="fbK-ZA-f8Z"/>
-                <outlet property="tableView" destination="6iR-55-zot" id="T6E-2O-lx9"/>
-                <outlet property="view" destination="i5M-Pr-FkT" id="aXW-QH-gBY"/>
+                <outlet property="calendarHeaderView" destination="DWw-OH-Vz4" id="2Cg-av-vua"/>
+                <outlet property="tableLoadingView" destination="A8F-JK-75S" id="AIt-iy-Tta"/>
+                <outlet property="tableView" destination="6iR-55-zot" id="T0m-xq-XgC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="xeo-xW-T3p"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -31,6 +31,9 @@
                         <constraint firstAttribute="width" constant="90" id="gE1-dv-MlK"/>
                     </constraints>
                 </view>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="A8F-JK-75S">
+                    <rect key="frame" x="290" y="360" width="20" height="20"/>
+                </activityIndicatorView>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EtN-aK-Yv4" userLabel="Header Box">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
                     <subviews>
@@ -53,9 +56,6 @@
                         </constraint>
                     </constraints>
                 </view>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="A8F-JK-75S">
-                    <rect key="frame" x="290" y="360" width="20" height="20"/>
-                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
