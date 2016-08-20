@@ -20,7 +20,7 @@ const int y_offset = 20;
 @property (weak, nonatomic) IBOutlet UIView *juniorBar;
 @property (weak, nonatomic) IBOutlet UIView *seniorBar;
 @property (weak, nonatomic) IBOutlet UIView *sophomoreBar;
-@property (weak, nonatomic) IBOutlet UIButton *showFeedButton;
+//@property (weak, nonatomic) IBOutlet UIButton *showFeedButton;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *refreshingIndicator;
 
 @property (nonatomic) NSString *statusString;
@@ -101,7 +101,7 @@ const int y_offset = 20;
     // Do any additional setup after loading the view from its nib.
     
     UIImage *pressedImage = [UIImage imageNamed:@"pressed.png"];
-    [self.showFeedButton setBackgroundImage:pressedImage forState:UIControlStateHighlighted];
+//    [self.showFeedButton setBackgroundImage:pressedImage forState:UIControlStateHighlighted];
     
     self.scoresContainer.layer.cornerRadius = 4;
     

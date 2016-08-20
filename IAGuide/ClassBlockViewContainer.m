@@ -92,49 +92,65 @@
     self.pageControl.currentPage = 0;
     [(UIButton *)[self viewWithTag:2] setEnabled:NO];//can only move right in beginning
     
-    NSString *titleString_1 = @"Lunch 1";
-    NSString *blockString1_1 = @"7:45";
-    NSString *blockString2_1 = @"9:15";
-    NSString *blockString3_1 = @"9:25";
-    NSString *blockString4_1 = @"10:55";
-    NSString *blockString5_1 = @"11:30";
-    NSString *blockString6_1 = @"1:05";
+    NSString *titleString_1 = @"Lunch 1 Schedule";
     
-    NSString *titleString_2 = @"Lunch 2";// since xib has "First Lunch Schedule"
-    NSString *blockString1_2 = @"7:45";
-    NSString *blockString2_2 = @"9:15";
-    NSString *blockString3_2 = @"9:25";
-    NSString *blockString4_2 = @"11:00";
-    NSString *blockString5_2 = @"12:30";
-    NSString *blockString6_2 = @"1:05";
+    NSString *timeString1_1 = @"7:45";
+    NSString *timeString2_1 = @"9:15";
+    NSString *timeString3_1 = @"9:25";
+    NSString *timeString4_1 = @"10:55";
+    NSString *timeString5_1 = @"11:30";
+    NSString *timeString6_1 = @"1:05";
+    
+    NSString *titleString_2 = @"Lunch 2 Schedule";// since xib has "First Lunch Schedule"
+    
+    NSString *timeString1_2 = @"7:45";
+    NSString *timeString2_2 = @"9:15";
+    NSString *timeString3_2 = @"9:25";
+    NSString *timeString4_2 = @"11:00";
+    NSString *timeString5_2 = @"12:30";
+    NSString *timeString6_2 = @"1:05";
+    
+    NSString *blockString1_1 = @"Block 1";
+    NSString *blockString2_1 = @"Passing";
+    NSString *blockString3_1 = @"Block 2";
+    NSString *blockString4_1 = @"Lunch 1";
+    NSString *blockString5_1 = @"Block 3";
+    NSString *blockString6_1 = @"Block 4";
+    
+    NSString *blockString1_2 = @"Block 1";
+    NSString *blockString2_2 = @"Passing";
+    NSString *blockString3_2 = @"Block 2";
+    NSString *blockString4_2 = @"Block 3";
+    NSString *blockString5_2 = @"Lunch 2";
+    NSString *blockString6_2 = @"Block 4";
     
     if ([[TodayManager sharedClassManager] halfDay]) {
         titleString_1 = @"Half Day";
         //only need one sched view
-        blockString1_1 = @"7:45";
-        blockString2_1 = @"8:45";
-        blockString3_1 = @"8:50";
-        blockString4_1 = @"(none)";
-        blockString5_1 = @"9:55";
-        blockString6_1 = @"11:00";
+        timeString1_1 = @"7:45";
+        timeString2_1 = @"8:45";
+        timeString3_1 = @"8:50";
+        timeString4_1 = @"(none)";
+        timeString5_1 = @"9:55";
+        timeString6_1 = @"11:00";
     } else if ([[TodayManager sharedClassManager]lateStart]) {
         //make titles for view2 based on view1 titles
         titleString_1 = @"Late Start Lunch 1";
         titleString_2 = @"Late Start Lunch 2";
         
-        blockString1_1 = @"9:30";
-        blockString2_1 = @"10:35";
-        blockString3_1 = @"10:40";
-        blockString4_1 = @"11:45";
-        blockString5_1 = @"12:20";
-        blockString6_1 = @"1:30";
+        timeString1_1 = @"9:30";
+        timeString2_1 = @"10:35";
+        timeString3_1 = @"10:40";
+        timeString4_1 = @"11:45";
+        timeString5_1 = @"12:20";
+        timeString6_1 = @"1:30";
         
-        blockString1_2 = @"9:30";
-        blockString2_2 = @"10:35";
-        blockString3_2 = @"11:45";
-        blockString4_2 = @"11:50";
-        blockString5_2 = @"12:55";
-        blockString6_2 = @"1:30";
+        timeString1_2 = @"9:30";
+        timeString2_2 = @"10:35";
+        timeString3_2 = @"11:45";
+        timeString4_2 = @"11:50";
+        timeString5_2 = @"12:55";
+        timeString6_2 = @"1:30";
     }
     
     ClassBlockView *view1 = [[ClassBlockView alloc] init];
@@ -145,7 +161,7 @@
     
     UIBezierPath *linePath = [[UIBezierPath alloc] init];
     [linePath moveToPoint:CGPointMake(view1.frame.size.width / 2, 35)];
-    [linePath addLineToPoint:CGPointMake(view1.frame.size.width / 2, view1.frame.size.height - 13)];
+    [linePath addLineToPoint:CGPointMake(view1.frame.size.width / 2, view1.frame.size.height - 6)];
     
     CAShapeLayer *shapeLayer = [CAShapeLayer layer];
     shapeLayer.path = linePath.CGPath;
@@ -162,6 +178,7 @@
     [view2.layer addSublayer:otherLayer];
     
     view1.titleLabel.text = titleString_1;
+    
     view1.blockLabel1.text = blockString1_1;
     view1.blockLabel2.text = blockString2_1;
     view1.blockLabel3.text = blockString3_1;
@@ -169,11 +186,26 @@
     view1.blockLabel5.text = blockString5_1;
     view1.blockLabel6.text = blockString6_1;
     
+    view1.timeLabel1.text = timeString1_1;
+    view1.timeLabel2.text = timeString2_1;
+    view1.timeLabel3.text = timeString3_1;
+    view1.timeLabel4.text = timeString4_1;
+    view1.timeLabel5.text = timeString5_1;
+    view1.timeLabel6.text = timeString6_1;
+    
     if ([[TodayManager sharedClassManager] halfDay]) {
-        self.classBlockViews = @[view1];
+        self.classBlockViews = @[view1];//both lunches have the same scheds in half day
         [self.scrollView addSubview:view1];
     } else {
         view2.titleLabel.text = titleString_2;
+        
+        view2.timeLabel1.text = timeString1_2;
+        view2.timeLabel2.text = timeString2_2;
+        view2.timeLabel3.text = timeString3_2;
+        view2.timeLabel4.text = timeString4_2;
+        view2.timeLabel5.text = timeString5_2;
+        view2.timeLabel6.text = timeString6_2;
+        
         view2.blockLabel1.text = blockString1_2;
         view2.blockLabel2.text = blockString2_2;
         view2.blockLabel3.text = blockString3_2;

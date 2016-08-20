@@ -12,6 +12,13 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel1;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel2;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel3;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel4;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel5;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel6;
+
 @property (weak, nonatomic) IBOutlet UILabel *blockLabel1;
 @property (weak, nonatomic) IBOutlet UILabel *blockLabel2;
 @property (weak, nonatomic) IBOutlet UILabel *blockLabel3;

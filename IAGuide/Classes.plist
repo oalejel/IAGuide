@@ -1,726 +1,780 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+
+<!-- IMPORTANT: all teachers are encoded with numbers. The Teachers.plist file defines
+ the number that every teacher is encoded by. Only teachers are encoded this way. One more thing, if 2 teachers teach in the same room on the same block (i.e. A1 or B2) in different semesters, then the digits that are multiples of 100 will be in the first semester, and multiples of one that are not multiples of 100 will be teaching in the second semester
+ 00## - only 2nd sem
+ ##00 only 1st sem
+ #### different teachers in diff. semesters
+ ##99 same teacher in both semesters-->
+
+<!-- if you have a 2nd sem class but no sem1 class, then let the value be in the format of "Sem2- ..."--->
+<!--ONE MORE THING, format sem2 classes so that its like sem1, Sem2... make sure comma and space is used if there is a sem1 class too-->
+
 <plist version="1.0">
-    <dict>
+<dict>
+    <key>101</key>
+    <array>
+        <string>0499</string>
+        <string>0000</string>
+        <string>0499</string>
+        <string>0499</string>
+        <string>0000</string>
+        <string>0499</string>
+        <string>0499</string>
+        <string>0499</string>
         
-        <!-- IMPORTANT: all teachers are encoded with numbers. The Teachers.plist file defines
-         the number that every teacher is encoded by. Only teachers are encoded this way. One more thing, if 2 teachers teach in the same room on the same block (i.e. A1 or B2) in different semesters, then the digits that are multiples of 100 will be in the first semester, and multiples of one that are not multiples of 100 will be teaching in the second semester
-         00## - only 2nd sem
-         ##00 only 1st sem
-         #### different teachers in diff. semesters
-         ##99 same teacher in both semesters-->
+        <!-- numbers 9-17 contain the class subject (, Sem2- )-->
+        <string>MYP Product Team, Sem2- IB Exam Prep</string>
+        <string>None</string>
+        <string>Math 2</string>
+        <string>Math 2</string>
+        <string>None</string>
+        <string>IB1 Math Studies SL</string>
+        <string>Math 2</string>
+        <string>IB1 Math Studies SL</string>
+    </array>
+    
+    
+    <key>102</key>
+    <array>
+        <string>0000 </string><!-- Slade -->
+        <string>2799 </string><!-- Slade -->
+        <string>2799 </string><!-- Slade -->
+        <string>2799 </string>
         
-        <!-- if you have a 2nd sem class but no sem1 class, then let the value be in the format of "Sem2- ..."--->
-        <!--ONE MORE THING, format sem2 classes so that its like sem1, Sem2... make sure comma and space is used if there is a sem1 class too-->
+        <string>2799 </string>
+        <string>2799 </string><!-- Slade -->
+        <string>0000 </string><!-- Slade -->
+        <string>2799 </string><!-- Slade -->
         
-        <key>101</key>
-        <array>
-            <string>0499</string>
-            <string>0000</string>
-            <string>0499</string>
-            <string>0499</string>
+        <string>None</string>
+        <string>Math 3</string>
+        <string>DP2 Math Studies SL</string>
+        <string>DP2 Math Studies SL</string>
+        
+        <string>DP1 Math SL</string>
+        <string>DP1 Math SL</string>
+        <string>None</string>
+        <string>Math 3</string>
+    </array>
+    
+    
+    <key>103</key>
+    <array>
+        <string>0000</string>
+        <string>0000</string>
+        <string>0599 </string>
+        <string>0000</string>
+        
+        <string>0000</string>
+        <string>0000</string>
+        <string>0000</string>
+        <string>0000</string>
+        
+        <string>None</string>
+        <string>None</string>
+        <string>PT Yearbook</string>
+        <string>None</string>
+        
+        <string>None</string>
+        <string>None</string>
+        <string>None</string>
+        <string>None</string>
+    </array>
+    
+    
+    <key>104</key>
+    <array>
+        <string>0000</string>
+        <string>0000</string>
+        <string>0000</string>
+        <string>0000</string>
+        <string>0000</string>
+        <string>0000</string>
+        <string>0000</string>
+        <string>0000</string>
+        
+        <string>Check Room Schedule</string>
+        <string>Check Room Schedule</string>
+        <string>Check Room Schedule</string>
+        <string>Check Room Schedule</string>
+        <string>Check Room Schedule</string>
+        <string>Check Room Schedule</string>
+        <string>Check Room Schedule</string>
+        <string>Check Room Schedule</string>
+    </array>
+    
+    
+    <key>105</key>
+    <array>
+        <string>2499 </string>
+        <string>2499 </string>
+        <string>2899</string>
+        <string>2499 </string>
+        
+        <string>2499 </string>
+        <string>2499 </string>
+        <string>0000</string>
+        <string>2499 </string>
+        
+        <string>IB2 Spanish</string>
+        <string>IB2 Spanish </string>
+        <string>World Studies</string>
+        <string>IB2 Spanish</string>
+        
+        <string>Spanish 9 + AIS1</string>
+        <string>Spanish 9 + AIS1</string>
+        <string>None</string>
+        <string>Spanish 9 + AIS1</string>
+    </array>
+    
+    
+    <key>106</key>
+    <array>
+        <string>00</string>
+        <string>00</string>
+        <string>00</string>
+        <string>00</string>
+        <string>00</string>
+        <string>00</string>
+        <string>00</string>
+        <string>00</string>
+        
+        <string>None</string>
+        <string>None</string>
+        <string>None</string>
+        <string>None</string>
+        <string>None</string>
+        <string>None</string>
+        <string>None</string>
+        <string>None</string>
+    </array>
+    
+    
+    <key>108</key>
+    <array>
+        <string>1999 </string>
+        <string>0000 </string>
+        <string>1999 </string>
+        <string>1999 </string>
+        
+        <string>1999 </string>
+        <string>0000 </string>
+        <string>1999 </string>
+        <string>1999 </string>
+        
+        <string>French 10 + AIF2</string>
+        <string>None</string>
+        <string>French 10 + AIF2</string>
+        <string>Product Team, Sem2- Product Team</string>
+        
+        <string>DP FLC, Sem2- MYP FLC</string>
+        <string>None</string>
+        <string>DP2 French</string>
+        <string>DP2 French</string>
+        
+    </array>
+    
+    
+    <key>109</key>
+    <array>
+        <string>2599 </string>
+        <string>2599 </string>
+        <string>2599</string>
+        <string>0000</string>
+        
+        <string>2599</string>
+        <string>2599</string>
+        <string>2899</string>
+        <string>2599 </string>
+        
+        <string>Product Team, Sem2- MYP GLC</string>
+        <string>German 9 + AIG2</string>
+        <string>DP1 German</string>
+        <string>None</string>
+        
+        <string>German 10</string>
+        <string>DP2 German</string>
+        <string>DP SLC, Sem2- ToK1</string>
+        <string>Product Team, Sem2- None</string>
+        
+    </array>
+    
+    
+    <key>110</key>
+    <array>
+        <string>1799 </string>
+        <string>1799 </string>
+        <string>3299 </string>
+        <string>1799 </string>
+        
+        <string>1799 </string>
+        <string>3299 </string>
+        <string>3299 </string>
+        <string>3299 </string>
+        
+        <string>Symphonic Band</string>
+        <string>DP2 Music</string>
+        <string>MYP Singers</string>
+        <string>Concert Band</string>
+        
+        <string>Chorale</string>
+        <string>Strings Orchestra</string>
+        <string>DP1 Music</string>
+        <string>Orchestra</string>
+        
+    </array>
+    
+    
+    
+    <key>111</key>
+    <array>
+        <string>2699</string>
+        <string>3199</string>
+        <string>2699</string>
+        <string>2699</string>
+        
+        <string>2699</string>
+        <string>2899</string>
+        <string>2699</string>
+        <string>2699</string>
+        
+        <string>DP1 Spanish</string>
+        <string>PEH 9, Sem2- PEH 10</string>
+        <string>DP1 Spanish</string>
+        <string>DP1 Spanish</string>
+        
+        <string>Spanish 10 + AIS2</string>
+        <string>DP SLC, Sem2- MYP SLC</string>
+        <string>Spanish 10 + AIS2</string>
+        <string>Spanish 10 + AIS2</string>
+    </array>
+    
+    
+    
+    <key>201</key>
+    <array>
+        <string>0399</string>
+        <string>1499</string>
+        <string>0399</string>
+        <string>0399</string>
+        
+        <string>0399</string>
+        <string>0399</string>
+        <string>0399</string>
+        <string>2399</string>
+        
+        <string>Math 3</string>
+        <string>DP1 Physics</string>
+        <string>IB2 Math SL</string>
+        <string>IB1 Math HL</string>
+        
+        <string>IB2 Math SL </string>
+        <string>IB2 Math SL </string>
+        <string>Math 3</string>
+        <string>ToK2, Sem2- ToK1</string>
+    </array>
+    
+    
+    <key>203</key>
+    <array>
+        <string>1499</string>
+        <string>1299</string>
+        <string>1299</string>
+        <string>1299</string>
+        
+        <string>1299</string>
+        <string>1299</string>
+        <string>1299</string>
+        <string>3199</string>
+        
+        <string>Physics 10</string>
+        <string>Physics 10</string>
+        <string>Physics 10</string>
+        <string>Physics 10</string>
+        
+        <string>IB2 Physics</string>
+        <string>IB1 Physics</string>
+        <string>Physics 10</string>
+        <string>PEH 9, Sem2- PEH 10</string>
+    </array>
+    
+    
+    <key>205</key>
+    <array>
+        <string>1199</string>
+        <string>1199</string>
+        <string>1499</string>
+        <string>1199</string>
+        
+        <string>1199</string>
+        <string>1499</string>
+        <string>1199</string>
+        <string>1199</string>
+        
+        <string>Math 2</string>
+        <string>IB1 Math SL</string>
+        <string>Math 3</string>
+        <string>IB2 Math HL</string>
+        
+        <string>Math 2 </string>
+        <string>Math 3</string>
+        <string>IB1 Math SL</string>
+        <string>IB1 Math SL</string>
+    </array>
+    
+    
+    <key>206</key>
+    <array>
+        <string>1599</string>
+        <string>1599</string>
+        <string>1599</string>
+        <string>1499</string>
+        
+        <string>1599</string>
+        <string>1599</string>
+        <string>1499</string>
+        <string>1599</string>
+        
+        <string>DP1 Biology</string>
+        <string>Biology 9</string>
+        <string>DP1 Biology</string>
+        <string>Physics 10</string>
+        
+        <string>DP2 Biology</string>
+        <string>DP2 Biology</string>
+        <string>DP2 Physics</string>
+        <string>Biology 9</string>
+    </array>
+    
+    
+    
+    
+    
+    
+    <key>207</key>
+    <array>
+        <string>1399</string>
+        <string>2099</string>
+        <string>2099</string>
+        <string>2099</string>
+        
+        <string>2099</string>
+        <string>3199</string>
+        <string>2099</string>
+        <string>2099</string>
+        
+        <string>Biology 9</string>
+        <string>DP1 Biology</string>
+        <string>Biology 9</string>
+        <string>DP1 Biology</string>
+        
+        <string>Biology 9</string>
+        <string>PEH 9, Sem2- PEH 10</string>
+        <string>DP2 Biology</string>
+        <string>DP2 Biology</string>
+    </array>
+    
+    
+    
+    <key>209</key>
+    <array>
+        <string>3199</string>
+        <string>2399</string>
+        <string>2399</string>
+        <string>2399</string>
+        
+        <string>2399</string>
+        <string>2399</string>
+        <string>1099</string>
+        <string>1099</string>
+        
+        <string>PEH 9, Sem2- PEH 10</string>
+        <string>Chemistry 10</string>
+        <string>Chemistry 10</string>
+        <string>DP1 Chemistry</string>
+        
+        <string>DP1 Chemistry</string>
+        <string>ToK2, Sem2- ToK1</string>
+        <string>Chemistry 10</string>
+        <string>Chemistry 10</string>
+    </array>
+    
+    
+    <key>211</key>
+    <array>
+        <string>0000</string>
+        <string>0000</string>
+        <string>0000</string>
+        <string>0000</string>
+        
+        <string>0000</string>
+        <string>0000</string>
+        <string>0000</string>
+        <string>0000</string>
+        
+        <string>None</string>
+        <string>None</string>
+        <string>None</string>
+        <string>None</string>
+        
+        <string>None</string>
+        <string>None</string>
+        <string>None</string>
+        <string>None</string>
+    </array>
+    
+    <key>213</key>
+    <array>
+        <string>0799</string>
+        <string>1399</string>
+        <string>0799</string>
+        <string>3199</string>
+        
+        <string>1099</string>
+        <string>0700</string>
+        <string>0799</string>
+        <string>0799</string>
+        
+        <string>ToK2//ToK1</string>
+        <string>Biology 9</string>
+        <string>IB2 Chemistry</string>
+        <string>PEH 9//PEH 10</string>
+        
+        <string>Chemistry 10</string>
+        <string>ToK2, Sem2- None</string>
+        <string>Chemistry 10</string>
+        <string>DP2 Chemistry</string>
+    </array>
+    
+    <key>301</key>
+    <array>
+        <string>0000</string>
+        <string>0000</string>
+        <string>0000</string>
+        <string>0000</string>
+        
+        <string>0000</string>
+        <string>0000</string>
+        <string>0000</string>
+        <string>0000</string>
+        
+        <string>None</string>
+        <string>None</string>
+        <string>None</string>
+        <string>None</string>
+        
+        <string>None</string>
+        <string>None</string>
+        <string>None</string>
+        <string>None</string>
+    </array>
+    
+    
+    <key>303</key>
+    <array>
+        <string>0899 </string>
+        <string>0799 </string>
+        <string>0899 </string>
+        <string>0899 </string>
+        
+        <string>0899 </string>
+        <string>2299 </string>
+        <string>0899 </string>
+        <string>0899 </string>
+        
+        <string>Am Studies</string>
+        <string>ToK2, Sem2- ToK1</string>
+        <string>Am Studies</string>
+        <string>Am Studies</string>
+        
+        <string>DP2 History</string>
+        <string>MYP Product Team, Sem2- IB Exam Prep</string>
+        <string>DP2 History</string>
+        <string>DP1 History</string>
+    </array>
+    
+    
+    
+    
+    <key>304</key>
+    <array>
+        <string>0599</string>
+        <string>2899</string>
+        <string>1399</string>
+        <string>0599</string>
             
-            <string>0000</string>
-            <string>0499</string>
-            <string>0499</string>
-            <string>0499</string>
-            
-            <!-- numbers 9-17 contain the class subject (, Sem2- )-->
-            <string>MYP Product Team//IB Exam Prep</string>
-            <string>None</string>
-            <string>Math 2</string>
-            <string>Math 2</string>
-            <string>None</string>
-            <string>IB1 Math St. SL</string>
-            <string>Math 2</string>
-            <string>IB1 Math St. SL</string>
-        </array>
+        <string>0000</string>
+        <string>0599</string>
+        <string>0599</string>
+        <string>0599</string>
         
+        <string>French 9 + AIF1</string>
+        <string>US Government, Sem2- MYP SLC</string>
+        <string>ESS</string>
+        <string>IB1 French</string>
         
+        <string>None</string>
+        <string>IB1 French </string>
+        <string>French 9 + AIF1</string>
+        <string>IB FLC, Sem2- FLC</string>
+    </array>
+
+
+
+    <key>305</key>
+    <array>
+        <string>3099</string>
+        <string>3099</string>
+        <string>0000</string>
+        <string>3099</string>
         
-        <key>102</key>
-        <array>
-            <string>0000 </string><!-- Slade -->
-            <string>2799 </string><!-- Slade -->
-            <string>2799 </string><!-- Slade -->
-            <string>2799 </string>
-            
-            <string>2799 </string>
-            <string>2799 </string><!-- Slade -->
-            <string>0000 </string><!-- Slade -->
-            <string>2799 </string><!-- Slade -->
-            
-            <string>None</string>
-            <string>Math 3</string>
-            <string>DP2 Math St. SL</string>
-            <string>DP2 Math St. SL</string>
-            
-            <string>DP1 Math SL</string>
-            <string>DP1 Math SL</string>
-            <string>None</string>
-            <string>Math 3</string>
-        </array>
+        <string>3099</string>
+        <string>3099</string>
+        <string>3099</string>
+        <string>0000</string>
         
+        <string>World Studies</string>
+        <string>DP GLC, Sem2- Product Team</string>
+        <string>None</string>
+        <string>DP1 History</string>
         
-        <key>103</key>
-        <array>
-            <string>0000</string>
-            <string>0000</string>
-            <string>0599 </string>
-            <string>0000</string>
-            
-            <string>0000</string>
-            <string>0000</string>
-            <string>0000</string>
-            <string>0000</string>
-            
-            <string>None</string>
-            <string>None</string>
-            <string>PT Yearbook</string>
-            <string>None</string>
-            
-            <string>None</string>
-            <string>None</string>
-            <string>None</string>
-            <string>None</string>
-        </array>
+        <string>DP1 History</string>
+        <string>World Studies</string>
+        <string>DP1 History</string>
+        <string>None</string>
+    </array>
+
+
+
+
+    <key>306</key>
+    <array>
+        <string>1699</string>
+        <string>1699</string>
+        <string>1699</string>
+        <string>3228</string>
         
+        <string>0116</string>
+        <string>1617</string>
+        <string>1699</string>
+        <string>1699</string>
         
-        <key>104</key>
-        <array>
-            <string>0000</string>
-            <string>0000</string>
-            <string>0000</string>
-            <string>0000</string>
-            <string>0000</string>
-            <string>0000</string>
-            <string>0000</string>
-            <string>0000</string>
-            
-            <string>Check Room Schedule</string>
-            <string>Check Room Schedule</string>
-            <string>Check Room Schedule</string>
-            <string>Check Room Schedule</string>
-            <string>Check Room Schedule</string>
-            <string>Check Room Schedule</string>
-            <string>Check Room Schedule</string>
-            <string>Check Room Schedule</string>
-        </array>
+        <string>American Studies</string>
+        <string>American Studies</string>
+        <string>DP2 History</string>
+        <string>MYP Product Team, Sem2- MYP SLC</string>
         
+        <string>Product Team, Sem2- Government</string>
+        <string>Government, Sem2- IB Exam Prep</string>
+        <string>DP2 History</string>
+        <string>American Studies</string>
+    </array>
+
+
+
+
+    <key>308</key>
+    <array>
+        <string>0299</string>
+        <string>0299</string>
+        <string>0000</string>
+        <string>0299</string>
         
-        <key>105</key>
-        <array>
-            <string>2499 </string>
-            <string>2499 </string>
-            <string>2899</string>
-            <string>2499 </string>
-            
-            <string>2499 </string>
-            <string>2499 </string>
-            <string>0000</string>
-            <string>2499 </string>
-            
-            <string>IB2 Spanish</string>
-            <string>IB2 Spanish </string>
-            <string>World Studies</string>
-            <string>IB2 Spanish</string>
-            
-            <string>Spanish 9 + AIS1</string>
-            <string>Spanish 9 + AIS1</string>
-            <string>None</string>
-            <string>Spanish 9 + AIS1</string>
-        </array>
+        <string>0000</string>
+        <string>0299</string>
+        <string>0299</string>
+        <string>0299</string>
         
+        <string>Art 1</string>
+        <string>DP2 Visual Arts</string>
+        <string>None</string>
+        <string>Art 1</string>
         
-        <key>106</key>
-        <array>
-            <string>00</string>
-            <string>00</string>
-            <string>00</string>
-            <string>00</string>
-            <string>00</string>
-            <string>00</string>
-            <string>00</string>
-            <string>00</string>
-            
-            <string>None</string>
-            <string>None</string>
-            <string>None</string>
-            <string>None</string>
-            <string>None</string>
-            <string>None</string>
-            <string>None</string>
-            <string>None</string>
-        </array>
+        <string>None</string>
+        <string>Art 2</string>
+        <string>DP1 Visual Arts</string>
+        <string>Art 2</string>
+    </array>
+
+
+
+    <key>310</key>
+    <array>
+        <string>2801</string>
+        <string>2999</string>
+        <string>2999</string>
+        <string>2999</string>
         
+        <string>2922</string>
+        <string>0029</string>
+        <string>2999</string>
+        <string>2999</string>
         
-        <key>108</key>
-        <array>
-            <string>1999 </string>
-            <string>0000 </string>
-            <string>1999 </string>
-            <string>1999 </string>
-            
-            <string>1999 </string>
-            <string>0000 </string>
-            <string>1999 </string>
-            <string>1999 </string>
-            
-            <string>French 10 + AIF2</string>
-            <string>None</string>
-            <string>French 10 + AIF2</string>
-            <string>Product Team, Sem2– Product Team</string>
-            
-            <string>DP FLC//MYP FLC</string>
-            <string>None</string>
-            <string>DP2 French</string>
-            <string>DP2 French</string>
-            
-        </array>
+        <string>IB SLC, Sem2- Product Team</string>
+        <string>DP2 Economics</string>
+        <string>Econ 9, Sem2- Econ 9</string>
+        <string>Econ 9, Sem2- Econ 9</string>
         
+        <string>Econ 9 , Sem2- Speech</string>
+        <string>Sem2- Product Team</string>
+        <string>DP1 Economics</string>
+        <string>Econ 9, Sem2- Product Team</string>
+    </array>
+
+
+
+
+
+    <key>403</key>
+    <array>
+        <string>0699</string>
+        <string>3299</string>
+        <string>0699</string>
+        <string>0699</string>
         
-        <key>109</key>
-        <array>
-            <string>2599 </string>
-            <string>2599 </string>
-            <string>2599</string>
-            <string>0000</string>
-            
-            <string>2599</string>
-            <string>2599</string>
-            <string>2899</string>
-            <string>2599 </string>
-            
-            <string>Product Team//MYP GLC</string>
-            <string>German 9 + AIG2</string>
-            <string>DP1 German</string>
-            <string>None</string>
-            
-            <string>German 10</string>
-            <string>DP2 German</string>
-            <string>DP SLC//ToK1</string>
-            <string>Product Team//None</string>
-            
-        </array>
+        <string>0699</string>
+        <string>0699</string>
+        <string>0699</string>
+        <string>1799</string>
         
+        <string>American Literature</string>
+        <string>MYP Product Team, Sem2- IB Exam Prep</string>
+        <string>IB1 English</string>
+        <string>American Literature</string>
         
-        <key>110</key>
-        <array>
-            <string>1799 </string>
-            <string>1799 </string>
-            <string>3299 </string>
-            <string>1799 </string>
-            
-            <string>1799 </string>
-            <string>3299 </string>
-            <string>3299 </string>
-            <string>3299 </string>
-            
-            <string>Symphonic Band</string>
-            <string>DP2 Music</string>
-            <string>MYP Singers</string>
-            <string>Concert Band</string>
-            
-            <string>Chorale</string>
-            <string>Strings Orchestra</string>
-            <string>DP1 Music</string>
-            <string>Orchestra</string>
-            
-        </array>
+        <string>IB2 English</string>
+        <string>American Literature</string>
+        <string>IB2 English</string>
+        <string>ToK2, Sem2- IB Exam Prep</string>
+    </array>
+
+
+
+
+
+    <key>404</key>
+    <array>
+        <string>1899</string>
+        <string>1899</string>
+        <string>0000</string>
+        <string>1899</string>
         
-      
+        <string>3199</string>
+        <string>1899</string>
+        <string>1899</string>
+        <string>1899</string>
         
-        <key>111</key>
-        <array>
-            <string>2699</string>
-            <string>3199</string>
-            <string>2699</string>
-            <string>2699</string>
-            
-            <string>2699</string>
-            <string>2899</string>
-            <string>2699</string>
-            <string>2699</string>
-            
-            <string>DP1 Spanish</string>
-            <string>PEH 9//PEH 10</string>
-            <string>DP1 Spanish</string>
-            <string>DP1 Spanish</string>
-            
-            <string>Spanish 10 + AIS2</string>
-            <string>DP SLC//MYP SLC</string>
-            <string>Spanish 10 + AIS2</string>
-            <string>Spanish 10 + AIS2</string>
-            
-        </array>
+        <string>DP1 Literature</string>
+        <string>World Literature</string>
+        <string>None</string>
+        <string>DP2 Literature</string>
         
-          <!-- YOU ARE BELOW THIS LINE IN THE EDITING PROCESS-->
+        <string>PEH 9, Sem2- PEH 10</string>
+        <string>World Literature</string>
+        <string>World Literature</string>
+        <string>DP1 Literature</string>
+    </array>
+
+
+    <key>405</key>
+    <array>
+        <string>0999</string>
+        <string>0999</string>
+        <string>2299</string>
+        <string>0999</string>
         
-        <key>201</key>
-        <array>
-            <string>0399</string>
-            <string>1499</string>
-            <string>0399</string>
-            <string>0399</string>
-            
-            <string>0399</string>
-            <string>0399</string>
-            <string>0399</string>
-            <string>2399</string>
-            
-            <string>Math 3</string>
-            <string>DP1 Physics</string>
-            <string>IB2 Math SL</string>
-            <string>IB1 Math HL</string>
-            
-            <string>IB2 Math SL </string>
-            <string>IB2 Math SL </string>
-            <string>Math 3</string>
-            <string>ToK2//ToK1</string>
-        </array>
+        <string>0999</string>
+        <string>0999</string>
+        <string>0999</string>
+        <string>2299</string>
         
+        <string>DP2 Literature</string>
+        <string>DP2 Literature</string>
+        <string>Speech, Sem2- Speech</string>
+        <string>DP2 Literature</string>
         
-        <key>203</key>
-        <array>
-            <string>1499</string>
-            <string>1299</string>
-            <string>1299</string>
-            <string>1299</string>
-            
-            <string>1299</string>
-            <string>1299</string>
-            <string>1299</string>
-            <string>3199</string>
-            
-            <string>Physics 10</string>
-            <string>Physics 10</string>
-            <string>Physics 10</string>
-            <string>Physics 10</string>
-            
-            <string>IB2 Physics</string>
-            <string>IB1 Physics</string>
-            <string>Physics 10</string>
-            <string>PEH 9//PEH 10</string>
-        </array>
+        <string>American Literature</string>
+        <string>American Literature</string>
+        <string>American Literature</string>
+        <string>MYP Product Team, Sem2- Speech</string>
+    </array>
+
+
+
+
+    <key>406</key>
+    <array>
+        <string>3399</string>
+        <string>3399</string>
+        <string>3399</string>
+        <string>2299</string>
         
+        <string>2207</string>
+        <string>3399</string>
+        <string>3399</string>
+        <string>3399</string>
         
-        <key>205</key>
-        <array>
-            <string>1199</string>
-            <string>1199</string>
-            <string>1499</string>
-            <string>1199</string>
-            
-            <string>1199</string>
-            <string>1499</string>
-            <string>1199</string>
-            <string>1199</string>
-            
-            <string>Math 2</string>
-            <string>IB1 Math SL</string>
-            <string>Math 3</string>
-            <string>IB2 Math HL</string>
-            
-            <string>Math 2 </string>
-            <string>Math 3</string>
-            <string>IB1 Math SL</string>
-            <string>IB1 Math SL</string>
-        </array>
+        <string>DP1 English</string>
+        <string>DP1 English</string>
+        <string>DP1 English</string>
+        <string>Speech, Sem2- Speech</string>
         
+        <string>MYP Product Team, Sem2- ToK1</string>
+        <string>World Literature</string>
+        <string>World Literature</string>
+        <string>World Literature</string>
+    </array>
+
+
+
+    <key>408</key>
+    <array>
+        <string>2199</string>
+        <string>0000</string>
+        <string>2199</string>
+        <string>2199</string>
+        <string>2199 </string>
+        <string>2199</string>
+        <string>2199</string>
+        <string>2899</string>
+
+        <string>DP2 History</string>
+        <string>None</string>
+        <string>DP1 History</string>
+        <string>DP2 History</string>
+        <string>World Studies</string>
+        <string>DP1 History</string>
+        <string>World Studies</string>
+        <string>World Studies</string>
+    </array>
+
+
+
+    <!-- the ISC -->
+    <key>999</key>
+    <array>
+        <string>0000</string>
+        <string>0000</string>
+        <string>0000</string>
+        <string>0000</string>
+        <string>0000</string>
+        <string>0000</string>
+        <string>0000</string>
+        <string>0000</string>
         
-        <key>206</key>
-        <array>
-            <string>1599</string>
-            <string>1599</string>
-            <string>1599</string>
-            <string>1499</string>
-            
-            <string>1599</string>
-            <string>1599</string>
-            <string>1499</string>
-            <string>1599</string>
-            
-            <string>DP1 Biology</string>
-            <string>Biology 9</string>
-            <string>DP1 Biology</string>
-            <string>Physics 10</string>
-            
-            <string>DP2 Biology</string>
-            <string>DP2 Biology</string>
-            <string>DP2 Physics</string>
-            <string>Biology 9</string>
-        </array>
-        
-        
-        
-        
-        
-        
-        <key>207</key>
-        <array>
-            <string>1899</string>
-            <string>1899</string>
-            <string>1199</string>
-            <string>1899</string>
-            
-            <string>1899</string>
-            <string>2699</string>
-            <string>1899</string>
-            <string>1899</string>
-            
-            <string>IB1 Biology</string>
-            <string>Biology 9</string>
-            <string>Physics 10</string>
-            <string>IB1 Biology</string>
-            
-            <string>Biology 9</string>
-            <string>Biology 9</string>
-            <string>IB2 Biology</string>
-            <string>IB2 Biology</string>
-        </array>
-        
-        
-        <key>209</key>
-        <array>
-            <string>1299</string><!-- Phillips -->
-            <string>2199</string><!-- Kilpatrick -->
-            <string>2199</string><!-- Phillips -->
-            <string>3099</string><!-- Weinger -->
-            <string>1399</string><!-- Phillips -->
-            <string>2199</string><!-- Griffin -->
-            <string>2199</string><!-- Phillips -->
-            <string>2199</string><!-- Phillips -->
-            
-            <string>ESS</string>
-            <string>Chemistry 10</string>
-            <string>Chemistry 10</string>
-            <string>PEH 9, Sem2- PEH 10</string>
-            <string>Physics 10</string>
-            <string>IB2 Chemistry</string>
-            <string>IB2 Chemistry</string>
-            <string>IB2 Chemistry</string>
-        </array>
-        
-        
-        <key>211</key>
-        <array>
-            <string>0000</string>
-            <string>0000</string>
-            <string>0000</string>
-            <string>0000</string>
-            <string>0000</string>
-            <string>0000</string>
-            <string>0000</string>
-            <string>0000</string>
-            
-            <string>None</string>
-            <string>None</string>
-            <string>None</string>
-            <string>None</string>
-            <string>None</string>
-            <string>None</string>
-            <string>None</string>
-            <string>None</string>
-        </array>
-        
-        <key>213</key>
-        <array>
-            <string>0799</string><!-- Kilpatrick -->
-            <string>1199</string><!-- Davies -->
-            <string>0799</string><!-- Davies -->
-            <string>0799</string><!-- Davies -->
-            <string>0700</string><!-- Davies -->
-            <string>0799</string><!-- Davies -->
-            <string>2699</string><!-- Davies -->
-            <string>0799</string>
-            
-            <string>Chemistry 10</string>
-            <string>Physics 10</string>
-            <string>IB1 Chemistry</string>
-            <string>Chemistry 10</string>
-            <string>IB2 TOK, Sem2- None</string>
-            <string>IB1 Chemistry</string>
-            <string>Chemistry 10</string>
-            <string>Chemistry 10</string>
-        </array>
-        
-        <key>301</key>
-        <array>
-            <string>0000</string>
-            <string>0000</string>
-            <string>0000</string>
-            <string>0000</string>
-            <string>0000</string>
-            <string>0000</string>
-            <string>0000</string>
-            <string>0000</string>
-            
-            <string>None</string>
-            <string>None</string>
-            <string>None</string>
-            <string>None</string>
-            <string>None</string>
-            <string>None</string>
-            <string>None</string>
-            <string>None</string>
-        </array>
-        
-        
-        <key>303</key>
-        <array>
-            <string>0899 </string><!-- DeZwaan -->
-            <string>0899 </string><!-- Weinger -->
-            <string>0899 </string><!-- DeZwaan -->
-            <string>0199 </string><!-- DeZwaan -->
-            <string>0899 </string><!-- DeZwaan -->
-            <string>0899 </string><!-- Fairman --> 
-            <string>0899 </string><!-- DeZwaan -->
-            <string>0000 </string><!-- DeZwaan -->
-            
-            <string>IB2 History</string>
-            <string>American Studies</string>
-            <string>IB2 History</string>
-            <string>Product Team, Sem2- Product Team</string>
-            <string>American Studies</string>
-            <string>American Studies</string>
-            <string>IB2 History</string>
-            <string>None</string>
-        </array>
-        
-        
-        <key>304</key>
-        <array>
-            <string>0599</string><!-- Weinger -->
-            <string>0599</string><!-- Cinader -->
-            <string>0599</string> 
-            <string>27999</string><!-- Cinader --> <!--- Check for verity-->
-            <string>0000</string><!-- Merchant -->
-            <string>0599</string><!-- Merchant -->
-            <string>0599</string> 
-            <string>2799</string><!-- Weinger -->
-            
-            <string>IB1 History</string>
-            <string>None</string>
-            <string>IB1 History</string>
-            <string>IB1 History</string>
-            <string>None</string> <!--- Check for verity-->
-            <string>World Studies</string>
-            <string>IB GLC, Sem2- Product Team</string>
-            <string>World Studies</string>
-        </array>
-        
-        <key>305</key>
-        <array>
-            <string>2999</string><!-- Zwolinski -->
-            <string>0000</string> 
-            <string>2999</string><!-- Zwolinski -->
-            <string>2999</string><!-- Zwolinski -->
-            <string>0000</string><!-- Griffin -->
-            <string>0299</string><!-- Zwolinski -->
-            <string>2999</string><!-- Zwolinski -->
-            <string>2999</string><!-- Zwolinski -->
-            
-            <string>IB1 History</string>
-            <string>None</string>
-            <string>IB1 History</string>
-            <string>IB1 History</string>
-            <string>None</string>
-            <string>World Studies</string>
-            <string>IB GLC, Sem2- Product Team</string>
-            <string>World Studies</string>
-        </array>
-        
-        
-        <key>306</key>
-        <array>
-            <string>2799</string><!-- Uhelski -->
-            <string>3399</string><!-- Uhelski -->
-            <string>3399</string><!-- None -->
-            <string>3399</string><!-- Uhelski -->
-            <string>3399</string><!-- Uhelski -->
-            <string>2799</string><!-- Uhelski -->
-            <string>3399</string><!-- None -->
-            <string>3399</string><!-- Uhelski -->
-            
-            <string>IB SLC, Sem2- SLC</string>
-            <string>IB2 History</string>
-            <string>IB2 History</string>
-            <string>IB2 History</string>
-            <string>Government, Sem2- Government</string>
-            <string>World Studies</string>
-            <string>American Studies</string>
-            <string>American Studies</string>
-        </array>
-        
-        
-        
-        <key>308</key>
-        <array>
-            <string>0299</string><!-- Cafcalas -->
-            <string>0299</string><!-- Cafcalas -->
-            <string>0000</string><!-- Cafcalas -->
-            <string>0299</string>
-            <string>0299</string><!-- Cafcalas -->
-            <string>0299</string>
-            <string>0000</string><!-- Cafcalas -->
-            <string>0299</string><!-- Cafcalas -->
-            
-            <string>Art 1</string>
-            <string>IB1 Visual Arts</string>
-            <string>None</string>
-            <string>Art 1</string>
-            <string>Art 2</string>
-            <string>IB2 Visual Arts</string>
-            <string>None</string>
-            <string>IB2 Visual Arts</string>
-        </array>
-        
-        <key>310</key>
-        <array>
-            <string>2199 </string>
-            <string>2899</string>
-            <string>2899</string>
-            <string>2899 </string>
-            <string>2899</string>
-            <string>2899</string>
-            <string>None</string>
-            <string>2899</string><!-- Tecmire -->
-                       
-            <string>IB2 TOK, Sem2- IB1 TOK</string>
-            <string>IB1 Economics</string>
-            <string>Econ 9, Sem2- Econ 9</string>
-            <string>Econ 9, Sem2- Econ 9</string>
-            <string>Econ 9, Sem2- Product Team</string>
-            <string>IB2 Economics</string>
-            <string>None</string>
-            <string>Econ 9, Sem2- Product Team</string>
-        </array>
-        
-        <key>403</key>
-        <array>
-            <string>0699</string><!-- Clancy -->
-            <string>3099</string><!-- Wolf -->
-            <string>0699</string><!-- Clancy -->
-            <string>0699</string><!-- Clancy -->
-            <string>0699</string><!-- Clancy -->
-            <string>3099</string><!-- Clancy -->
-            <string>0699</string>
-            <string>0699</string><!-- Clancy -->
-            
-            <string>IB2 English</string>
-            <string>PEH 9, Sem2- PEH 10</string>
-            <string>IB2 English</string>
-            <string>IB2 English</string>
-            <string>American Literature</string>
-            <string>PEH 9, Sem2- PEH 10</string>
-            <string>American Literature</string>
-            <string>American Literature</string>
-        </array>
-        
-        <key>404</key>
-        <array>
-            <string>0000</string><!-- McCabe -->
-            <string>1699</string><!-- McCabe -->
-            <string>1699</string><!-- McCabe -->
-            <string>1699</string><!-- Acton --><!-- none -->
-            <string>1699</string><!-- McCabe -->
-            <string>0000</string><!-- McCabe -->
-            <string>1699</string><!-- McCabe -->
-            <string>1699</string>
-            
-            <string>None</string>
-            <string>World Literature</string>
-            <string>World Literature</string>
-            <string>IB1 English</string>
-            <string>World Literature</string>
-            <string>None</string>
-            <string>IB1 English</string>
-            <string>IB1 English</string>
-        </array>
-        
-        <key>405</key>
-        <array>
-            <string>0999</string> 
-            <string>1299</string> 
-            <string>0999</string> 
-            <string>0999</string> 
-            <string>3099</string> 
-            <string>0999</string>
-            <string>0999</string><!-- Cinader -->
-            <string>0999</string>
-            
-            <string>American Literature</string>
-            <string>MYP Product Team, Sem2- IB Exam Prep</string>
-            <string>American Literature</string>
-            <string>American Literature</string>
-            <string>PEH 9, Sem2- PEH 10</string>
-            <string>IB2 English</string>
-            <string>IB2 English</string>
-            <string>IB2 English</string>
-        </array>
-        
-        <key>406</key>
-        <array>
-            <string>3299</string><!-- Woods -->
-            <string>3199</string><!-- Woods -->
-            <string>3299</string><!-- Woods -->
-            <string>3299</string><!-- Wolf -->
-            <string>3299</string><!-- Woods -->
-            <string>3199</string><!-- Woods -->
-            <string>3299</string><!-- Wolf -->
-            <string>3299</string><!-- Woods -->
-            
-            <string>IB1 English</string>
-            <string>IB2 TOK, Sem2- IB1 TOK</string>
-            <string>IB1 English</string>
-            <string>IB1 English</string>
-            <string>World Literature</string>
-            <string>IB2 TOK, Sem2- IB1 TOK</string>
-            <string>World Literature</string>
-            <string>World Literature</string>
-        </array>
-        
-        <key>408</key>
-        <array>
-            <string>1999</string>
-            <string>1999</string><!-- Morrison -->
-            <string>1999</string><!-- Morrison -->
-            <string>0000</string><!-- Morrison -->
-            <string>1999 </string><!-- Wolf --><!-- Tecmire -->
-            <string>0000</string><!-- Morrison -->
-            <string>1999</string><!-- Morrison -->
-            <string>1999</string><!-- Morrison -->
-            
-            <string>World Studies</string>
-            <string>World Studies</string>
-            <string>IB1 History</string>
-            <string>None</string>
-            <string>IB1 History</string>
-            <string>None</string>
-            <string>American Studies</string>
-            <string>IB1 History</string>
-        </array>
-        
-        <key>999</key>
-        <array>
-            <string>0000</string><!-- Weinger -->
-            <string>0000</string><!-- Weinger -->
-            <string>0000</string><!-- None -->
-            <string>0000</string><!-- Weinger -->
-            <string>0000</string><!-- Weinger -->
-            <string>0000</string><!-- Weinger -->
-            <string>0000</string><!-- none -->
-            <string>0000</string><!-- Weinger -->
-            
-            <string>None</string>
-            <string>None</string>
-            <string>None</string>
-            <string>None</string>
-            <string>None</string>
-            <string>None</string>
-            <string>None</string>
-            <string>None</string>
-        </array>
-        
-    </dict>
+        <string>None</string>
+        <string>None</string>
+        <string>None</string>
+        <string>None</string>
+        <string>None</string>
+        <string>None</string>
+        <string>None</string>
+        <string>None</string>
+    </array>
+
+
+
+
+
+</dict>
 </plist>
