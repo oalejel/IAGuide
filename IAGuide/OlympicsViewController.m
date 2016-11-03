@@ -25,7 +25,7 @@ const int y_offset = 20;
 
 @property (nonatomic) NSString *statusString;
 
-@property (nonatomic) NSDictionary *scoreDictionary;
+@property (nonatomic) NSMutableDictionary *scoreDictionary;
 @property (nonatomic) NSDictionary *freshmanDictionary;
 @property (nonatomic) NSDictionary *sophomoreDictionary;
 @property (nonatomic) NSDictionary *juniorDictionary;
@@ -100,7 +100,7 @@ const int y_offset = 20;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    UIImage *pressedImage = [UIImage imageNamed:@"pressed.png"];
+//    UIImage *pressedImage = [UIImage imageNamed:@"pressed.png"];
 //    [self.showFeedButton setBackgroundImage:pressedImage forState:UIControlStateHighlighted];
     
     self.scoresContainer.layer.cornerRadius = 4;
@@ -311,6 +311,15 @@ const int y_offset = 20;
     self.juniorDictionary = dictStorage[3];
     self.seniorDictionary = dictStorage[4];
     self.statusString = dictStorage[5];
+    
+    int scoreIndex = 0;
+    NSArray *names = @[@"freshman", @"sophomore", @"junior", @"senior"];
+    for (NSNumber *i in self.scoreDictionary) {
+        if (i == nil || [i intValue] < 0) {
+            self.scoreDictionary[names[scoreIndex]] = @0;
+        }
+        scoreIndex++;
+    }
     
     NSLog(@"%@", self.scoreDictionary);
 }

@@ -31,6 +31,8 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *calendarHeaderView; // dont mess with this
 
+@property (nonatomic) NSDate *lastOpenedDate;
+
 @end
 
 @implementation GuideViewController
@@ -78,6 +80,11 @@
     
     self.dayImageView = [[UIImageView alloc] initWithImage:yesterdayImage];
     self.finishedAnimaton = true; //this will be set to false later
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(appIsActive)
+                                                 name:UIApplicationDidBecomeActiveNotification
+                                               object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -99,7 +106,24 @@
         CGFloat centerY = ((calendarFrame.origin.y + calendarFrame.size.height) + (self.tableView.frame.origin.y)) / 2;
         self.scheduleView.center = CGPointMake(self.view.center.x, centerY);
         [self.view insertSubview:self.scheduleView aboveSubview:self.tableView];
+        self.lastOpenedDate = [NSDate date];
+    } else {
+        dateFormatter.dateFormat = @"D";
+        if ([dateFormatter stringFromDate:self.lastOpenedDate] != [dateFormatter stringFromDate:[NSDate date]]) {
+            //day of month not the same; reset tgings that are time dependent
+            [self prepareForNewDay];
+            self.lastOpenedDate = [NSDate date];
+        }
     }
+}
+
+- (void)appIsActive {
+    dateFormatter.dateFormat = @"D";
+    if ([dateFormatter stringFromDate:self.lastOpenedDate] != [dateFormatter stringFromDate:[NSDate date]]) {
+        //day of month not the same; reset tgings that are time dependent
+        [self prepareForNewDay];
+    }
+    self.lastOpenedDate = [NSDate date];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -169,7 +193,7 @@
 
 - (void)switchDayImage
 {
-    if (self.finishedAnimaton) {
+//    if (self.finishedAnimaton) {
         NSDate *now = [NSDate date];
         //make sure its up to date the moment this is called (for new days)
         self.isADay = [[TodayManager sharedClassManager] todayIsAnADay:now]; //get bool value on whether it is an a day
@@ -230,7 +254,7 @@
                 self.dayImageView = nil;
                 self.dayImageView = newImageView;
             }];
-    }
+//    }
 }
 
 #pragma mark - TableView
@@ -336,8 +360,12 @@
 
 //awesome:
 - (void)prepareForNewDay {
-    [self switchDayImage];
-    [self updateCurrentEvents];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[TodayManager sharedClassManager] resetForNewDate];
+        [self switchDayImage];
+        [self updateCurrentEvents];
+    });
+   
 }
 
 #pragma Mark - File functions

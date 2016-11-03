@@ -28,6 +28,7 @@ enum DayType {
 - (BOOL)noSchool;
 - (BOOL)halfDay;
 - (BOOL)lateStart;
+- (void)resetForNewDate;
 
 @property (nonatomic, weak) ClassBlockViewContainer *delegate;//this will recieve notifications for change in class
 

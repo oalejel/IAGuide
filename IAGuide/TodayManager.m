@@ -71,6 +71,26 @@
     return self;
 }
 
+- (void)resetForNewDate {
+    int dayTypeInt = [self dayTypeForDate: [NSDate date]];
+    //determine the type of day
+    switch (dayTypeInt) {
+        case 1:
+            typeOfDay = Late;
+            break;
+        case 2:
+            typeOfDay = Half;
+            break;
+        case 3:
+            typeOfDay = NoSchool;
+            break;
+        default:
+            typeOfDay = Standard;
+    }
+
+    [self setUpSchedulesArray];
+}
+
 - (int)dayTypeForDate:(NSDate *)date {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"ShortDays" ofType:@"plist"];
     NSArray *irregularDays = [NSArray arrayWithContentsOfFile:path];
@@ -206,31 +226,31 @@
     [self.delegate highlightClassLabelAtIndex:labelIndex forViewIndex:viewIndex];
 }
 
+/*
+ @{
+ @8: @[@YES, @21], @9: @[@YES], @10: @[@YES], @11: @[@NO, @30],
+ @12: @[@YES], //december of 2015. Key is month, [0:(odd is A day), 1:exception, 2:exception]
+ @1: @[@YES, @19], @2: @[@YES, @22],
+ @3: @[@YES, @28], @4: @[@NO], @5: @[@NO, @31],
+ @6: @[@NO]
+ };
+ */
+
 - (BOOL)todayIsAnADay:(NSDate *)date
 {
     NSDictionary *monthInfoDictionary = @{
                                           @8: @[@NO, @21],
                                           @9: @[@NO],
-                                          @10: @[@NO],
-                                          @11: @[@NO, @8],
+                                          @10: @[@NO, @28],
+                                          @11: @[@NO, @8, @23],
                                           @12: @[@NO], //december of 2015. Key is month, [0:(odd is A day), 1:exception, 2:exception]
-                                          @1: @[@NO, @7],
+                                          @1: @[@NO, @7, @14],
                                           @2: @[@YES, @18],
                                           @3: @[@NO],
-                                          @4: @[@NO, @15],
+                                          @4: @[@NO, @14],
                                           @5: @[@YES, @27],
                                           @6: @[@YES]
                                           };
-    
-    /*
-     @{
-     @8: @[@YES, @21], @9: @[@YES], @10: @[@YES], @11: @[@NO, @30],
-     @12: @[@YES], //december of 2015. Key is month, [0:(odd is A day), 1:exception, 2:exception]
-     @1: @[@YES, @19], @2: @[@YES, @22],
-     @3: @[@YES, @28], @4: @[@NO], @5: @[@NO, @31],
-     @6: @[@NO]
-     };
-     */
     
     dateFormatter.dateFormat = @"M"; //this date formatter variable is a global variable in the app delegate
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
@@ -244,7 +264,7 @@
     BOOL todayIsOdd = false;
     if (dayOfMonth % 2 == 1) {
         todayIsOdd = true;
-    }
+    } 
     BOOL isADay = NO;
     int rule = [[monthArray objectAtIndex:0] intValue];
     NSLog(@"today is odd: %@, odds are aday: %@", todayIsOdd ? (@"true") : (@"false"), rule ? (@"true") : (@"false"));
