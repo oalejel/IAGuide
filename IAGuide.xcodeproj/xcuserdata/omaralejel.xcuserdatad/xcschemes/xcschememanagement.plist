@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Guide Siri Extension.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Guide Siri ExtensionUI.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>IAGuide.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +33,16 @@
 			<true/>
 		</dict>
 		<key>3D551AC819AB82D10082C393</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3DC7206A1DD6B8620014CEBF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3DC720731DD6B8620014CEBF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
