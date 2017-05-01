@@ -24,27 +24,27 @@ class SqueezeButton: UIButton {
 //     An empty implementation adversely affects performance during animation.
 
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesBegan(touches, withEvent: event)
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
         press()
     }
-
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesEnded(touches, withEvent: event)
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
         rescaleButton()
     }
     
     func press() {
-        UIView.animateKeyframesWithDuration(0.4, delay: 0.0, options: UIViewKeyframeAnimationOptions.CalculationModeCubic, animations: { () -> Void in
-            self.transform = CGAffineTransformScale(self.transform, 0.9, 0.9)
+        UIView.animateKeyframes(withDuration: 0.4, delay: 0.0, options: UIViewKeyframeAnimationOptions.calculationModeCubic, animations: { () -> Void in
+            self.transform = self.transform.scaledBy(x: 0.9, y: 0.9)
             }) { (done) -> Void in
                 
         }
     }
     
     func rescaleButton() {
-        UIView.animateKeyframesWithDuration(0.2, delay: 0.0, options: UIViewKeyframeAnimationOptions.CalculationModeCubic, animations: { () -> Void in
-            self.transform = CGAffineTransformScale(self.transform, 1/0.9, 1/0.9)
+        UIView.animateKeyframes(withDuration: 0.2, delay: 0.0, options: UIViewKeyframeAnimationOptions.calculationModeCubic, animations: { () -> Void in
+            self.transform = self.transform.scaledBy(x: 1/0.9, y: 1/0.9)
             }) { (done) -> Void in
                 
         }

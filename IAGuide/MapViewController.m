@@ -76,6 +76,7 @@
     self.mapView.userTrackingMode = MKUserTrackingModeNone; //so map does not adjust its focus to current loc.
     self.mapView.zoomEnabled = NO;
     self.mapView.scrollEnabled = NO;
+    self.mapView.rotateEnabled = NO;
     self.mapView.alpha = 0.0; //Once it renders, it will change its alpha
     
     [self setLocation];//set mapview location to IA's location

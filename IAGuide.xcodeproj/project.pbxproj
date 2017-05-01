@@ -15,7 +15,6 @@
 		3D1F8B941A36749C007173A8 /* more_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D1F8B931A36749C007173A8 /* more_selected@2x.png */; };
 		3D1F8B961A367706007173A8 /* star_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D1F8B951A367706007173A8 /* star_selected@2x.png */; };
 		3D24D3B61A5DF510008AC1AF /* ShortDays.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D24D3B51A5DF510008AC1AF /* ShortDays.plist */; };
-		3D26ABF91B339BD800514279 /* __GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D26ABF81B339BD800514279 /* __GuideViewController.swift */; };
 		3D2956A31D5BFF99002D834F /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8330391A0A7C3C00447A4D /* GuideViewController.m */; };
 		3D2C3B881A354F900040B3E6 /* compass_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D2C3B871A354F900040B3E6 /* compass_sel@2x.png */; };
 		3D3D9D0F1AE1E5F2007F8945 /* digital-7 (mono).ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D3D9D0E1AE1E5F2007F8945 /* digital-7 (mono).ttf */; };
@@ -64,8 +63,6 @@
 		3DC720761DD6B8620014CEBF /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC720751DD6B8620014CEBF /* IntentsUI.framework */; };
 		3DC720791DD6B8620014CEBF /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC720781DD6B8620014CEBF /* IntentViewController.swift */; };
 		3DC7207C1DD6B8630014CEBF /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC7207A1DD6B8630014CEBF /* MainInterface.storyboard */; };
-		3DC720801DD6B8630014CEBF /* Guide Siri ExtensionUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3DC720741DD6B8620014CEBF /* Guide Siri ExtensionUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		3DC720831DD6B8630014CEBF /* Guide Siri Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3DC7206B1DD6B8620014CEBF /* Guide Siri Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3DD81F0419B68BAA00794B17 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DD81F0319B68BAA00794B17 /* MapViewController.xib */; };
 		3DD81F0619B6A08D00794B17 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DD81F0519B6A08D00794B17 /* MapKit.framework */; };
 		3DEF22C71A15615300FBED5C /* toggle.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DEF22C61A15615300FBED5C /* toggle.png */; };
@@ -82,20 +79,6 @@
 			remoteGlobalIDString = 3D551AAF19AB82D00082C393;
 			remoteInfo = IAGuide;
 		};
-		3DC7207E1DD6B8630014CEBF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3D551AA819AB82D00082C393 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3DC720731DD6B8620014CEBF;
-			remoteInfo = "Guide Siri ExtensionUI";
-		};
-		3DC720811DD6B8630014CEBF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3D551AA819AB82D00082C393 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3DC7206A1DD6B8620014CEBF;
-			remoteInfo = "Guide Siri Extension";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -105,8 +88,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				3DC720831DD6B8630014CEBF /* Guide Siri Extension.appex in Embed App Extensions */,
-				3DC720801DD6B8630014CEBF /* Guide Siri ExtensionUI.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -533,8 +514,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				3DC7207F1DD6B8630014CEBF /* PBXTargetDependency */,
-				3DC720821DD6B8630014CEBF /* PBXTargetDependency */,
 			);
 			name = IAGuide;
 			productName = IAGuide;
@@ -601,12 +580,12 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Omar Alejel";
 				TargetAttributes = {
 					3D551AAF19AB82D00082C393 = {
 						CreatedOnToolsVersion = 6.0;
-						DevelopmentTeam = FNU3YT2Q2N;
+						DevelopmentTeam = DL7989H5XT;
 						LastSwiftMigration = 0800;
 					};
 					3D551AC819AB82D10082C393 = {
@@ -615,11 +594,12 @@
 					};
 					3DC7206A1DD6B8620014CEBF = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = DL7989H5XT;
 						ProvisioningStyle = Automatic;
 					};
 					3DC720731DD6B8620014CEBF = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = FNU3YT2Q2N;
+						DevelopmentTeam = DL7989H5XT;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -738,7 +718,6 @@
 				3D8AE3701A3D31E10055A312 /* LocationTable.m in Sources */,
 				3D551ADB19AB83E40082C393 /* MapViewController.m in Sources */,
 				3DF32E1019FC22CB005AEA8B /* ExtrasViewController.m in Sources */,
-				3D26ABF91B339BD800514279 /* __GuideViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -774,16 +753,6 @@
 			target = 3D551AAF19AB82D00082C393 /* IAGuide */;
 			targetProxy = 3D551ACA19AB82D10082C393 /* PBXContainerItemProxy */;
 		};
-		3DC7207F1DD6B8630014CEBF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3DC720731DD6B8620014CEBF /* Guide Siri ExtensionUI */;
-			targetProxy = 3DC7207E1DD6B8630014CEBF /* PBXContainerItemProxy */;
-		};
-		3DC720821DD6B8630014CEBF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3DC7206A1DD6B8620014CEBF /* Guide Siri Extension */;
-			targetProxy = 3DC720811DD6B8630014CEBF /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -811,8 +780,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -822,6 +793,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -834,10 +806,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
@@ -854,8 +827,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -864,15 +839,18 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0.1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -886,9 +864,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				DEVELOPMENT_TEAM = DL7989H5XT;
+				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = IAGuide/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DL7989H5XT.com.alejel.iaguide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -896,7 +875,7 @@
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "IAGuide/IAGuide-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -910,16 +889,17 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				DEVELOPMENT_TEAM = DL7989H5XT;
+				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = IAGuide/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DL7989H5XT.com.alejel.iaguide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "IAGuide/IAGuide-Bridging-Header.h";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -970,6 +950,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = DL7989H5XT;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Guide Siri Extension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
@@ -979,7 +960,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
@@ -994,6 +975,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = DL7989H5XT;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Guide Siri Extension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
@@ -1002,7 +984,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
 		};
@@ -1016,7 +998,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = FNU3YT2Q2N;
+				DEVELOPMENT_TEAM = DL7989H5XT;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Guide Siri ExtensionUI/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
@@ -1026,7 +1008,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
@@ -1041,7 +1023,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = FNU3YT2Q2N;
+				DEVELOPMENT_TEAM = DL7989H5XT;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Guide Siri ExtensionUI/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
@@ -1050,7 +1032,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
 		};
@@ -1091,6 +1073,7 @@
 				3DC720871DD6B8630014CEBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3DC720891DD6B8630014CEBF /* Build configuration list for PBXNativeTarget "Guide Siri Extension" */ = {
 			isa = XCConfigurationList;
@@ -1099,6 +1082,7 @@
 				3DC720851DD6B8630014CEBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
