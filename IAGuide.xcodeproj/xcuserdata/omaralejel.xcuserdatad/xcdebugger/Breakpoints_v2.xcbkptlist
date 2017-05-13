@@ -312,11 +312,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IAGuide/GuideViewController.m"
-            timestampString = "499650621.800488"
+            timestampString = "516390919.515329"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "362"
-            endingLineNumber = "362"
+            startingLineNumber = "368"
+            endingLineNumber = "368"
             landmarkName = "-prepareForNewDay"
             landmarkType = "7">
          </BreakpointContent>

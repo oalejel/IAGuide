@@ -344,14 +344,20 @@
         int testDayOfMonth = [[dateFormatter stringFromDate:newDate] intValue];
         dateFormatter.dateFormat = @"M";//set to month format
         int testMonthNumber = [[dateFormatter stringFromDate:newDate] intValue];
+        dateFormatter.dateFormat = @"Y";
+        int testYear = [[dateFormatter stringFromDate:newDate] intValue];
         
         for (MXLCalendarEvent *event in eventsCalendar.events) {
-            dateFormatter.dateFormat = @"M";//must set month again since reiteration will change dateFormat
-            if ([[dateFormatter stringFromDate:event.eventStartDate] intValue] == testMonthNumber) {
-                dateFormatter.dateFormat = @"d"; //set to day format
-                int f = [[dateFormatter stringFromDate:event.eventStartDate] intValue];
-                if (f == testDayOfMonth) {
-                    [self.eventsArray addObject:event];
+            //must set format types repeatedly since reiteration will change dateFormat
+            dateFormatter.dateFormat = @"Y";//first make sure we're picking from the correct year
+            if ([[dateFormatter stringFromDate:event.eventStartDate] intValue] == testYear) {
+                dateFormatter.dateFormat = @"M";
+                if ([[dateFormatter stringFromDate:event.eventStartDate] intValue] == testMonthNumber) {
+                    dateFormatter.dateFormat = @"d"; //set to day format
+                    int f = [[dateFormatter stringFromDate:event.eventStartDate] intValue];
+                    if (f == testDayOfMonth) {
+                        [self.eventsArray addObject:event];
+                    }
                 }
             }
         }
