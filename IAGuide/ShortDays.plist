@@ -1,212 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-
-<!--even indexed array objects are dates, 3rd digit being the month, 1st 2 being the day, and odd indexed array objects are either 1 for latestart 2 for halfday, and 3 for no school-->
 <array>
-    <integer>808</integer>
-    <integer>3</integer>
-    
-    <integer>809</integer>
-    <integer>3</integer>
-    
-    <integer>810</integer>
-    <integer>3</integer>
-    
-    <integer>811</integer>
-    <integer>3</integer>
-    
-    <integer>812</integer>
-    <integer>3</integer>
-    
-    <integer>813</integer>
-    <integer>3</integer>
-    
-    <integer>814</integer>
-    <integer>3</integer>
-    
-    <integer>815</integer>
-    <integer>3</integer>
-    
-    
-    
-
-    <integer>901</integer>
-    <integer>1</integer>
-    
-    <integer>902</integer>
-    <integer>3</integer>
-
-    <integer>905</integer>
-    <integer>3</integer>
-
-
-
-
-
-
-    <integer>1012</integer>
-    <integer>1</integer>
-
-    <integer>1021</integer>
-    <integer>2</integer>
-
-    <integer>1027</integer>
-    <integer>2</integer>
-
-    <integer>1028</integer>
-    <integer>3</integer>
-    
-    
-    
-
-    <integer>1108</integer>
-    <integer>3</integer>
-
-    <integer>1123</integer>
-    <integer>3</integer>
-    
-    <integer>1124</integer>
-    <integer>3</integer>
-
-    <integer>1125</integer>
-    <integer>3</integer>
-
-
-
-
-    <integer>1214</integer>
-    <integer>1</integer>
-
-    <integer>1222</integer>
-    <integer>3</integer>
-    
-    <integer>1223</integer>
-    <integer>3</integer>
-    
-    <integer>1226</integer>
-    <integer>3</integer>
-    
-    <integer>1227</integer>
-    <integer>3</integer>
-    
-    <integer>1228</integer>
-    <integer>3</integer>
-    
-    <integer>1229</integer>
-    <integer>3</integer>
-    
-    <integer>1230</integer>
-    <integer>3</integer>
-
-
-
-
-
-    <integer>102</integer>
-    <integer>3</integer>
-    
-    <integer>103</integer>
-    <integer>3</integer>
-    
-    <integer>106</integer>
-    <integer>3</integer>
-
-    <integer>113</integer>
-    <integer>2</integer>
-
-    <integer>116</integer>
-    <integer>3</integer>
-
-    <integer>125</integer>
-    <integer>2</integer>
-    
-    
-    
-
-    <integer>208</integer>
-    <integer>1</integer>
-
-    <integer>220</integer>
-    <integer>3</integer>
-    
-    <integer>221</integer>
-    <integer>3</integer>
-    
-    <integer>222</integer>
-    <integer>3</integer>
-    
-    <integer>223</integer>
-    <integer>3</integer>
-    
-    <integer>224</integer>
-    <integer>3</integer>
-    
-    <integer>225</integer>
-    <integer>3</integer>
-    
-
-    
-    
-    
-
-    <integer>316</integer>
-    <integer>2</integer>
-        
-    <integer>331</integer>
-    <integer>2</integer>
-    
-    
-
-    <integer>402</integer>
-    <integer>3</integer>
-    
-    <integer>403</integer>
-    <integer>3</integer>
-    
-    <integer>404</integer>
-    <integer>3</integer>
-    
-    <integer>405</integer>
-    <integer>3</integer>
-    
-    <integer>406</integer>
-    <integer>3</integer>
-    
-    <integer>407</integer>
-    <integer>3</integer>
-    
-    <integer>414</integer>
-    <integer>3</integer>
-    
-    <integer>418</integer>
-    <integer>1</integer>
-        
-
-
-
-
-
-    <integer>511</integer>
-    <integer>1</integer>
-    
-    <integer>529</integer>
-    <integer>3</integer>
-
-
-    
-
-    <integer>613</integer>
-    <integer>2</integer>
-
-    <integer>614</integer>
-    <integer>2</integer>
-
-    <integer>615</integer>
-    <integer>2</integer>
-
-    <integer>616</integer>
-    <integer>2</integer>
-
+	<integer>808</integer>
+	<integer>3</integer>
+	<integer>809</integer>
+	<integer>3</integer>
+	<integer>810</integer>
+	<integer>3</integer>
+	<integer>811</integer>
+	<integer>3</integer>
+	<integer>812</integer>
+	<integer>3</integer>
+	<integer>813</integer>
+	<integer>3</integer>
+	<integer>814</integer>
+	<integer>3</integer>
+	<integer>815</integer>
+	<integer>3</integer>
+	<integer>901</integer>
+	<integer>1</integer>
+	<integer>902</integer>
+	<integer>3</integer>
+	<integer>905</integer>
+	<integer>3</integer>
+	<integer>1012</integer>
+	<integer>1</integer>
+	<integer>1021</integer>
+	<integer>2</integer>
+	<integer>1027</integer>
+	<integer>2</integer>
+	<integer>1028</integer>
+	<integer>3</integer>
+	<integer>1108</integer>
+	<integer>3</integer>
+	<integer>1123</integer>
+	<integer>3</integer>
+	<integer>1124</integer>
+	<integer>3</integer>
+	<integer>1125</integer>
+	<integer>3</integer>
+	<integer>1214</integer>
+	<integer>1</integer>
+	<integer>1222</integer>
+	<integer>3</integer>
+	<integer>1223</integer>
+	<integer>3</integer>
+	<integer>1226</integer>
+	<integer>3</integer>
+	<integer>1227</integer>
+	<integer>3</integer>
+	<integer>1228</integer>
+	<integer>3</integer>
+	<integer>1229</integer>
+	<integer>3</integer>
+	<integer>1230</integer>
+	<integer>3</integer>
+	<integer>102</integer>
+	<integer>3</integer>
+	<integer>103</integer>
+	<integer>3</integer>
+	<integer>106</integer>
+	<integer>3</integer>
+	<integer>113</integer>
+	<integer>2</integer>
+	<integer>116</integer>
+	<integer>3</integer>
+	<integer>125</integer>
+	<integer>2</integer>
+	<integer>208</integer>
+	<integer>1</integer>
+	<integer>220</integer>
+	<integer>3</integer>
+	<integer>221</integer>
+	<integer>3</integer>
+	<integer>222</integer>
+	<integer>3</integer>
+	<integer>223</integer>
+	<integer>3</integer>
+	<integer>224</integer>
+	<integer>3</integer>
+	<integer>225</integer>
+	<integer>3</integer>
+	<integer>316</integer>
+	<integer>2</integer>
+	<integer>331</integer>
+	<integer>2</integer>
+	<integer>402</integer>
+	<integer>3</integer>
+	<integer>403</integer>
+	<integer>3</integer>
+	<integer>404</integer>
+	<integer>3</integer>
+	<integer>405</integer>
+	<integer>3</integer>
+	<integer>406</integer>
+	<integer>3</integer>
+	<integer>407</integer>
+	<integer>3</integer>
+	<integer>414</integer>
+	<integer>3</integer>
+	<integer>418</integer>
+	<integer>1</integer>
+	<integer>511</integer>
+	<integer>1</integer>
+	<integer>529</integer>
+	<integer>3</integer>
+	<integer>613</integer>
+	<integer>2</integer>
+	<integer>614</integer>
+	<integer>2</integer>
+	<integer>615</integer>
+	<integer>2</integer>
+	<integer>616</integer>
+	<integer>2</integer>
 </array>
 </plist>

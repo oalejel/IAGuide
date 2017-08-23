@@ -8,7 +8,6 @@
 	<string>Cafcalas</string>
 	<integer>3</integer>
 	<string>Casazza</string>
-    
 	<integer>4</integer>
 	<string>Casper</string>
 	<integer>5</integer>
@@ -17,30 +16,26 @@
 	<string>Clancy</string>
 	<integer>7</integer>
 	<string> Davies</string>
-    
 	<integer>8</integer>
 	<string>deZwaan</string>
-	<integer>09</integer>
+	<integer>9</integer>
 	<string>Gardner</string>
 	<integer>10</integer>
 	<string>Guibord</string>
-    
 	<integer>11</integer>
 	<string>Hessler</string>
 	<integer>12</integer>
 	<string>Hodgkins</string>
 	<integer>13</integer>
 	<string>Jones</string>
-    
 	<integer>14</integer>
-	<string>Kilpatrick</string>
+	<string>DeHaan</string>
 	<integer>15</integer>
 	<string>Kiriazis</string>
 	<integer>16</integer>
 	<string>Kwiatkowski</string>
 	<integer>17</integer>
 	<string>LaNoue</string>
-    
 	<integer>18</integer>
 	<string>McCabe</string>
 	<integer>19</integer>
@@ -49,25 +44,22 @@
 	<string>Monck</string>
 	<integer>21</integer>
 	<string>Morrison</string>
-    
 	<integer>22</integer>
 	<string>Pagnani</string>
 	<integer>23</integer>
 	<string>Phillips</string>
 	<integer>24</integer>
 	<string>Riggs</string>
-    
 	<integer>25</integer>
 	<string>Schultz</string>
-    <integer>26</integer>
-    <string>Shamanski</string>
+	<integer>26</integer>
+	<string>Shamanski</string>
 	<integer>27</integer>
 	<string>Slade</string>
 	<integer>28</integer>
 	<string>Stibitz</string>
-    
-    <integer>29</integer>
-    <string>Tecmire</string>
+	<integer>29</integer>
+	<string>Tecmire</string>
 	<integer>30</integer>
 	<string>Uhelski</string>
 	<integer>31</integer>
